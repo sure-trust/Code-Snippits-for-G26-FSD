@@ -1,0 +1,78 @@
+name: Plagiarism Check
+
+on:
+  pull_request:
+    paths:
+      - 'Assignments/Submissions/**'
+
+# Add permissions block
+permissions:
+  pull-requests: write
+  contents: read
+  issues: write
+
+jobs:
+  check-plagiarism:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run plagiarism check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<EOF
+          import os
+          import sys
+          import json
+          from github import Github
+          sys.path.append(os.getcwd())
+          from Assignments.utils.plagiarism_checker import check_plagiarism
+
+          # Get PR number from GitHub event
+          with open(os.environ['GITHUB_EVENT_PATH']) as f:
+              event = json.load(f)
+          pr_number = event['pull_request']['number']
+
+          # Initialize GitHub client
+          g = Github(os.environ['GITHUB_TOKEN'])
+          repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
+          pr = repo.get_pull(pr_number)
+
+          # Get changed files
+          changed_files = [f.filename for f in pr.get_files() if f.filename.startswith('Assignments/Submissions/')]
+          
+          plagiarism_found = False
+          comment = '## Plagiarism Check Results\n\n'
+
+          for file in changed_files:
+              results = check_plagiarism(file, 'Assignments/Submissions')
+              
+              if results:
+                  plagiarism_found = True
+                  comment += f'### {file}\n'
+                  comment += 'High similarity found with:\n'
+                  for result in results:
+                      comment += f"- {result['file']}: {result['similarity']}% similarity\n"
+                  comment += '\n'
+
+          # Create comment on PR
+          if plagiarism_found:
+              pr.create_issue_comment(comment)
+              sys.exit(1)  # Fail the check
+          else:
+              pr.create_issue_comment('✅ No significant code similarity detected')
+          EOF
