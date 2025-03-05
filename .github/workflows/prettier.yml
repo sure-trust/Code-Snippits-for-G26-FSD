@@ -1,0 +1,53 @@
+name: Prettier Format
+
+on:
+  pull_request:
+    paths:
+      - '**/*.js'
+      - '**/*.jsx'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.css'
+      - '**/*.html'
+      - '**/*.json'
+      - '**/*.md'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Prettier
+        run: npm install --global prettier
+
+      - name: Run Prettier
+        run: |
+          prettier --write "**/*.{js,jsx,ts,tsx,css,html,json,md}"
+          
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -am "style: format code with prettier"
+          git push 
