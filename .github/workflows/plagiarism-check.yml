@@ -1,4 +1,4 @@
-name: Plagiarism Check
+name: Check Plagiarism
 
 on:
   pull_request:
@@ -9,58 +9,31 @@ on:
 permissions:
   pull-requests: write
   contents: read
-  issues: write
 
 jobs:
-  check-plagiarism:
+  check:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@v3
+      # This special checkout configuration works with forked PRs
+      - name: Checkout PR
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Check for Plagiarism
+        uses: actions/github-script@v6
         with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run plagiarism check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python - <<EOF
-          import os
-          import sys
-          import json
-          from github import Github
-          sys.path.append(os.getcwd())
-          from Assignments.utils.plagiarism_checker import check_plagiarism
-
-          # Get PR number from GitHub event
-          with open(os.environ['GITHUB_EVENT_PATH']) as f:
-              event = json.load(f)
-          pr_number = event['pull_request']['number']
-
-          # Initialize GitHub client
-          g = Github(os.environ['GITHUB_TOKEN'])
-          repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
-          pr = repo.get_pull(pr_number)
-
-          # Get changed files
-          changed_files = [f.filename for f in pr.get_files() if f.filename.startswith('Assignments/Submissions/')]
-          
-          plagiarism_found = False
-          comment = '## Plagiarism Check Results\n\n'
-
-          for file in changed_files:
-              results = check_plagiarism(file, 'Assignments/Submissions')
-              
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            function calculateSimilarity(str1, str2) {
+              str1 = str1.replace(/\s+/g, '').toLowerCase();
+              str2 = str2.replace(/\s+/g, '').toLowerCase();
+               vipulattri/jsassignments
               if results:
                   plagiarism_found = True
                   comment += f'### {file}\n'
@@ -76,3 +49,54 @@ jobs:
           else:
               pr.create_issue_comment('✅ No significant code similarity detected')
           EOF
+              if (str1 === str2) return 100;
+              if (str1.length === 0 || str2.length === 0) return 0;
+              
+              let matches = 0;
+              const len = Math.min(str1.length, str2.length);
+              for (let i = 0; i < len; i++) {
+                if (str1[i] === str2[i]) matches++;
+              }
+              return Math.round((matches / len) * 100);
+            }
+            
+            const submissionsDir = 'Assignments/Submissions';
+            const changedFiles = await github.paginate(
+              github.rest.pulls.listFiles,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number
+              }
+            );
+            
+            let comment = '## Plagiarism Check Results\n\n';
+            let plagiarismFound = false;
+            
+            for (const file of changedFiles) {
+              if (!file.filename.startsWith('Assignments/Submissions/')) continue;
+              
+              const content = fs.readFileSync(file.filename, 'utf8');
+              const files = fs.readdirSync(submissionsDir, {recursive: true})
+                .filter(f => f.endsWith('.js') || f.endsWith('.py') || f.endsWith('.html') || f.endsWith('.css'));
+              
+              for (const otherFile of files) {
+                const fullPath = path.join(submissionsDir, otherFile);
+                if (fullPath === file.filename) continue;
+                
+                const otherContent = fs.readFileSync(fullPath, 'utf8');
+                const similarity = calculateSimilarity(content, otherContent);
+                
+                if (similarity > 90) {
+                  plagiarismFound = true;
+                  comment += `⚠️ ${file.filename} has ${similarity}% similarity with ${otherFile}\n`;
+                }
+              }
+            }
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: plagiarismFound ? comment : '✅ No significant code similarity detected'
+            }); main

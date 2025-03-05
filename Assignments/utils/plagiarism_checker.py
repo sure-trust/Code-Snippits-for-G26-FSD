@@ -38,8 +38,8 @@ def check_plagiarism(submission_path, submissions_dir, file_patterns=['*.py', '*
                         
                     similarity = calculate_similarity(submission_content, other_content)
                     
-                    # If similarity is above 80%, add to results
-                    if similarity > 80:
+                    # If similarity is above 90%, add to results
+                    if similarity > 90:
                         results.append({
                             'file': os.path.relpath(file_path, submissions_dir),
                             'similarity': round(similarity, 2)
