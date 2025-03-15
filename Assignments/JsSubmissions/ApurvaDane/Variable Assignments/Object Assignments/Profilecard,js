@@ -1,0 +1,10 @@
+// Create an object
+let user = {
+  name: "Apuu",
+  age: 21,
+  city: "Delhi"
+};
+user.age = 25;
+user.profession = "Intern";
+delete user.city;
+console.log(user);
