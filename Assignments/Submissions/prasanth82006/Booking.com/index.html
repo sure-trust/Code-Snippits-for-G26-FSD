@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Booking.com: Hotels, Homes, and Much More</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <!-- Header -->
+     <header>
+          <div class="logo">Booking.com</div>
+          <div class="header-right">
+               <div class="currency-selector">INR</div>
+               <img class="e3fa9175ee d354f8f44f ed3971de08"
+                    src="https://t-cf.bstatic.com/design-assets/assets/v3.142.0/images-flags/In@3x.png" alt=""
+                    role="presentation" loading="lazy">
+               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path
+                         d="M9.75 9a2.25 2.25 0 1 1 3 2.122 2.25 2.25 0 0 0-1.5 2.122v1.006a.75.75 0 0 0 1.5 0v-1.006c0-.318.2-.602.5-.708A3.75 3.75 0 1 0 8.25 9a.75.75 0 1 0 1.5 0M12 16.5a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5M22.5 12c0 5.799-4.701 10.5-10.5 10.5S1.5 17.799 1.5 12 6.201 1.5 12 1.5 22.5 6.201 22.5 12m1.5 0c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12">
+                    </path>
+               </svg>
+               <button class="btn">List your property</button>
+               <div class="header-buttons">
+                    <button class="btn btn-outline">Register</button>
+                    <button class="btn btn-outline">Sign in</button>
+               </div>
+          </div>
+     </header>
+
+     <!-- Navigation -->
+     <div class="nav-container">
+          <nav class="navigation">
+               <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                         <path
+                              d="M2.75 12h18.5c.69 0 1.25.56 1.25 1.25V18l.75-.75H.75l.75.75v-4.75c0-.69.56-1.25 1.25-1.25zm0-1.5A2.75 2.75 0 0 0 0 13.25V18c0 .414.336.75.75.75h22.5A.75.75 0 0 0 24 18v-4.75a2.75 2.75 0 0 0-2.75-2.75H2.75zM0 18v3a.75.75 0 0 0 1.5 0v-3A.75.75 0 0 0 0 18zm22.5 0v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0zm-.75-6.75V4.5a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 2.25 4.5v6.75a.75.75 0 0 0 1.5 0V4.5a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 0 1.5 0z">
+                         </path>
+                    </svg>
+                    Stays
+               </div>
+               <div class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                         <path
+                              d="m20.505 7.5-15.266.022.672.415-1.1-2.2a.75.75 0 0 0-.638-.414l-2.293-.1C.82 5.228-.003 6.06.003 7.083c.002.243.051.484.146.709l2.072 4.68a2.95 2.95 0 0 0 2.701 1.778h4.043l-.676-1.075-2.484 5.168A1.83 1.83 0 0 0 7.449 21h2.099a1.85 1.85 0 0 0 1.419-.664l5.165-6.363-.582.277h4.956c1.82.09 3.399-1.341 3.49-3.198l.004-.134a3.426 3.426 0 0 0-3.44-3.419l-.074.001zm.02 1.5h.042a1.924 1.924 0 0 1 1.933 1.914l-.002.065a1.866 1.866 0 0 1-1.955 1.772l-4.993-.001a.75.75 0 0 0-.582.277l-5.16 6.355a.35.35 0 0 1-.26.118h-2.1a.336.336 0 0 1-.3-.49l2.493-5.185a.75.75 0 0 0-.676-1.075H4.924a1.45 1.45 0 0 1-1.328-.878l-2.07-4.676a.35.35 0 0 1 .326-.474l2.255.1-.638-.415 1.1 2.2a.75.75 0 0 0 .672.415L20.507 9zm-4.202-1.24-2.992-4.02A1.85 1.85 0 0 0 11.85 3H9.783a1.85 1.85 0 0 0-1.654 2.672l1.439 2.91a.75.75 0 0 0 1.344-.664l-1.44-2.911a.35.35 0 0 1 .312-.507h2.066a.35.35 0 0 1 .279.14l2.99 4.017a.75.75 0 1 0 1.203-.896z">
+                         </path>
+                    </svg>
+                    Flights
+               </div>
+               <div class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" data-rtl-flip="true">
+                         <path
+                              d="M6.306 17.25a8.25 8.25 0 1 1 11.69-7.502.75.75 0 1 0 1.5 0A9.75 9.75 0 0 0 13.812.889C8.917-1.356 3.13.791.884 5.685-1.36 10.58.786 16.367 5.68 18.613a.75.75 0 0 0 .626-1.364zM3.756 3.5l5.28 2a.75.75 0 0 1 .475.851l-.313 1.57a.75.75 0 0 1-.554.58l-2.08.518a.75.75 0 0 0-.514.45l-1.154 2.884a2.24 2.24 0 0 1-.84 1.037l-1.84 1.263a.75.75 0 1 0 .85 1.236l1.83-1.257a3.73 3.73 0 0 0 1.393-1.722l1.153-2.884-.514.449 2.079-.52a2.25 2.25 0 0 0 1.661-1.74l.314-1.57a2.25 2.25 0 0 0-1.417-2.548l-5.277-2A.75.75 0 1 0 3.756 3.5m11.565-.57-1.467 2.926a2.25 2.25 0 0 0-.122 1.718l.557 1.663a.75.75 0 1 0 1.422-.476L15.154 7.1a.75.75 0 0 1 .041-.572l1.466-2.924a.75.75 0 1 0-1.34-.672zm7.175 16.192v2.625a.75.75 0 0 1-.75.75h-10.5a.75.75 0 0 1-.75-.75v-5.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 .75.75zm1.5 0v-2.625a2.25 2.25 0 0 0-2.25-2.25h-10.5a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25zm-12-4.125v8.25a.75.75 0 0 0 1.5 0v-8.25a.75.75 0 0 0-1.5 0m7.5 0v8.25a.75.75 0 0 0 1.5 0v-8.25a.75.75 0 0 0-1.5 0m-4.5.002v-.75a1.5 1.5 0 0 1 3 0V15a.75.75 0 0 0 1.5 0v-.75a3 3 0 1 0-6 0V15a.75.75 0 0 0 1.5 0z">
+                         </path>
+                    </svg>
+                    Flight + Hotel
+               </div>
+               <div class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                         <path
+                              d="m21.684 9.443-1.7-3.79c-.42-1.128-1.542-1.905-2.794-1.903H6.809a3 3 0 0 0-2.811 1.947L2.316 9.443a.75.75 0 1 0 1.368.614l1.7-3.79c.238-.63.798-1.018 1.424-1.017h10.383a1.5 1.5 0 0 1 1.407.973l1.718 3.834a.75.75 0 1 0 1.368-.614M.75 16.468V18a2.25 2.25 0 0 0 4.5 0v-1.5a.75.75 0 0 0-1.5 0V18a.75.75 0 0 1-1.5 0v-1.532a.75.75 0 0 0-1.5 0m21 0V18a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 0-1.5 0V18a2.25 2.25 0 0 0 4.5 0v-1.532a.75.75 0 0 0-1.5 0M19.875 13.5a.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5m.375-.375a.375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5c-.621 0-1.125.504-1.125 1.125a.75.75 0 0 0 1.5 0m-.375-.375c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5m-.375.375c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0M4.125 12C3.504 12 3 12.504 3 13.125a.75.75 0 0 0 1.5 0 .375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5m1.125 1.125c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0M4.125 14.25c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5M3 13.125c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0M2.75 10.5h18.5c.69 0 1.25.56 1.25 1.25v3.75a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-3.75c0-.69.56-1.25 1.25-1.25m0-1.5A2.75 2.75 0 0 0 0 11.75v3.75c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0 0 24 15.5v-3.75A2.75 2.75 0 0 0 21.25 9z">
+                         </path>
+                    </svg>
+                    Car rentals
+               </div>
+               <div class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                         <path
+                              d="M13.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M15 3a3 3 0 1 0-6 0 3 3 0 0 0 6 0m6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M6 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M21 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0m-9-3.75a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M6 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0m10.066 1.277a7.5 7.5 0 0 1-3.077 2.05.75.75 0 0 0 .498 1.415 9 9 0 0 0 3.693-2.46.75.75 0 1 0-1.114-1.005m1.798-6.466c.177.922.183 1.869.015 2.792a.75.75 0 1 0 1.476.268c.2-1.106.194-2.24-.019-3.344a.75.75 0 1 0-1.472.284m-5.337-5.784a7.5 7.5 0 0 1 3.54 2.196.75.75 0 0 0 1.113-1.004 9 9 0 0 0-4.247-2.636.75.75 0 1 0-.406 1.444M6.434 6.223a7.5 7.5 0 0 1 3.539-2.196.75.75 0 1 0-.406-1.444A9 9 0 0 0 5.32 5.219a.75.75 0 0 0 1.114 1.004M4.636 12.69a7.6 7.6 0 0 1 0-2.878.75.75 0 1 0-1.472-.284 9.1 9.1 0 0 0 0 3.446.75.75 0 0 0 1.472-.284m4.876 5.639a7.5 7.5 0 0 1-3.035-2.005.75.75 0 0 0-1.106 1.014 9 9 0 0 0 3.641 2.405.75.75 0 1 0 .5-1.414M7.31 21.872A1.5 1.5 0 0 0 8.672 24h6.656a1.5 1.5 0 0 0 1.362-2.128l-3.314-8.217c-.361-.785-1.252-1.114-2.005-.767a1.5 1.5 0 0 0-.733.734l-3.343 8.283zm1.377.595 3.328-8.25-.015.033 3.313 8.217.015.033H8.672z">
+                         </path>
+                    </svg>
+                    Attractions
+               </div>
+               <div class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                         <path
+                              d="M21.75 15.5V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0m-16.5 0V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0M3 8.75h3a.75.75 0 0 0 0-1.5H3a.75.75 0 0 0 0 1.5m6.75 6.75v-6a.75.75 0 0 1 1.5 0v6a.75.75 0 0 0 1.5 0v-6a2.25 2.25 0 0 0-4.5 0v6a.75.75 0 0 0 1.5 0M9 13.25h3a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5m5.304-4.971 3 7.5a.75.75 0 0 0 1.392-.557l-3-7.5a.75.75 0 0 0-1.392.557m3-.558-3 7.5a.75.75 0 0 0 1.392.557l3-7.5a.75.75 0 0 0-1.392-.557M.75 5h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5m0 15h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5">
+                         </path>
+                    </svg>
+                    Airport taxis
+               </div>
+          </nav>
+     </div>
+
+     <!-- Hero Section -->
+     <div class="hero">
+          <h1>Find your next stay</h1>
+          <p>Search low prices on hotels, homes and much more...</p>
+     </div>
+
+     <div class="search-form">
+          <input type="text" class="search-input" placeholder="Where are you going?">
+          <div class="date-picker">Check-in date — Check-out date</div>
+          <div class="guest-selector">2 adults · 0 children · 1 room</div>
+          <button class="search-button">Search</button>
+     </div>
+
+     <div class="checkbox-container">
+          <input type="checkbox" id="flights-checkbox">
+          <label for="flights-checkbox">I'm looking for flights</label>
+     </div>
+
+     <!-- Offers Section -->
+     <div class="offers">
+          <h2>Offers</h2>
+          <p>Promotions, deals and special offers for you</p>
+
+          <div class="offers-grid">
+               <div class="offer-card">
+                    <div class="offer-content">
+                         <div class="offer-title">Save on stays worldwide</div>
+                         <div class="offer-description">Start your year with a sense of adventure, saving 15% or more
+                              with Early 2025 Deals.</div>
+                         <button class="offer-button">Save 15% or more</button>
+                    </div>
+                    <img src="img/p1.jpg" alt="Adventure" class="offer-image">
+               </div>
+               <div class="offer-card">
+                    <div class="offer-content">
+                         <div class="offer-title">Quick escape, quality time</div>
+                         <div class="offer-description">Save up to 20% with a Getaway Deal</div>
+                         <button class="offer-button">Save on stays</button>
+                    </div>
+                    <img src="img/p2.jpg" alt="Getaway" class="offer-image">
+               </div>
+          </div>
+
+          <div class="pagination">
+               <div class="pagination-dot active"></div>
+          </div>
+     </div>
+     <div class="container">
+          <h1>Browse by property type</h1>
+          <div class="property-types">
+               <div class="property-card">
+                    <img src="hotel.jpg" alt="Hotels">
+                    <h3>Hotels</h3>
+               </div>
+               <div class="property-card">
+                    <img src="apartment.jpg" alt="Apartments">
+                    <h3>Apartments</h3>
+               </div>
+               <div class="property-card">
+                    <img src="resort.jpg" alt="Resorts">
+                    <h3>Resorts</h3>
+               </div>
+               <div class="property-card">
+                    <img src="villa.jpg" alt="Villas">
+                    <h3>Villas</h3>
+               </div>
+          </div>
+     </div>
+     <!-- Explore Section -->
+     <div class="explore">
+          <h2>Explore India</h2>
+          <p>These popular destinations have a lot to offer</p>
+
+          <div class="destinations-grid">
+               <!-- Initial destination cards -->
+               <div class="destination-card">
+                    <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684765.webp?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o="
+                         alt="Prayagraj" class="destination-image">
+                    <div class="destination-info">
+                         <div class="destination-name">Prayagraj</div>
+                         <div class="destination-properties">124 properties</div>
+                    </div>
+               </div>
+               <div class="destination-card">
+                    <img src="https://t-cf.bstatic.com/xdata/images/city/square250/684534.webp?k=d1fe86c22f2433f4e2dda14ddcbe80feb024b0fb30305e5684a1241fba5d4cff&o="
+                         alt="New Delhi" class="destination-image">
+                    <div class="destination-info">
+                         <div class="destination-name">New Delhi</div>
+                         <div class="destination-properties">2,919 properties</div>
+                    </div>
+               </div>
+               <!-- The rest will be added by JavaScript -->
+
+               <!-- Navigation buttons -->
+               <button class="carousel-button prev">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                         <path
+                              d="M14.55 18a.74.74 0 0 1-.53-.22l-5-5A1.08 1.08 0 0 1 8.7 12c0-.3.11-.56.32-.78l5-5a.75.75 0 0 1 1.06 0 .74.74 0 0 1 0 1.06L10.36 12l4.72 4.72a.74.74 0 0 1 0 1.06.73.73 0 0 1-.53.22z">
+                         </path>
+                    </svg>
+               </button>
+               <button class="carousel-button next">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                         <path
+                              d="M9.45 6c.2 0 .39.078.53.22l5 5c.208.206.323.487.32.78a1.1 1.1 0 0 1-.32.78l-5 5a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06L13.64 12 8.92 7.28a.74.74 0 0 1 0-1.06.73.73 0 0 1 .53-.22z">
+                         </path>
+                    </svg>
+               </button>
+          </div>
+     </div>
+     <!-- added -->
+     <div class="container">
+          <div class="header">
+               <h2>Quick and easy trip planner</h2>
+               <div class="subheading">Pick a vibe and explore the top destinations in India</div>
+
+               <div class="filter-options">
+                    <div class="filter-option active">
+                         <i class="fas fa-building"></i> Big City
+                    </div>
+                    <div class="filter-option">
+                         <i class="fas fa-umbrella-beach"></i> Beach
+                    </div>
+                    <div class="filter-option">
+                         <i class="fas fa-mountain"></i> Outdoors
+                    </div>
+                    <div class="filter-option">
+                         <i class="fas fa-spa"></i> Relax
+                    </div>
+                    <div class="filter-option">
+                         <i class="fas fa-heart"></i> Romance
+                    </div>
+                    <div class="filter-option">
+                         <i class="fas fa-utensils"></i> Food
+                    </div>
+               </div>
+
+               <div class="destinations">
+                    <div class="destination-card">
+                         <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41" alt="Fatehpur Sikri">
+                         <div class="destination-info">
+                              <div class="destination-name">Fatehpur Sikri</div>
+                              <div class="destination-distance">133 km from Greater Noida</div>
+                         </div>
+                    </div>
+
+                    <div class="destination-card">
+                         <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66" alt="Old Goa">
+                         <div class="destination-info">
+                              <div class="destination-name">Old Goa</div>
+                              <div class="destination-distance">1,488 km from Greater Noida</div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="section-header">
+               <h2>Popular attractions in New Delhi</h2>
+               <a href="#" class="see-all">See all attractions</a>
+          </div>
+          <div class="subheading">Experience everything this city has to offer</div>
+
+          <div class="attractions" style="position: relative;">
+               <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523" alt="Taj Mahal">
+                    <div class="attraction-info">
+                         <div class="attraction-title">Same Day Agra/Taj Mahal Tour from Delhi - Private & Guided</div>
+                    </div>
+               </div>
+
+               <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="Taj Mahal">
+                    <div class="attraction-info">
+                         <div class="attraction-title">All Inclusive Taj Mahal Agra Fort, Baby Taj Car with Local Guide
+                         </div>
+                    </div>
+               </div>
+
+               <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1" alt="Walking Tour">
+                    <div class="attraction-info">
+                         <div class="attraction-title">Guided Walking Tour in New Delhi</div>
+                    </div>
+               </div>
+
+               <div class="attraction-card">
+                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da" alt="Taj Mahal">
+                    <div class="attraction-info">
+                         <div class="attraction-title">All Inclusive Taj Mahal & Agra Fort Tour from Delhi by Car</div>
+                    </div>
+               </div>
+
+               <div class="next-button">
+                    <i class="fas fa-chevron-right"></i>
+               </div>
+          </div>
+
+          <div class="section-header">
+               <h2>Deals for the weekend</h2>
+          </div>
+          <div class="subheading">Save on stays for 21 March - 23 March</div>
+
+          <div class="deals" style="position: relative;">
+               <div class="deal-card">
+                    <div class="deal-tag">Deal</div>
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a" alt="Palm Mystic Inn">
+                    <div class="deal-info">
+                         <div class="deal-title">Palm Mystic Inn - Indiranagar</div>
+                         <div class="deal-location">Bengaluru, India</div>
+                         <div class="deal-rating">
+                              <div class="deal-rating-score">8.2</div>
+                              <div class="deal-rating-text">Very good</div>
+                         </div>
+                         <div class="deal-reviews">221 reviews</div>
+                         <div class="deal-price">
+                              <div class="deal-nights">2 nights</div>
+                              <div>
+                                   <div class="deal-old-price">₹ 5,320</div>
+                                   <div class="deal-amount">₹ 4,320</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="deal-card">
+                    <div class="deal-tag">Deal</div>
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461" alt="Hotel O Park">
+                    <div class="deal-info">
+                         <div class="deal-title">Hotel O Park Town Near Nehru Stadium</div>
+                         <div class="deal-location">Chennai, India</div>
+                         <div class="deal-rating">
+                              <div class="deal-rating-score">7.8</div>
+                              <div class="deal-rating-text">Good</div>
+                         </div>
+                         <div class="deal-reviews">156 reviews</div>
+                         <div class="deal-price">
+                              <div class="deal-nights">2 nights</div>
+                              <div>
+                                   <div class="deal-old-price">₹ 4,890</div>
+                                   <div class="deal-amount">₹ 3,950</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="deal-card">
+                    <div class="deal-tag">Deal</div>
+                    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9" alt="Lakeside Resort">
+                    <div class="deal-info">
+                         <div class="deal-title">Lakeside Resort & Spa</div>
+                         <div class="deal-location">Udaipur, India</div>
+                         <div class="deal-rating">
+                              <div class="deal-rating-score">9.1</div>
+                              <div class="deal-rating-text">Excellent</div>
+                         </div>
+                         <div class="deal-reviews">342 reviews</div>
+                         <div class="deal-price">
+                              <div class="deal-nights">2 nights</div>
+                              <div>
+                                   <div class="deal-old-price">₹ 7,650</div>
+                                   <div class="deal-amount">₹ 6,120</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="deal-card">
+                    <div class="deal-tag">Deal</div>
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Hillside Retreat">
+                    <div class="deal-info">
+                         <div class="deal-title">Hillside Retreat - Shimla</div>
+                         <div class="deal-location">Shimla, India</div>
+                         <div class="deal-rating">
+                              <div class="deal-rating-score">8.5</div>
+                              <div class="deal-rating-text">Very good</div>
+                         </div>
+                         <div class="deal-reviews">189 reviews</div>
+                         <div class="deal-price">
+                              <div class="deal-nights">2 nights</div>
+                              <div>
+                                   <div class="deal-old-price">₹ 6,200</div>
+                                   <div class="deal-amount">₹ 5,270</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="next-button">
+                    <i class="fas fa-chevron-right"></i>
+               </div>
+          </div>
+
+          <div class="section-header">
+               <h2>Properties near you</h2>
+               <a href="#" class="see-all">See all properties</a>
+          </div>
+          <div class="subheading">Explore staycation options in your city</div>
+
+          <div class="properties" style="position: relative;">
+               <div class="property-card">
+                    <div class="favorite-icon">❤</div>
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Luxury Hotel">
+                    <div class="property-info">
+                         <div class="property-title">The Luxury Collection - South Delhi</div>
+                         <div class="property-price">
+                              <span class="property-amount">₹ 3,850</span> per night
+                         </div>
+                         <a href="#" class="book-now">Book now</a>
+                    </div>
+               </div>
+
+               <div class="property-card">
+                    <div class="favorite-icon">❤</div>
+                    <img src="https://images.unsplash.com/photo-1587985064135-0366536eab42" alt="Garden View">
+                    <div class="property-info">
+                         <div class="property-title">Garden View Suites - Aerocity</div>
+                         <div class="property-price">
+                              <span class="property-amount">₹ 4,200</span> per night
+                         </div>
+                         <a href="#" class="book-now">Book now</a>
+                    </div>
+               </div>
+
+               <div class="property-card">
+                    <div class="favorite-icon">❤</div>
+                    <img src="https://images.unsplash.com/photo-1444201983204-c43cbd584d93" alt="River View">
+                    <div class="property-info">
+                         <div class="property-title">River View Resort - Yamuna Banks</div>
+                         <div class="property-price">
+                              <span class="property-amount">₹ 5,120</span> per night
+                         </div>
+                         <a href="#" class="book-now">Book now</a>
+                    </div>
+               </div>
+
+               <div class="property-card">
+                    <div class="favorite-icon">❤</div>
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" alt="City Center">
+                    <div class="property-info">
+                         <div class="property-title">City Center Plaza Hotel</div>
+                         <div class="property-price">
+                              <span class="property-amount">₹ 3,400</span> per night
+                         </div>
+                         <a href="#" class="book-now">Book now</a>
+                    </div>
+               </div>
+
+               <div class="next-button">
+                    <i class="fas fa-chevron-right"></i>
+               </div>
+          </div>
+
+          <div class="section-header">
+               <h2>Trending destinations</h2>
+               <a href="#" class="see-all">See all destinations</a>
+          </div>
+          <div class="subheading">Most searched destinations by Indian travelers</div>
+
+          <div class="destinations">
+               <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445" alt="Goa">
+                    <div class="destination-info">
+                         <div class="destination-name">Goa</div>
+                         <div class="destination-distance">1,480 km from Greater Noida</div>
+                    </div>
+               </div>
+
+               <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="Agra">
+                    <div class="destination-info">
+                         <div class="destination-name">Agra</div>
+                         <div class="destination-distance">165 km from Greater Noida</div>
+                    </div>
+               </div>
+
+               <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1509815626781-3e8537de4617" alt="Jaipur">
+                    <div class="destination-info">
+                         <div class="destination-name">Jaipur</div>
+                         <div class="destination-distance">235 km from Greater Noida</div>
+                    </div>
+               </div>
+
+               <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1596275281743-e7399c7bdfa9" alt="Shimla">
+                    <div class="destination-info">
+                         <div class="destination-name">Shimla</div>
+                         <div class="destination-distance">378 km from Greater Noida</div>
+                    </div>
+               </div>
+
+               <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1586752727874-074e6fb4c0a4" alt="Rishikesh">
+                    <div class="destination-info">
+                         <div class="destination-name">Rishikesh</div>
+                         <div class="destination-distance">222 km from Greater Noida</div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <footer>
+          <div>
+               <h1>Popular with travellers from India</h1>
+               <ul type="none" class="special">
+                    <li><button id="btn">Domestic cities</button></li>
+                    <li>International cities</li>
+                    <li>Regions</li>
+
+                    <li>Places to stay</li>
+               </ul><br>
+               <div class="list">
+                    <div>
+                         <ul type="none">
+                              <li>Srinagar hotels</li>
+                              <li>Ooty hotels</li>
+                              <li>Bangalore hotels</li>
+                              <li>Mumbai hotels</li>
+                         </ul>
+                    </div>
+                    <div>
+                         <ul type="none">
+
+
+                              <li>Lonavala hotels</li>
+                              <li>Hyderabad hotels</li>
+                              <li>Jaipur hotels</li>
+                              <li>Jaipur hotels</li>
+                              <li>Puri hotels</li>
+
+                         </ul>
+                    </div>
+                    <div>
+                         <ul type="none">
+                              <li>Puducherry hotels</li>
+                              <li>Rishīkesh hotels</li>
+                              <li>Munnar hotels</li>
+                              <li>Varanasi hotels</li>
+                              <li>Ayodhya hotels</li>
+                         </ul>
+                    </div>
+                    <div>
+                         <ul type="none">
+                              <li>Pune hotels</li>
+                              <li>Mysore hotels</li>
+                              <li>Varkala hotels</li>
+                              <li>Manāli hotels</li>
+                              <li>New Delhi hotels</li>
+                         </ul>
+                    </div>
+               </div>
+               <div class="city">
+
+                    <ul type="bullet">
+                         <li>Airports</li>
+                         <li>Cities</li>
+
+                    </ul>
+                    <ul type="bullet">
+                         <li>Discover monthly stays</li>
+                         <li>Discover</li>
+
+                    </ul>
+                    <ul type="bullet">
+                         <li>Unique places to stay</li>
+                         <li>Cities</li>
+
+                    </ul>
+                    <ul type="bullet">
+                         <li>Places of interest</li>
+                         <li>Villas</li>
+                    </ul>
+               </div>
+               <br>
+               <div class="last">
+                    <div>
+                         <ul type="none">
+                              <li><b>Support</b></li>
+                              <li>Coronavirus (COVID-19) FAQs</li>
+                              <li>Manage your trips</li>
+                              <li>Contact Customer Service</li>
+                              <li>Safety resource centre</li>
+                         </ul>
+                    </div>
+                    <div>
+                         <ul type="none">
+                              <li></li>
+                              <li><b>Discover</b></li>
+                              <li>Genius loyalty programme</li>
+                              <li>Seasonal and holiday deals</li>
+                              <li>Travel articles</li>
+                              <li>Booking.com for Business</li>
+                              <li>Traveller Review Awards</li>
+                              <li>Car hire</li>
+                              <li>Flight finder</li>
+                              <li>Restaurant reservations</li>
+                              <li>Booking.com for Travel Agents</li>
+
+                         </ul>
+
+
+                    </div>
+                    <div>
+                         <ul type="none">
+                              <li></li>
+                              <li><b>Terms and settings</b></li>
+                              <li>Privacy & cookies</li>
+                              <li>Terms and conditions</li>
+                              <li>Grievance officer</li>
+                              <li>Modern Slavery Statement</li>
+                              <li>Human Rights Statement</li>
+                         </ul>
+
+
+                    </div>
+                    <div>
+                         <ul type="none">
+                              <li></li>
+                              <li><b>Partners</b></li>
+                              <li>Extranet login</li>
+                              <li>Partner help</li>
+                              <li>List your property</li>
+                              <li>Become an affiliate</li>
+                         </ul>
+                    </div>
+                    <div>
+                         <ul>
+                              <li><b>About</b></li>
+                              <li>About Booking.com</li>
+                              <li>How we work</li>
+                              <li>Sustainability</li>
+                              <li>Press centre</li>
+                              <li>Corporate contact</li>
+                              <li>Careers</li>
+                              <li>Investor relations</li>
+                         </ul>
+                    </div>
+               </div>
+               <hr><br>
+               <div class="end">
+                    <p>Booking.com is part of Booking Holdings Inc., the world leader in online travel and related
+                         services.</p>
+                    <p>Copyright &copy; 1996-2025 Booking.com &trade;. All rights reserved.</p>
+               </div>
+               <br>
+               <ul type="none" class="special" id="logo">
+                    <img src="booking.png">
+                    <li></li>
+                    <img src="pricelinelogo.png">
+                    <li></li>
+                    <img src="kayak_logo.png">
+                    <li></li>
+                    <img src="agoda.png">
+                    <li></li>
+                    <img src="opentable.png">
+                    <li></li>
+               </ul>
+     </footer>
+     <script src="script.js"></script>
+</body>
+
+</html>
