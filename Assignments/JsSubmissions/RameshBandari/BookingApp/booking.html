@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="Icon" href="./images/logo.jpeg" type="image/x-icon">
+    <title>Booking.com</title>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="w-full h-[365px] bg-[#003b95]">
+            <header class="ml-[14%] mr-[13%] pt-5">
+                <div class="flex">
+                    <div class="w-[54%] ">
+                        <h1 class="text-white font-bold pb-3 text-2xl">Booking.com</h1>
+                    </div>
+                    <div class="text-white flex gap-2">
+                        <button class="hover:bg-[#255db1cc] rounded-md p-3">INR</button>
+
+                        <button class="hover:bg-[#255db1cc] rounded-md p-3"><img
+                                src="https://t-cf.bstatic.com/design-assets/assets/v3.142.0/images-flags/In@3x.png"
+                                height="25px" width="25px" alt="" class="rounded-[50%]"></button>
+                        <a href="" class="hover:bg-[#255db1cc] rounded-md p-3"><img src="help.svg" alt=""></a>
+                        <a href="" class="hover:bg-[#255db1cc] rounded-md p-3"><span class="font-semibold text-md">List
+                                Your Property</span></a>
+                        <a href="" class="bg-white rounded-sm p-2 mt-1 w-18 h-9"><span
+                                class="text-blue-600 font-semibold text-sm justify-center flex">Register</span></a>
+                        <a href="" class="bg-white rounded-sm p-2 mt-1 w-18 h-9"><span
+                                class="text-blue-600 font-semibold text-sm justify-center flex">Sign in</span></a>
+
+
+                    </div>
+                </div>
+                <div class="flex gap-3 font-normal text-sm">
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white bg-[#255db19f] border border-white hover:bg-[#255db19f] hover:border hover:border-white rounded-l-full rounded-r-full px-4 py-2">
+                        <img src="bed.svg" alt="Bed Icon" class="w-6 h-6">
+                        <span>Stays</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white hover:bg-[#255db19f] rounded-l-full rounded-r-full px-4 py-2">
+                        <i class="fa-solid fa-plane"></i> <span>Flights</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white hover:bg-[#255db19f] rounded-l-full rounded-r-full px-4 py-2">
+                        <i class="fa-solid fa-suitcase-rolling"></i> <span>Flight + Hotel</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white hover:bg-[#255db19f] rounded-l-full rounded-r-full px-4 py-2">
+                        <i class="fa-solid fa-car"></i> <span>Car Rentals</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white hover:bg-[#255db19f] rounded-l-full rounded-r-full px-4 py-2">
+                        <img src="attractions.svg" alt="Attractions" class="w-6 h-6"> <span>Attractions</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-white hover:bg-[#255db19f] rounded-l-full rounded-r-full px-4 py-2">
+                        <i class="fa-solid fa-taxi"></i> <span>Airport Taxis</span></a>
+                </div>
+            </header>
+            <div class="ml-[14%] mr-[13%] pt-10 text-white">
+                <span class="font-bold text-[50px]">Find your next stay</span>
+                <p class="text-[25px]">Search deals on hotels, homes, and much more...</p>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center">
+            <div
+                class="bg-[#ffb700] rounded-lg ml-[14%] mr-[13%] w-full h-[65px] flex justify-center mt-[-30px] p-1 gap-1">
+                <div class="w-1/3 bg-white rounded-md flex items-center text-gray-600 p-4">
+
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" fill="currentColor">
+                            <path
+                                d="M2.75 12h18.5c.69 0 1.25.56 1.25 1.25V18l.75-.75H.75l.75.75v-4.75c0-.69.56-1.25 1.25-1.25m0-1.5A2.75 2.75 0 0 0 0 13.25V18c0 .414.336.75.75.75h22.5A.75.75 0 0 0 24 18v-4.75a2.75 2.75 0 0 0-2.75-2.75zM0 18v3a.75.75 0 0 0 1.5 0v-3A.75.75 0 0 0 0 18m22.5 0v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0m-.75-6.75V4.5a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 2.25 4.5v6.75a.75.75 0 0 0 1.5 0V4.5a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 0 1.5 0m-13.25-3h7a.25.25 0 0 1 .25.25v2.75l.75-.75h-9l.75.75V8.5a.25.25 0 0 1 .25-.25m0-1.5A1.75 1.75 0 0 0 6.75 8.5v2.75c0 .414.336.75.75.75h9a.75.75 0 0 0 .75-.75V8.5a1.75 1.75 0 0 0-1.75-1.75z">
+                            </path>
+                        </svg></span>
+                    <input type="text" placeholder="Where are you going?"
+                        class="placeholder-black hover:placeholder-gray-600 text-black border-none font-semibold text-sm px-3 py-2 w-full outline-none">
+                </div>
+                <div class="w-1/3 bg-white rounded-lg flex items-center text-gray-600 p-4">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" fill="currentColor">
+                            <path
+                                d="M22.5 13.5v8.25a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1-.75-.75V5.25a.75.75 0 0 1 .75-.75h19.5a.75.75 0 0 1 .75.75zm1.5 0V5.25A2.25 2.25 0 0 0 21.75 3H2.25A2.25 2.25 0 0 0 0 5.25v16.5A2.25 2.25 0 0 0 2.25 24h19.5A2.25 2.25 0 0 0 24 21.75zm-23.25-3h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5M7.5 6V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0M18 6V.75a.75.75 0 0 0-1.5 0V6A.75.75 0 0 0 18 6M5.095 14.03a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06m.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5m-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06m.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5m5.845-3.97a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06m.53-1.28A1.125 1.125 0 1 0 12 15a1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5m-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06M12 18a1.125 1.125 0 1 0 0 2.25A1.125 1.125 0 0 0 12 18a.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5m5.845-3.97a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06m.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5m-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06m.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5">
+                            </path>
+                        </svg></span>
+
+                    <button type="button"><span class="p-2 text-black font-semibold text-sm">Check-in
+                            date</span></button><span> — </span>
+                    <button type="button"><span class="p-2 text-black font-semibold text-sm">Check-out
+                            date</span></button>
+
+
+                </div>
+                <div class="w-1/3 bg-white rounded-lg flex items-center text-gray-600 p-4 gap-1">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" fill="currentColor">
+                            <path
+                                d="M16.5 6a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0M18 6A6 6 0 1 0 6 6a6 6 0 0 0 12 0M3 23.25a9 9 0 1 1 18 0 .75.75 0 0 0 1.5 0c0-5.799-4.701-10.5-10.5-10.5S1.5 17.451 1.5 23.25a.75.75 0 0 0 1.5 0">
+                            </path>
+                        </svg>
+                    </span><span class="p-2 text-black font-semibold text-sm">2 adults · 0 children · 1 room</span>
+                    <span class="flex justify-end items-end pl-10"><i class="fa-solid fa-chevron-down"></i></span>
+
+                </div>
+                <div class="w-[150px] rounded-md flex items-center bg-[#006ce3] hover:bg-[#0059b8]">
+                    <button class="w-full flex items-center justify-center"><span
+                            class="w-full text-white text-xl font-semibold">Search</span></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="ml-[14%] mr-[13%] py-4 text-black flex items-center gap-2">
+            <input type="checkbox" class="w-5 h-5"><label class="text-sm">I’m looking for flights</label>
+        </div>
+        <div class="flex ml-[14%] mr-[13%] flex-col gap-1 mt-10 p-2">
+            <div>
+                <div>
+                    <h1 class="font-bold text-2xl">Offers</h1>
+                </div>
+                <div>
+                    <p class="text-gray-600">Promotions, deals, and special offers for you</p>
+                </div>
+                <div class="flex gap-2 w-full">
+                    <div class="w-1/2 border border-gray-200 rounded-md p-2 flex h-auto">
+                        <div class="w-3/4 p-2">
+                            <h1 class="font-bold text-xl">Save on stays worldwide</h1>
+                            <p class="text-sm">Start your year with an adventure, saving 15% or more with Early 2025
+                                Deals.</p>
+                            <button
+                                class="rounded-md flex items-center bg-[#006ce3] hover:bg-[#0059b8] text-white p-[5px] mt-3">Save
+                                15% or more</button>
+                        </div>
+                        <div class="w-1/4 flex justify-center items-center p-3">
+                            <img src="https://r-xx.bstatic.com/xdata/images/xphoto/248x248/432735067.jpeg?k=eb7007b62c42d5746b3c22f385e43035085456b1a1ff8ecaeadd01e9c7aff258&amp;o="
+                                alt="A family on safari" loading="lazy"
+                                class="w-25 h-25 object-cover object-center rounded-sm">
+                        </div>
+
+                    </div>
+                    <div class="w-1/2 border border-gray-200 rounded-md p-2 h-auto flex">
+                        <div class="w-3/4 p-2">
+                            <h1 class="font-bold text-xl">Quick escape, quality time</h1>
+                            <p class="text-sm">Save up to 20% with a Getaway Deal</p>
+                            <button
+                                class="rounded-md flex items-center bg-[#006ce3] hover:bg-[#0059b8] text-white p-[5px] mt-3">Save
+                                on stays</button>
+                        </div>
+
+                        <div class="w-1/4 flex justify-center items-center p-3">
+                            <img class="w-25 h-25 object-cover object-center rounded-sm"
+                                src="https://r-xx.bstatic.com/xdata/images/xphoto/248x248/468828542.jpeg?k=b51cb74f05db0ebc1a1cbcca384fa2ee8c4d6c0b5fd089a15b1fd14a107ccab4&amp;o="
+                                alt="Two people lean on the edge of a boat and smile in the sunshine. " loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-full max-w-6xl mx-auto mt-[125px]">
+                <h2 class="text-2xl font-bold mb-4">Browse by Property Type</h2>
+
+                <div class="relative">
+                    <button id="prev"
+                        class="absolute left-[-10px] top-1/2 transform -translate-y-1/2 bg-white text-black p-3 w-10 h-10 rounded-full items-center flex shadow-lg justify-center font-semibold">&lt;</button>
+
+                    <div id="scrollContainer"
+                        class="overflow-x-scroll  scroll-smooth flex space-x-4 p-4 scrollbar-hide hide-scrollbar">
+                        <div class="flex space-x-4">
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/1.jpeg" alt="Hotel"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold"> Ryokans</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/2.jpeg" alt="Apartment"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Apartment</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/3.jpeg" alt="Resort"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Resort</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/5.jpeg" alt="Villa"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Cabins</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/6.jpeg" alt="Bungalow"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Cottages</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/7.webp" alt="Hotel"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Guest Houses</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/8.jpeg" alt="Apartment"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Holiday Homes</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/9.jpeg" alt="Bungalow"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Holiday Parks</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/10.jpeg" alt="Hotel"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Motels</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[255px]">
+                                <img src="./images/hotel/11.jpeg" alt="Apartment"
+                                    class="w-full h-[210px] object-cover rounded-md">
+                                <div class="py-2 font-bold">Hotel</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="next"
+                        class="absolute right-[-15px] top-1/2 transform -translate-y-1/2 bg-white text-black p-3 w-10 h-10 rounded-full items-center flex shadow-lg justify-center font-semibold">&gt;</button>
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold">Explore India</h2>
+                <div>
+                    <p>These popular destinations have a lot to offer</p>
+                </div>
+
+                <div class="relative">
+                    <button id="prev2"
+                        class="absolute left-[-15px] top-1/2 transform -translate-y-1/2 bg-white text-black p-3 w-10 h-10 rounded-full items-center flex shadow-lg justify-center font-semibold">&lt;</button>
+
+                    <div id="scrollContainer2"
+                        class="overflow-x-scroll scroll-smooth flex space-x-4 py-4 scrollbar-hide hide-scrollbar">
+                        <div class="flex space-x-4 p-1">
+
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/1.jpeg" alt="Hotel"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold"> Hotel</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/2.jpeg" alt="Apartment"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Apartment</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/3.jpeg" alt="Resort"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Resort</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/5.jpeg" alt="Villa"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Villa</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/6.jpeg" alt="Bungalow"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Bungalow</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/1.jpeg" alt="Hotel"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold"> Hotel</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/2.jpeg" alt="Apartment"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Apartment</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/3.jpeg" alt="Resort"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Resort</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/5.jpeg" alt="Villa"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Villa</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/6.jpeg" alt="Bungalow"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Bungalow</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/2.jpeg" alt="Apartment"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Apartment</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/3.jpeg" alt="Resort"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Resort</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/5.jpeg" alt="Villa"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Villa</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden min-w-[172px]">
+                                <img src="./images/hotel/6.jpeg" alt="Bungalow"
+                                    class="w-full h-32 object-cover rounded-md">
+                                <div class="py-2 font-bold">Bungalow</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="next2"
+                        class="absolute right-[-25px] top-1/2 transform -translate-y-1/2 bg-white text-black p-3 w-10 h-10 rounded-full items-center flex shadow-lg justify-center font-semibold">&gt;</button>
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold">Trending destinations</h2>
+                <div>
+                    <p class="text-gray-600">Travellers searching for India also booked these</p>
+                </div>
+                <div class="gap-4 mt-5 w-full">
+                    <!-- First Row -->
+                    <div class="flex w-full gap-4">
+                        <div class="relative w-1/2 rounded-lg overflow-hidden">
+                            <img src="./images/city/1.jpg" alt="Calangute Beach"
+                                class="w-full h-[270px] object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 text-white drop-shadow-[1px_1px_0_black] font-bold text-3xl px-2 py-1 rounded">
+                                Calangute, India
+                            </span>
+                        </div>
+
+                        <div class="relative w-1/2 rounded-lg overflow-hidden">
+                            <img src="./images/city/2.webp" alt="Candolim Beach"
+                                class="w-full h-[270px] object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 text-white drop-shadow-[1px_1px_0_black] font-bold text-3xl px-2 py-1 rounded">
+                                Candolim, India
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Second Row -->
+                    <div class="flex w-full gap-4 mt-4">
+                        <div class="relative w-1/3 rounded-lg overflow-hidden">
+                            <img src="./images/city/3.jpg" alt="Panaji"
+                                class="w-full h-[270px] object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 text-white drop-shadow-[1px_1px_0_black] font-bold text-3xl px-2 py-1 rounded">
+                                Panaji, India
+                            </span>
+                        </div>
+
+                        <div class="relative w-1/3 rounded-lg overflow-hidden">
+                            <img src="./images/city/4.jpg" alt="Anjuna Beach"
+                                class="w-full h-[270px] object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 text-white drop-shadow-[1px_1px_0_black] font-bold text-3xl px-2 py-1 rounded">
+                                Anjuna, India
+                            </span>
+                        </div>
+
+                        <div class="relative w-1/3 rounded-lg overflow-hidden">
+                            <img src="./images/city/5.jpg" alt="Mumbai"
+                                class="w-full h-[270px] object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 text-white drop-shadow-[1px_1px_0_black] font-bold text-3xl px-2 py-1 rounded">
+                                Mumbai, India
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="relative w-full max-w-6xl mx-auto">
+                <h2 class="text-2xl font-bold my-2">Quick and easy trip planner</h2>
+                <div>
+                    <p class="text-gray-600">Pick a vibe and explore the top destinations in India</p>
+                </div>
+                <div class="flex gap-3 font-normal text-sm mt-2 ">
+                    <a href="#"
+                        class="flex items-center space-x-2 text-blue-500 bg-[#eff6fe] border border-blue-600 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-city"></i>
+
+                        <span>City</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <span>Beach</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-bicycle"></i>
+                        <span>Outdoors</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-spa"></i>
+                        <span>Relax</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Romance</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Food</span></a>
+                </div>
+                <div class="flex gap-5 mt-5">
+
+                    <div class="bg-white rounded-lg overflow-hidden max-w-[172px]">
+                        <img src="./images/hotel/1.jpeg" alt="Hotel"
+                            class="w-full h-32 object-cover rounded-md">
+                        <div class="py-2 font-semibold"> Old Goa</div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden max-w-[172px]">
+                        <img src="./images/hotel/2.jpeg" alt="Apartment"
+                            class="w-full h-32 object-cover rounded-md">
+                        <div class="py-2 font-semibold">Fatehpur Sīkri</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="relative w-full max-w-6xl mx-auto mt-5">
+                <h2 class="text-2xl font-bold my-2">Deals for the weekend</h2>
+                <div>
+                    <p class="text-gray-600">Save on stays for 21 March - 23 March</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-md">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative p-4">
+                        <img src="./images/hotel/1.jpeg" alt="Hotel" class="w-full h-[210px] object-cover">
+                        <div class=" font-bold">Vijayshree Resort, Hampi</div>
+                        <p class="text-gray-600">Hampi, India</p>
+                        <div class="my-1">
+                        <span class="p-1 bg-blue-900 rounded-md text-white text-[12px] mb-2">6.3</span><span class="text-[12px] text-gray-900 px-2">Review score · 51 reviews</span>
+                    </div>
+                        <button class="bg-green-700 text-white rounded-md px-2 py-1 text-[12px]">Early 2025 Deal</button>
+
+                        <div class="absolute bottom-2 right-2 flex items-end gap-2">
+                            <span class="text-gray-700 text-[12px]">2 nights</span>
+                            <span class="text-red-600 line-through text-sm font-medium">₹ 21,600</span>
+                            <span class="font-bold px-2">₹ 15,120</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative p-4">
+                        <img src="./images/hotel/2.jpeg" alt="Hotel" class="w-full h-[210px] object-cover">
+                        <div class=" font-bold">Olive Hotel Benz Circle, Vijayawada by Embassy Group</div>
+                        <p class="text-gray-600"> Vijayawāda, India</p>
+                        <div class="my-1">
+                        <span class="p-1 bg-blue-900 rounded-md text-white text-[12px] mb-2">8.4</span><span class="text-[12px] text-gray-900 px-2">Very goodVery good · 34 reviews</span>
+                    </div>
+                        <button class="bg-green-700 text-white rounded-md px-2 py-1 text-[12px]">Early 2025 Deal</button>
+
+                        <div class="absolute bottom-2 right-2 flex items-end gap-2">
+                            <span class="text-gray-700 text-[12px]">2 nights</span>
+                            <span class="text-red-600 line-through text-sm font-medium">₹ 7,267
+                                </span>
+                            <span class="font-bold px-2">₹ 5,814</span>
+                        </div>
+                    </div>
+        
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative p-4">
+                        <img src="./images/hotel/1.jpeg" alt="Hotel" class="w-full h-[210px] object-cover">
+                        <div class=" font-bold">Super Collection O Srisailam Highway</div>
+                        <p class="text-gray-600">Shamshabad, India</p>
+                        <div class="my-1">
+                        <span class="p-1 bg-blue-900 rounded-md text-white text-[12px] mb-2">6.5</span><span class="text-[12px] text-gray-900 px-2">Review score · 20 reviews</span>
+                    </div>
+
+                        <div class="absolute bottom-2 right-2 flex items-end gap-2">
+                            <span class="text-gray-700 text-[12px]">2 nights</span>
+                            <span class="text-red-600 line-through text-sm font-medium">₹ 3,858</span>
+                            <span class="font-bold px-2">₹ 2,238</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative p-4">
+                        <img src="./images/hotel/1.jpeg" alt="Hotel" class="w-full h-[210px] object-cover">
+                        <div class=" font-bold">ANU HOMESTAY</div>
+                        <p class="text-gray-600">Hampi, India</p>
+                        <div class="my-1">
+                        <span class="p-1 bg-blue-900 rounded-md text-white text-[12px] mb-2">9.8</span><span class="text-[12px] text-gray-900 px-2">ExceptionalExceptional · 13 reviews</span>
+                    </div>
+                        <button class="bg-green-700 text-white rounded-md px-2 py-1 text-[12px]">Early 2025 Deal</button>
+
+                        <div class="absolute bottom-2 right-2 flex items-end gap-2">
+                            <span class="text-gray-700 text-[12px]">2 nights</span>
+                            <span class="text-red-600 line-through text-sm font-medium">₹ 6,000</span>
+                            <span class="font-bold px-2">₹ 4,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="container mx-auto py-10">
+                <h2 class="text-2xl font-bold">Popular with travellers from India</h2>
+
+
+                <div class="flex gap-3 font-normal text-sm mb-4 py-4">
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 bg-[#eff6fe] border border-blue-600 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-3 text-blue-500 ">
+                        <span>Domestic cities</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-2">
+                        <span>International cities</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-2">
+                        <span>Regions</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-2">
+                        <span>Countries</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center space-x-2 text-gray-1000 hover:bg-gray-100 rounded-l-full rounded-r-full px-4 py-2">
+                        <span>Places to stay</span>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-black text-[12px]">
+                    <p>Srinagar hotels</p>
+                    <p>Hyderabad hotels</p>
+                    <p>Rishikesh hotels</p>
+                    <p>Mysore hotels</p>
+                    <p>Kodaikanal hotels</p>
+                    <p>Ooty hotels</p>
+                    <p>Jaipur hotels</p>
+                    <p>Munnar hotels</p>
+                    <p>Varkala hotels</p>
+                    <p>Mussoorie hotels</p>
+                    <p>Bangalore hotels</p>
+                    <p>Puri hotels</p>
+                    <p>Varanasi hotels</p>
+                    <p>Manali hotels</p>
+                    <p>Shimla hotels</p>
+                    <p>Mumbai hotels</p>
+                    <p>Chennai hotels</p>
+                    <p>Ayodhya hotels</p>
+                    <p>New Delhi hotels</p>
+                    <p>Cochin hotels</p>
+                    <p>Lonavala hotels</p>
+                    <p>Puducherry hotels</p>
+                    <p>Pune hotels</p>
+                    <p>Gurgaon hotels</p>
+                    <p>Udaipur hotels</p>
+                </div>
+
+                <button class="mt-4 text-blue-600 font-semibold">+ Show more</button>
+            </div>
+
+
+
+
+            <script>
+                const scrollContainer = document.getElementById("scrollContainer");
+                const nextButton = document.getElementById("next");
+                const prevButton = document.getElementById("prev");
+
+                nextButton.addEventListener("click", () => {
+                    scrollContainer.scrollBy({ left: 272, behavior: "smooth" });
+                });
+
+                prevButton.addEventListener("click", () => {
+                    scrollContainer.scrollBy({ left: -272, behavior: "smooth" });
+                });
+
+                const scrollContainer2 = document.getElementById("scrollContainer2");
+                const nextButton2 = document.getElementById("next2");
+                const prevButton2 = document.getElementById("prev2");
+
+                nextButton2.addEventListener("click", () => {
+                    scrollContainer2.scrollBy({ left: 187, behavior: "smooth" });
+                });
+
+                prevButton2.addEventListener("click", () => {
+                    scrollContainer2.scrollBy({ left: -187, behavior: "smooth" });
+                });
+            </script>
+
+
+
+
+        </div>
+
+        <footer class="bg-gray-100 py-10 mt-10">
+            <div class="flex ml-[14%] mr-[13%] flex-col gap-2 p-2">
+                <div class="mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div>
+                        <h3 class="font-bold text-sm mb-2">Support</h3>
+                        <ul class="text-black text-sm space-y-2">
+                            <li>Coronavirus (COVID-19) FAQs</li>
+                            <li>Manage your trips</li>
+                            <li>Contact Customer Service</li>
+                            <li>Safety resource centre</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm mb-2">Discover</h3>
+                        <ul class="text-black text-sm space-y-2">
+                            <li>Genius loyalty programme</li>
+                            <li>Seasonal and holiday deals</li>
+                            <li>Travel articles</li>
+                            <li>Booking.com for Business</li>
+                            <li>Traveller Review Awards</li>
+                            <li>Flight finder</li>
+                            <li>Car hire</li>
+                            <li>Restaurant reservations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm mb-2">Terms and settings</h3>
+                        <ul class="text-black text-sm space-y-2">
+                            <li>Privacy & cookies</li>
+                            <li>Terms and conditions</li>
+                            <li>Grievance officer</li>
+                            <li>Modern Slavery Statement</li>
+                            <li>Human Rights Statement</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm mb-2">Partners</h3>
+                        <ul class="text-black text-sm space-y-2">
+                            <li>Extranet login</li>
+                            <li>Partner help</li>
+                            <li>List your property</li>
+                            <li>Become an affiliate</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm mb-2">About</h3>
+                        <ul class="text-black text-sm space-y-2">
+                            <li>About Booking.com</li>
+                            <li>How we work</li>
+                            <li>Sustainability</li>
+                            <li>Press centre</li>
+                            <li>Careers</li>
+                            <li>Investor relations</li>
+                            <li>Corporate contact</li>
+                        </ul>
+                    </div>
+                    <div class="flex ">
+                        <img src="https://t-cf.bstatic.com/design-assets/assets/v3.142.0/images-flags/In@3x.png"
+                            height="25px" width="25px" alt="" class="rounded-[50%]">
+                        <p class="font-semibold px-8">INR</p>
+
+                    </div>
+
+                </div>
+                <hr class="border-t border-gray-300 my-4">
+
+                <div class="text-center mt-10">
+                    <p class="text-sm text-gray-600">Booking.com is part of Booking Holdings Inc., the world leader in
+                        online travel
+                        and related services.</p>
+                    <p class="text-xs mt-2 text-gray-600">Copyright © 1996–2025 Booking.com™. All rights reserved.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <div>
+                            <h1 class="text-[#15478c] font-bold">Booking.com</h1>
+                        </div>
+                        <div>
+                            <h1 class="text-blue-500 font-bold">Priceline</h1>
+                        </div>
+                        <div class="text-white flex">
+                            <button
+                                class="border bg-orange-500 w-4 h-4 justify-center flex items-center text-[10px] font-bold my-1">K</button>
+                            <button
+                                class="border bg-orange-500 w-4 h-4 justify-center flex items-center text-[10px] font-bold my-1">A</button>
+                            <button
+                                class="border bg-orange-500 w-4 h-4 justify-center flex items-center text-[10px] font-bold my-1">Y</button>
+                            <button
+                                class="border bg-orange-500 w-4 h-4 justify-center flex items-center text-[10px] font-bold my-1">A</button>
+                            <button
+                                class="border bg-orange-500 w-4 h-4 justify-center flex items-center text-[10px] font-bold my-1">K</button>
+                        </div>
+                        <div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
