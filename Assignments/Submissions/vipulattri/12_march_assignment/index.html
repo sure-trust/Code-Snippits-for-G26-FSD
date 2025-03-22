@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List with CRUD - By Vipul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h3 class="hnav">To Do List</h3>
+    </div>
+    <div class="main">
+       <div class="box1">
+            <h3 class="h3">Stay Organized and <br> Get Things Done with Your To-Do List.</h3>
+            <p><strong>✔ Today's Tasks –</strong> Keep track of what needs to be done and stay on schedule.</p>
+            <p><strong>📝 Your Plans –</strong> Set goals, write notes, and check off completed tasks.</p>
+            <p><strong>📅 Reminders –</strong> Never miss an important deadline or meeting again.</p>
+            <div class="card"><h4>Hello</h4></div>
+       </div>
+       <div class="box2">
+           <h2>To Do List</h2>
+           <form id="todoForm">
+            <label>Task: </label><br>
+            <input type="text" id="title"  size="50"  placeholder="Enter new task" required><br><br>
+            <label>Description: </label><br>
+            <input type="text" id="description" size="50" placeholder="Enter the description"><br>
+             <label>Enter Deadline</label><br>
+
+            <!-- Due Date (cannot select past dates) -->
+            <input type="date" id="dueDate" min="<?= new Date().toISOString().split('T')[0]; ?>">
+            <br>
+            <label for="">Enter priority: </label>
+                      <br>
+            <select id="priority"> 
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+            </select> <br>
+            <label for="">Status: </label><br>
+            <select id="status">
+                <option value="Not Started" selected>Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <br>
+        <label>Tags</label>
+        <br>
+
+            <input type="text" id="tags1" placeholder="Enter tag 1"><br> <br>
+            <input type="text" id="tags2" placeholder="Enter tag 2">
+        <br> <br>
+            <button type="submit">Add Task</button>
+        </form>
+        
+       </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
