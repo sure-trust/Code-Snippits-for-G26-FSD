@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <h1>Area and Perimeter Formulas</h1>
+</body>
+<script type = "module" src="./utils.js"></script>
+<script type = "module">
+    import Mounika from './utils.js' 
+    console.log(Mounika);
+
+    import {CircleArea,CirclePerimeter} from './utils.js'
+    console.log("Cricle Area : ",CircleArea(5));
+    console.log("Circle Perimeter : ",CirclePerimeter(5));
+
+    import {RectangleArea,RectanglePerimeter} from './utils.js'
+    console.log("Rectangle Area : ",RectangleArea(4,3));
+    console.log("Rectangle perimeter : ",RectanglePerimeter(4,3));
+
+    import {TriangleArea,TrianglePerimeter} from './utils.js'
+    console.log("Triangle Area : ",TriangleArea(3,4))
+    console.log("Triangle perimeter : ",TrianglePerimeter(3,4,5))
+
+    import {SquareArea,SquarePerimeter} from './utils.js'
+    console.log("Square Area : ",SquareArea(10))
+    console.log("Squre Perimeter : ",SquarePerimeter(10))
+    </script>
+
+</html>
