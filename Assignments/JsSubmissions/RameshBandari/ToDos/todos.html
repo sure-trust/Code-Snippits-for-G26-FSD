@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DOs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold text-center mb-4">TO-DO List</h1>
+      <form action="">
+      <div class="mb-4 flex">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="Enter a new todo..."
+          class="w-full p-2 border rounded-l-lg focus:outline-none"
+        />
+        <button type="submit"
+          onclick="addTodo()"
+          class="bg-blue-500 text-white px-4 py-2 rounded-r-lg"
+        >
+          Add
+        </button>
+       </div> </form>
+      </div><div class="mt-5 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <div class="mb-4 mt-5  flex">
+      <ul id="todo-list" class="space-y-2"></ul></div>
+    </div>
+
+    <script>
+      async function fetchTodos() {
+        const response = await fetch("https://dummyjson.com/todos");
+        const data = await response.json();
+        const todos = data.todos;
+        const todoList = document.getElementById("todo-list");
+        todoList.innerHTML = "";
+        todos.forEach((todo) => {
+          const li = document.createElement("li");
+          li.className ="flex justify-between items-center bg-gray-200 p-2 rounded";
+          li.innerHTML = `<span>${todo.todo}</span>
+                    <button class="text-red-500" onclick="deleteTodo(${todo.id}, this)">Delete</button>
+                `;
+          todoList.appendChild(li);
+        });
+      }
+
+      function addTodo() {
+        event.preventDefault();
+        const input = document.getElementById("todo-input");
+        const newTodo = input.value.trim();
+        if (newTodo === "") return;
+
+        const li = document.createElement("li");
+        li.className ="flex justify-between items-center bg-gray-200 p-2 rounded";
+        li.innerHTML = `
+                <span>${newTodo}</span>
+                <button class="text-red-500" onclick="this.parentElement.remove()">Delete</button>
+            `;
+        document.getElementById("todo-list").prepend(li);
+        input.value = "";
+      }
+
+      function deleteTodo(id, element) {
+        fetch(`https://dummyjson.com/todos/${id}`, { method: "DELETE" }).then(
+          () => element.parentElement.remove()
+        );
+      }
+
+      fetchTodos();
+    </script>
+  </body>
+</html>
