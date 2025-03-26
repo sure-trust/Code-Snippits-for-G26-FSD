@@ -1,0 +1,62 @@
+<html> 
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light font-roboto">
+    <div class="container max-w-md mx-auto mt-10 p-6 bg-white shadow rounded">
+        <h1 class="title text-3xl font-bold mb-2">Sign Up</h1>
+        <p class="subtitle text-lg mb-4">It's free and always will be.</p>
+        <form>
+            <div class="name-fields flex gap-2 mb-4">
+                <input type="text" placeholder="First Name" class="input w-1/2 p-2 border rounded">
+                <input type="text" placeholder="Last Name" class="input w-1/2 p-2 border rounded">
+            </div>
+            <div class="email-field mb-4">
+                <input type="email" placeholder="Your Email" class="input w-full p-2 border rounded">
+            </div>
+            <div class="email-confirm mb-4">
+                <input type="email" placeholder="Re-enter Email" class="input w-full p-2 border rounded">
+            </div>
+            <div class="password-field mb-4">
+                <input type="password" placeholder="New Password" class="input w-full p-2 border rounded">
+            </div>
+            <div class="birthday-field mb-4">
+                <label class="label block text-lg font-bold mb-2">Birthday:</label>
+                <div class="birthday-select flex gap-2">
+                    <select class="dropdown w-1/3 p-2 border rounded">
+                        <option>Month</option>
+                    </select>
+                    <select class="dropdown w-1/3 p-2 border rounded">
+                        <option>Day</option>
+                    </select>
+                    <select class="dropdown w-1/3 p-2 border rounded">
+                        <option>Year</option>
+                    </select>
+                </div>
+                <a href="#" class="info-link text-blue-600 text-sm mt-2 inline-block">Why do I need to provide my birthday?</a>
+            </div>
+            <div class="gender-field mb-4">
+                <label class="label block text-lg font-bold mb-2">Gender:</label>
+                <div class="gender-options flex gap-4">
+                    <label class="gender-option flex items-center">
+                        <input type="radio" name="gender" class="radio mr-2"> Female
+                    </label>
+                    <label class="gender-option flex items-center">
+                        <input type="radio" name="gender" class="radio mr-2"> Male
+                    </label>
+                </div>
+            </div>
+            <p class="terms text-xs text-gray-600 mb-4">
+                By clicking Sign Up, you agree to our <a href="#" class="link text-blue-600">Terms</a> and that you have read our <a href="#" class="link text-blue-600">Data Use Policy</a>, including our <a href="#" class="link text-blue-600">Cookie Use</a>.
+            </p>
+            <button class="signup-btn w-full bg-green-600 text-white p-2 rounded text-lg">Sign Up</button>
+        </form>
+        <hr class="divider my-4">
+        <p class="create-page text-center text-sm">
+            <a href="#" class="link text-blue-600">Create a Page</a> for a celebrity, band, or business.
+        </p>
+    </div>
+</body>
+</html>
