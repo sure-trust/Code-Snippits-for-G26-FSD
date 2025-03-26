@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address Information API</title>
+</head>
+<body>
+  <h1>Address Information</h1>
+  <div id="output"></div>
+  
+  <script type="module">
+    import { AddressAPI } from './server.js';
+    async function displayAddressInfo() {
+      const addresses = await AddressAPI.getFakeAddresses();
+      AddressAPI.getIds(addresses);
+      AddressAPI.getStreets(addresses);
+    }
+    displayAddressInfo();
+  </script>
+</body>
+</html>

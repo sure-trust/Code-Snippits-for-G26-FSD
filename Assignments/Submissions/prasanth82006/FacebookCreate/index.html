@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign Up</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               background-color: #f2f2f2;
+          }
+
+          .form-container {
+               background-color: #fff;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               padding: 20px;
+               box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          }
+
+          .form-container h1 {
+               font-size: 36px;
+               font-weight: bold;
+               color: #333;
+          }
+
+          .form-container p {
+               font-size: 16px;
+               color: #666;
+          }
+
+          .form-container input[type="text"],
+          .form-container input[type="email"],
+          .form-container input[type="password"] {
+               padding: 10px;
+               margin-bottom: 10px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 14px;
+          }
+
+          .form-container select {
+               padding: 8px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 14px;
+               margin-right: 5px;
+          }
+
+          .form-container label {
+               font-size: 14px;
+               color: #333;
+          }
+
+          .form-container button {
+               background-color: #69a74e;
+               color: #fff;
+               border: none;
+               padding: 10px 20px;
+               font-size: 16px;
+               border-radius: 10px;
+               cursor: pointer;
+          }
+
+          .form-container button:hover {
+               background-color: #5d9345;
+          }
+
+          .form-container a {
+               color: #3b5998;
+               text-decoration: none;
+          }
+
+          .form-container a:hover {
+               text-decoration: underline;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="w-full h-full flex justify-end items-center p-10">
+          <div class=" form-container [50%]">
+               <div class="">
+                    <h1 class="text-5xl font-semibold">Sign Up</h1>
+                    <br>
+                    <p class="text-xl">It's free and always will be.</p>
+               </div>
+               <form id="myform">
+                    <div class="w-full flex gap-3 py-2">
+                         <input type="text" class="border p-2 rounded border-slate-400" name="firstName"
+                              placeholder="First Name" id="FName" required>
+                         <input type="text" name="lastName" class="border p-2 rounded border-slate-400"
+                              placeholder="Last Name" id="LName" required>
+                    </div>
+                    <div class="flex flex-col w-full">
+                         <input type="email" class="border p-2 rounded border-slate-400 w-[403px]" name="email"
+                              placeholder="Your Email" id="Email" required>
+                         <input type="email" class="border p-2 rounded border-slate-400 w-[403px]" name="reEmail"
+                              placeholder="Re-Enter Email" required>
+                         <input type="password" class="border p-2 rounded border-slate-400 w-[403px]" name="password"
+                              placeholder="••••••••••••" id="pass" required>
+
+                    </div>
+                    <label for="birthday">Birthday:</label>
+                    <div class="flex justify-center items-center">
+                         <div class="flex gap-2">
+                              <select name="month">
+                                   <option value="">Month</option>
+                                   <option value="1">January</option>
+                                   <option value="2">February</option>
+                                   <option value="3">March</option>
+                                   <option value="4">April</option>
+                                   <option value="5">May</option>
+                                   <option value="6">June</option>
+                                   <option value="7">July</option>
+                                   <option value="8">August</option>
+                                   <option value="9">September</option>
+                                   <option value="10">October</option>
+                                   <option value="11">November</option>
+                                   <option value="12">December</option>
+                              </select>
+                              <select name="day">
+                                   <option value="">Day</option>
+                                   <script>
+                                        for (let i = 1; i <= 31; i++) {
+                                             document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                   </script>
+                              </select>
+                              <select name="year">
+                                   <option value="">Year</option>
+                                   <script>
+                                        let currentYear = new Date().getFullYear();
+                                        for (let i = currentYear; i >= 1900; i--) {
+                                             document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                   </script>
+                              </select>
+                         </div>
+                         <span class="text-blue-500 text-xs cursor-pointer hover:underline">Why do I need to provide my
+                              birthday?
+                         </span>
+                    </div>
+                    <div class="flex gap-2 my-3">
+                         <label>
+                              <input type="radio" name="gender" id="gender" value="male"> Male
+                         </label>
+                         <label>
+                              <input type="radio" name="gender" id="gender" value="female"> Female
+                         </label>
+                    </div>
+                    <p class="text-xs">
+                         By clicking Sign Up, you agree to our
+                         <span class="text-blue-500 cursor-pointer hover:underline">Terms</span>
+                         and that you have <br> read our
+                         <span class="text-blue-500 cursor-pointer hover:underline">Data Use Policy</span>,
+                         including our
+                         <span class="text-blue-500 cursor-pointer hover:underline">Cookie Use</span>.
+                    </p>
+                    <br>
+                    <button class="" type="submit">Sign Up</button>
+               </form>
+               <br>
+               <hr>
+               <p class="text-lg"> <span class="text-blue-500 cursor-pointer hover:underline">Create a Page</span> for a
+                    celebrity, band or business.</p>
+          </div>
+     </div>
+     <script>
+          window.document.getElementById('myform').addEventListener('submit', (e) => {
+               e.preventDefault();
+               const formData = new FormData(e.target);
+               const data = {};
+               formData.forEach((value, key) => {
+                    data[key] = value;
+               });
+               const day = data.day.padStart(2, '0');
+               const month = data.month.padStart(2, '0');
+               const year = data.year;
+               const birthday = `${day}-${month}-${year}`;
+               data.birthday = birthday;
+               localStorage.setItem('formData', JSON.stringify(data));
+               let count = 1;
+               console.log("Form Data:", count);
+               console.log("The Birthday:", birthday);
+               console.log("The Name:", data.firstName, data.lastName);
+               console.log("The Email:", data.email);
+               console.log("The Gender:", data.gender);
+               count += 1;
+               e.target.reset();
+          });
+
+     </script>
+</body>
+
+</html>
