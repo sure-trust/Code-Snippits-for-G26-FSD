@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">amazon<span>.in</span></div>
+        <div class="location">Delivering to Mohali 160103</div>
+        <input type="text" placeholder="Search Amazon.in" class="search-box">
+        <div class="nav-links">
+            <span>Account & Lists</span>
+            <span>Returns & Orders</span>
+            <span>Cart (2)</span>
+        </div>
+    </header>
+
+    <nav class="sub-navbar">
+        <span>All</span>
+        <span>Fresh</span>
+        <span>Gift Cards</span>
+        <span>MX Player</span>
+        <span>Sell</span>
+        <span>Gift Ideas</span>
+        <span>Buy Again</span>
+        <span>Browsing History</span>
+        <span>Home Improvement</span>
+        <span>Books</span>
+        <span>Bestsellers</span>
+        <span>Today's Deals</span>
+    </nav>
+
+    <section id="products"> </section>
+
+
+        <script>
+            // Extract ID from URL
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+    
+            if (id) {
+                document.getElementById("output") + id;
+            } else {
+                document.getElementById("output");
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator | Vipul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h3 class="navigation">Password Generator</h3>
+        </div>
+    </header>
+    <div class="main">
+        <div class="box">
+            <input type="text" id="input" readonly> <!-- Added readonly -->
+            <br><br>
+            <label for="value1">a-z</label>
+            <input type="checkbox" id="value1" value="lowercase">
+            <label for="value2">A-Z</label>
+            <input type="checkbox" id="value2" value="uppercase">
+            <label for="value3">0-9</label>
+            <input type="checkbox" id="value3" value="numbers">
+            <label for="value4">Special Characters</label>
+            <input type="checkbox" id="value4" value="special">
+            <br><br>
+            <button onclick="generatePassword()">Generate Password</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
