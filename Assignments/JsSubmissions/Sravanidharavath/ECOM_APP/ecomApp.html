@@ -1,0 +1,83 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple E-commerce App</title>
+  <link rel="stylesheet" href="ecomApp.css" />
+</head>
+<body>
+  <header>
+    <h1>Fashion E-commerce</h1>
+    <p>Best Style Choices</p>
+  </header>
+
+  <nav>
+    <button onclick="showHome()">Home</button>
+    <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+
+  <div class="content" id="content"></div>
+
+  <div id="payment-dialog">
+    <div id="payment-dialog-content">
+      <h2>Order Summary</h2>
+      <p id="order-summary"></p>
+      <h3>Choose Payment Mode</h3>
+      <ul>
+        <li><label><input type="radio" name="payment" /> Credit Card</label></li>
+        <li><label><input type="radio" name="payment" /> Debit Card</label></li>
+        <li><label><input type="radio" name="payment" /> UPI</label></li>
+        <li><label><input type="radio" name="payment" /> Cash on Delivery</label></li>
+      </ul>
+      <button class="buy-btn" onclick="completePurchase()">Proceed to Pay</button>
+      <button onclick="closePaymentDialog()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="ecomApp.js"></script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple E-commerce App</title>
+  <link rel="stylesheet" href="ecomApp.css" />
+</head>
+<body>
+  <header>
+    <h1>Fashion E-commerce</h1>
+    <p>Best Style Choices</p>
+  </header>
+
+  <nav>
+    <button onclick="showHome()">Home</button>
+    <div class="moving-text">🔥 Limited Offer: Get 20% Off Today! 🔥</div>
+    <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+
+  <div class="content" id="content"></div>
+
+  <div id="payment-dialog">
+    <div id="payment-dialog-content">
+      <h2>Order Summary</h2>
+      <p id="order-summary"></p>
+      <h3>Choose Payment Mode</h3>
+      <ul>
+        <li><label><input type="radio" name="payment" /> Credit Card</label></li>
+        <li><label><input type="radio" name="payment" /> Debit Card</label></li>
+        <li><label><input type="radio" name="payment" /> UPI</label></li>
+        <li><label><input type="radio" name="payment" /> Cash on Delivery</label></li>
+      </ul>
+      <button class="buy-btn" onclick="completePurchase()">Proceed to Pay</button>
+      <button onclick="closePaymentDialog()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="ecomApp.js"></script>
+</body>
+</html>
