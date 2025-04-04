@@ -289,7 +289,7 @@ header {
 }
 
 .destination-image {
-     width: 10000px;
+     width: 100%;
      height: 120px;
      object-fit: cover;
 }
@@ -326,6 +326,10 @@ header {
 
 .carousel-button.next {
      right: -20px;
+}
+
+.carousel-button.prev {
+     left: -20px;
 }
 
 .container {
@@ -394,15 +398,9 @@ p {
      }
 }
 
-.container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 20px;
-}
 
-.header {
-     margin-bottom: 20px;
-}
+/* added */
+
 
 h2 {
      font-size: 20px;
@@ -719,3 +717,45 @@ h2 {
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
      cursor: pointer;
 }
+
+
+footer {
+     background-color: white;
+     padding: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     border-top: 1px solid white
+     ;
+ }
+ 
+ .footer-section {
+     flex: 1;
+     min-width: 200px;
+ }
+ 
+ .footer-section h4 {
+     margin-bottom: 10px;
+ }
+ 
+ .footer-section ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ 
+ .footer-section ul li {
+     margin-bottom: 5px;
+ }
+ 
+ .footer-bottom {
+     width: 100%;
+     text-align: center;
+     margin-top: 20px;
+     border-top: 1px solid #ccc;
+     padding-top: 10px;
+ }
+ 
+ .footer-bottom span {
+     font-weight: bold;
+ }
+

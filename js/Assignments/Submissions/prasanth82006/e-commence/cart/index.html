@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-6">Your Cart</h1>
+        <div id="cartItems" class="bg-white rounded-lg shadow-md p-4"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+     const cartContainer = document.body;
+     const h1 = document.querySelector("h1");
+     h1.textContent = "Your Cart";
+     const cartItemsContainer = document.createElement("div");
+     cartItemsContainer.className = "cart-items p-4";
+     document.body.appendChild(cartItemsContainer);
+     const displayCartItems = () => {
+       const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+   
+       cartItemsContainer.innerHTML = "";
+   
+       if (cartItems.length === 0) {
+         const emptyMessage = document.createElement("p");
+         emptyMessage.textContent = "Your cart is empty";
+         cartItemsContainer.appendChild(emptyMessage);
+         return;
+       }
+   
+       cartItems.forEach((item, index) => {
+         const cartItemDiv = document.createElement("div");
+         cartItemDiv.className = "flex items-center border-b py-4";
+   
+         const img = document.createElement("img");
+         img.src = item.image;
+         img.className = "w-20 h-20 object-cover mr-4";
+         cartItemDiv.appendChild(img);
+   
+         const infoDiv = document.createElement("div");
+         infoDiv.className = "flex-grow";
+   
+         const title = document.createElement("h3");
+         title.textContent = item.title;
+         title.className = "font-semibold";
+         infoDiv.appendChild(title);
+   
+         const price = document.createElement("p");
+         price.textContent = `$${item.price}`;
+         price.className = "text-gray-600";
+         infoDiv.appendChild(price);
+         cartItemDiv.appendChild(infoDiv);
+         const removeButton = document.createElement("button");
+         removeButton.textContent = "Remove";
+         removeButton.className =
+           "bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600 ml-4";
+         removeButton.addEventListener("click", () => {
+           removeFromCart(index);
+         });
+         cartItemDiv.appendChild(removeButton);
+   
+         cartItemsContainer.appendChild(cartItemDiv);
+       });
+     };
+     const removeFromCart = (index) => {
+       const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+       cartItems.splice(index, 1);
+       localStorage.setItem("cart", JSON.stringify(cartItems));
+       displayCartItems();
+     };
+     displayCartItems();
+   
+     // Add a Home button to go back to the home page
+     const homeButton = document.createElement("button");
+     homeButton.textContent = "Home";
+     homeButton.className =
+     "bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 m-4 absolute top-4 right-4";
+   
+     homeButton.addEventListener("click", () => {
+       window.location.href = "http://127.0.0.1:5500/e-commence/index.html#";
+     });
+     cartContainer.appendChild(homeButton);
+   });
+   
+    </script>
+</body>
+</html>
