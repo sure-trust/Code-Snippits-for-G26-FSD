@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <style>
+        body { font-family: Arial; background: #f0f2f5; padding: 20px; }
+        .card { background: white; max-width: 500px; margin: auto; padding: 20px; }
+        .title { color: #1877f2; text-align: center; }
+        .input { width: 100%; padding: 8px; margin-bottom: 10px; }
+        .button { background: #1877f2; color: white; border: none; padding: 8px 15px; }
+        .item { background: #f0f2f5; padding: 8px; margin: 5px 0; display: flex; justify-content: space-between; }
+        .delete { color: red; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">Todo List</h1>
+        <form onsubmit="addTodo(); return false;">
+            <input id="todo-input" class="input" placeholder="Enter todo...">
+            <button type="submit" class="button">Add</button>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+        // Load todos on start
+        fetch("https://dummyjson.com/todos")
+            .then(res => res.json())
+            .then(data => {
+                data.todos.forEach(todo => {
+                    addTodoToList(todo.todo, todo.id);
+                });
+            });
+
+        function addTodo() {
+            event.preventDefault();
+            const input = document.getElementById("todo-input");
+            const todo = input.value.trim();
+            if (!todo) return;
+            
+            addTodoToList(todo);
+            input.value = "";
+        }
+
+        function addTodoToList(todo, id) {
+            const li = document.createElement("li");
+            li.className = "item";
+            li.innerHTML = `
+                <span>${todo}</span>
+                <span class="delete" onclick="this.parentElement.remove()">Delete</span>
+            `;
+            document.getElementById("todo-list").appendChild(li);
+        }
+    </script>
+</body>
+</html>

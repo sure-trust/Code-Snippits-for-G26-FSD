@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* HEADER & NAVIGATION */
+  .main {
+    background-color: #0071c2;
+  }
+  .hi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+  .navbar {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  .bot {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .inr {
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  .img, .ques {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+  }
+  .list {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  .register,
+  .sign {
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .sub-nav {
+    padding: 10px 50px;
+    background: #005b95;
+  }
+  .sub-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  /* BANNER & SEARCH */
+  .banner {
+    background: url('https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .banner h2 {
+    font-size: 32px;
+  }
+  .banner h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .book {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .search-container {
+    background: #f5f5f5;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .search-box {
+    background: white;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .search-box input {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+  .search-box button {
+    padding: 10px;
+    border: none;
+    background: #0071c2;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* SECTION HEADER */
+  .section-header {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  .section-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .section-header p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* GRID Layout for Cards */
+  .cards-container,
+  .hotels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 50px 40px;
+  }
+  
+  /* DESTINATIONS (using flex remains) */
+  .destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px 40px;
+  }
+  .destination {
+    position: relative;
+    width: 170px;
+    height: 136px;
+  }
+  .destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .destination .dest-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* CARD STYLES */
+  .card {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    overflow: hidden;
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 15px;
+  }
+  .badge {
+    background: #005eff;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .location {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .rating-badge {
+    background: #005eff;
+    color: white;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  .rating-text {
+    font-size: 14px;
+    color: #444;
+  }
+  .price-section {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #222;
+    font-weight: bold;
+  }
+  .price-section span {
+    color: #0071c2;
+  }
+  
+  /* Additional Sections Background */
+  .unique-properties,
+  .homes-guests-love,
+  .popular-attractions,
+  .property-type,
+  .popular-from-india {
+    background: #f9f9f9;
+    padding-bottom: 40px;
+  }
+  
+  /* SIGN IN PROMOTION */
+  .signin {
+    background: #f5f5f5;
+    margin: 40px 50px;
+    padding: 20px;
+    text-align: center;
+  }
+  .signin h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .signin p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .signin .btn {
+    font-size: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #005eff;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  .signin .reg {
+    font-size: 16px;
+    color: blue;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .gift {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+  .chair{
+    width: 200px;
+    height: 300px;
+    margin-left:400px;
+    margin-top:50px;
+
+ }
+
+ .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 300px;
+}
+
+.left-section {
+    background-color: #0066eb;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.left-section h2 {
+    font-size: 24px;
+}
+
+.left-section a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #0066eb;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.illustration {
+    width: 200px;
+    height: auto;
+}
+
+  
+  /* FOOTER (Original Site Style) */
+  footer {
+    background: #fff;
+    padding: 40px 50px;
+    font-size: 13px;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .footer-col {
+    flex: 1 1 150px;
+    margin: 10px;
+  }
+  .footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #0071c2;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+  .footer-col ul li a {
+    color: #333;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+  }
+  .footer-bottom p {
+    margin-top: 10px;
+  }

@@ -1,0 +1,125 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #1877f2; /* Facebook blue */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1877f2;
+        }
+        .input, .select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .button {
+            width: 100%;
+            background: #1877f2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #166fe5;
+        }
+        .link {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="title">Sign Up</h1>
+        <p class="text">It's free and always will be.</p>
+        <form class="form">
+            <div class="row">
+                <input type="text" placeholder="First Name" class="input">
+                <input type="text" placeholder="Last Name" class="input">
+            </div>
+            <input type="email" placeholder="Your Email" class="input">
+            <input type="email" placeholder="Re-enter Email" class="input">
+            <input type="password" placeholder="New Password" class="input">
+            
+            <label class="label">Birthday:</label>
+            <div class="row">
+                <select class="select">
+                    <option>Month</option>
+                </select>
+                <select class="select">
+                    <option>Day</option>
+                </select>
+                <select class="select">
+                    <option>Year</option>
+                </select>
+            </div>
+            <a href="#" class="link">Why do I need to provide my birthday?</a>
+
+            <label class="label">Gender:</label>
+            <div class="row">
+                <label class="label">
+                    <input type="radio" name="gender" class="radio"> Female
+                </label>
+                <label class="label">
+                    <input type="radio" name="gender" class="radio"> Male
+                </label>
+            </div>
+
+            <p class="text">
+                By clicking Sign Up, you agree to our <a href="#" class="link">Terms</a> and that you have read our <a href="#" class="link">Data Use Policy</a>, including our <a href="#" class="link">Cookie Use</a>.
+            </p>
+            <button class="button">Sign Up</button>
+        </form>
+        <hr>
+        <p class="text">
+            <a href="#" class="link">Create a Page</a> for a celebrity, band, or business.
+        </p>
+    </div>
+</body>
+</html>
