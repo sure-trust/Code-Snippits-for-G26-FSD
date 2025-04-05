@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    background-color: #f60909;
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: orange;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #db0c0c;
+    padding: 20px;
+    color: white;
+}
