@@ -1,0 +1,470 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header{
+    position: relative;
+}
+#navbar{
+    padding: 10px;
+    height: 120px;
+    background-color: #003580;
+    
+}
+#logo i{
+    margin-right: 10px;
+}
+.india-logo{
+ 
+    height: 25px;
+    width:25px;
+}
+#nav-1{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+#userlogo i{
+    
+    padding: 10px;
+    
+    
+}
+.btn{
+    border-radius: 8px;
+    margin-left: 10px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:white;
+    background-color: #003580;
+    font-size: 15px;
+}
+.offers-container {
+    max-width: 800px;
+    margin: auto;
+}
+.offers-heading {
+    font-size: 24px;
+    font-weight: bold;
+}
+.offers-subheading {
+    color: #555;
+    margin-bottom: 20px;
+}
+.offers-cards {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+.offer-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+.offer-text {
+    max-width: 60%;
+}
+.offer-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.offer-description {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.offer-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.offer-button:hover {
+    background-color: #0056b3;
+}
+.offer-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.dot-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot.active {
+    background-color: #007bff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.grid-item {
+    position: relative;
+}
+.grid-item h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.tabs {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+.tab {
+    padding: 10px 15px;
+    border: 1px solid #0073e6;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #0073e6;
+}
+.tab.active {
+    background-color: #0073e6;
+    color: white;
+}
+.hotel-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+.hotel-list a {
+    text-decoration: none;
+    color: black;
+}
+.show-more {
+    margin-top: 15px;
+    color: #0073e6;
+    cursor: pointer;
+}
+
+.btnp{
+    border: 1px solid white;
+}
+.spe{
+   background-color: white;
+    color: #003580;
+}
+.searchbtn{
+    background-color: #003580;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    
+}
+.searchBarItem span{
+    font-size: small;
+    margin-right: 8px;
+}
+#nav-2{
+    margin: auto;
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    color: white;
+    gap: 40px;
+}
+#searchinput{
+    font-size: 15px;
+}
+.nav-2-Item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+}
+.i1{
+    border: 1px solid white;
+}
+.nav-2-Item:hover{
+    background-color: #153f7b;
+}
+#banner{
+    height: 500px;
+    width: 100%;
+    position: relative;
+
+}
+#banner img{
+height: 100%;
+width: 100%;
+
+}
+#banner div{
+    position: absolute;
+    top: 30px;
+    left:20%;
+    font-size: 30px;
+    color: white;
+}
+#banner button{
+    padding: 20px;
+    background-color: #003580;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+#searchbar{
+    width: 60%;
+    margin: auto;
+    height: 30px;
+    background-color: #febb02;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: lightslategray;
+    padding:10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    left: 20%;
+    
+}
+.searchBarItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content:space-around ;
+    height: 30px;
+    width: 23%;
+    background-color: white;
+    padding: 8px;
+    border-radius: 3px;
+    
+
+}
+#searchinput{
+    border: none;
+    outline:none;
+}
+#searchdate{
+    color: lightslategray;
+    cursor: pointer;
+    border: none;
+}
+.searchBarItem input{
+    color: lightslategray;
+    cursor: pointer;
+    height: 30px;
+
+    border: #003580;
+    
+
+    
+}
+#num{
+    width: 100px;
+    height: 30px;
+}
+#middleSection{
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+
+}
+#offerImage{
+    position: relative;
+
+}
+#offercont{
+    position: absolute;
+    top:10px; 
+    color: white;
+    margin-left: 20px;
+}
+#offercont p{
+    color: lightslategray;
+}
+#offerimg{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    
+    
+}
+.flex{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    
+}
+#exploreindiacont{
+    
+    overflow-x:scroll;
+    
+}
+#exploreindiacont::-webkit-scrollbar{
+    width: 0px;
+   
+}
+
+#exploreindiacont img{
+    height: 200px;
+    width: 200px;
+}
+
+#exploreindiacont h3{
+    margin: 0px;
+}
+#exploreindiacont p{
+    margin: 0px;
+    color: lightslategray;
+}
+
+
+#browsecont img{
+    width: 250px;
+    height: 220px;
+}
+
+#browsecont h3{
+    margin: 0px;
+}
+#browsecont p{
+    margin: 0px;
+    color: lightslategray;
+}
+#browsecont div:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+#candolimimg img{
+ height: 100%;
+ width: 100%;
+}
+#candolimimg div{
+    margin-top: 30px;
+    width: 50%;
+    height: auto;
+    
+}
+.candolimimgcont{
+    position: relative;
+    overflow: hidden;
+}
+#candolimimg img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+    overflow: hidden;
+     
+}
+
+.candolimimgcont div{
+    position: absolute;
+    bottom: 70%;
+    color: white;
+    margin-left: 30px;
+    
+
+}
+#homecont img{
+    width: 250px;
+    height: 220px;
+}
+#homecont h3{
+    margin: 0px;
+}
+#homecont p{
+    margin:5px;
+}
+#homecont div:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+#connectcont img{
+    width: 250px;
+    height: 250px;
+}
+#connectcont{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+#connectcont h3{
+    margin: 0px;
+}
+#connectcont p{
+    margin:5px;
+}
+#destinationcont{
+    display: flex;
+    gap: 20px;
+}
+#destinationcont button{
+    background-color:white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: #003580;
+}
+#destinationcont div:nth-child(1) button:nth-child(1){
+    border: 1px solid #003580;
+}
+#destinationcont button:hover{
+    background-color: #c3d8f5;
+}
+#list{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    
+    
+}
+#list div p{
+margin-top: 0px;
+}
+#list div h4{
+    margin: 0px;
+}
