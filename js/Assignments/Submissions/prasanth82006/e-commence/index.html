@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .flipkart-logo {
+            color: white;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 1.75rem;
+            position: relative;
+        }
+        .flipkart-logo .yellow {
+            color: #f9e107;
+        }
+        .flipkart-logo .plus {
+            font-size: 0.8rem;
+            position: absolute;
+            top: -0.5rem;
+            right: -1.2rem;
+            color: #f9e107;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="flex items-center justify-between px-6 py-3 bg-blue-600 shadow-md w-full sticky top-0 z-50">
+        <div class="flex items-center space-x-8">
+            <!-- Flipkart Logo -->
+            <a href="#" class="flipkart-logo">
+                <span>Flipkart</span>
+                <span class="yellow">.</span>
+                <span class="plus">+</span>
+            </a>
+            
+            <!-- Explore Plus -->
+            <span class="text-white text-sm font-medium hover:text-yellow-200 transition cursor-pointer hidden md:block">
+                Explore <span class="text-yellow-300 font-bold">Plus</span>
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" 
+                     alt="Plus" class="w-4 h-4 inline ml-1">
+            </span>
+        </div>
+        
+        <!-- Cart Section -->
+        <div class="flex items-center space-x-6">
+            <a href="#" class="text-white text-lg font-medium flex items-center hover:text-blue-200 transition" id="CartButton">
+                <div class="relative">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cartCount" class="absolute -top-2 -right-2 bg-yellow-400 text-blue-800 rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold hidden">0</span>
+                </div>
+                <span class="ml-2 hidden sm:inline">Cart</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-6">
+        <div class="mb-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Featured Products</h1>
+            <div class="relative w-64">
+                <input type="text" placeholder="Search products..." 
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+            </div>
+        </div>
+
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="productList">
+            <!-- Product List -->
+        </main>
+    </div>
+
+    <footer class="bg-gray-800">
+     <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+         <p>&copy; 2023 Flipkart Clone. All rights reserved.</p>
+     </div>
+ </footer>
+ 
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
