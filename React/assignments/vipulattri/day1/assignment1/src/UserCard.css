@@ -1,0 +1,26 @@
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally  /* Center vertically */
+    height: 20vh; /* Full viewport height */
+    padding-bottom: 20px;
+}
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
