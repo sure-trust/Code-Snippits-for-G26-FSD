@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .todo-input {
+            width: 80%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .add-btn, .delete-btn {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task...">
+    <button id="add-todo" class="add-btn">Add</button>
+    <ul id="todo-list"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const todoListContainer = document.getElementById("todo-list");
+            const todoInput = document.getElementById("todo-input");
+            const addTodoButton = document.getElementById("add-todo");
+    
+            // Fetching todos from the API
+            fetch("https://shrimo.com/fake-api/todos?limit=10&page=1")
+                .then(response => response.json())
+                .then(todos => {
+                    todos.forEach(todo => {
+                        addTodoToList(todo.title, todo.completed);
+                    });
+                })
+                .catch(error => console.error("Error fetching todos:", error));
+    
+            // Function to add a new todo to the list
+            function addTodoToList(title, completed = false) {
+                const listItem = document.createElement("li");
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.classList.add("delete-btn");
+                deleteButton.addEventListener("click", function () {
+                    todoListContainer.removeChild(listItem);
+                });
+    
+                listItem.textContent = title;
+                listItem.appendChild(deleteButton);
+                if (completed) {
+                    listItem.style.textDecoration = "line-through";
+                }
+                todoListContainer.appendChild(listItem);
+            }
+    
+            // Adding a new todo from user input
+            addTodoButton.addEventListener("click", function () {
+                const todoText = todoInput.value.trim();
+                if (todoText !== "") {
+                    addTodoToList(todoText);
+                    todoInput.value = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
