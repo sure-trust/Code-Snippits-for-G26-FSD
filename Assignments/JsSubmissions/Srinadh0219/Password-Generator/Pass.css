@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+    height: 300px;
+}
+.password{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+.reverse{
+  width: 50px;
+}
+#pass{
+    margin-left: 200px;
+}
+.strength-bar {
+    height: 5px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#length{
+  margin-right:5px;
+  padding: 8px;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin: 20px;
+}
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+button {
+    background:greenyellow;
+    color: color;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+button:hover {
+    background:greenyellow;
+}
