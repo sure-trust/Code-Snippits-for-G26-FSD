@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script1.js"></script>
+    <style>
+        body{
+            background: linear-gradient(135deg, #a1ffce, #faffd1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes bounceIn {
+            0%{
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            100%{
+                transform:scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full transition-all duration-500 transform hover:scale-105 animate-fadeIn">
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-3 animate-bounce">
+        TODO App
+      </h2>
+      <button
+        id="fetchButton"
+        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full w-full transition-transform transform hover:scale-105">
+        Fetch Todo Data
+      </button>
+      <div id="todoList" class="mt-4 space-y-2"></div>
+    </div>
+  </body>
+</html>

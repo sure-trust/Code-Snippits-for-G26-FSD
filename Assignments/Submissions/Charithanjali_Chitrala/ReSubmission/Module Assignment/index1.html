@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Assignment</title>
+</head>
+<body>
+    <h1>Math Module</h1>
+</body>
+<script type = "module" src="./script1.js"></script>
+<script type = "module">
+    import Charitha from './script1.js' 
+    console.log(Charitha);
+
+    import {square} from './script1.js'
+    console.log("Square : ",square(5));
+
+    import {cube} from './script1.js'
+    console.log("Cube : ",cube(4));
+
+    import {percentage} from './script1.js'
+    console.log("Percentage : ",percentage(5,200))
+
+    import {triangle} from './script1.js'
+    console.log("Triangle : ",triangle(5,4))
+    </script>
+
+</html>
