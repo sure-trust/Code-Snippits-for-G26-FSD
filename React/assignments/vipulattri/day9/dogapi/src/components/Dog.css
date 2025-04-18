@@ -1,0 +1,78 @@
+.box{
+    height: 45px;
+    width: 450px;
+    background-color: #F5F5F5;
+    margin-top: 200px;
+    margin-left: 300px; 
+    font-size: 22px;
+    padding-top: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 30px;
+    text-align: center;
+    display: flex;
+
+  
+}
+.fun{
+    margin-top: 200px;
+    margin-left: 300px; 
+}
+.set{
+   font-size: 20px;
+   font-family: sans-serif;
+   font-weight: 200;
+
+}
+.main{
+    display: flex;
+}
+.hole{
+    margin-top: 205px;   
+    height: 45px;
+    width: 80px;
+    font-size: 22px;
+    background-color: #1782C4;
+    color: white;
+    border: none;
+}
+.json{
+    height: 150px;
+    width: 450px;
+    border: 1px solid grey;
+    margin-top: 50px;
+    margin-left: 300px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.hole:hover{
+    background-color: rgb(10, 158, 227);
+    cursor: pointer;
+
+}
+.h5{
+    font-size: 16px;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.role{
+    margin-top: 205px;   
+    height: 45px;
+    width: 85px;
+    font-size: 22px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+.role:hover{
+    background-color: rgb(109, 0, 0);
+}
+.image{
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    margin-left: 1200px;
+    margin-top: -250px;
+}
