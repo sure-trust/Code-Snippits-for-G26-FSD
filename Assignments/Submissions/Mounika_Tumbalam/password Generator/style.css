@@ -1,0 +1,87 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #512DA8;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+/* Display Section */
+#display {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+#password {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #512DA8;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Container */
+.container {
+    background: white;
+    color: black;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Length slider */
+input[type="range"] {
+    width: 100%;
+    accent-color: #007BFF;
+}
+
+/* Checkboxes */
+.type {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.type label {
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+/* Generate Button */
+.container button {
+    background: #28a745;
+    font-weight: bold;
+}
+
+.container button:hover {
+    background: #218838;
+}

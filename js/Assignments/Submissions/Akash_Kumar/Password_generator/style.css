@@ -1,0 +1,179 @@
+:root {
+    --primary: #0099FF;
+    --secondry: #ADD8FF;
+    --defaultSecondry: #F1F1F1;
+    --defaultPrimary: #49454F;
+    --white: #ffffff;
+  }
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+#nav_text{
+    display: flex;
+    width: 100vw;
+    height: 70px;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--white);
+}
+#password_generator_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 100px;
+}
+#generated_password{
+    font-size: 30px;
+    width: 650px;
+    height: 88px;
+    color: var(--defaultPrimary);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 25px;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    background-color: var(--defaultSecondry);
+    overflow: hidden;
+    overflow-x: default;
+}
+#password_generating_options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#password_options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10vw;
+    padding: 10px;
+}
+#choice_set_one{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+#password_copy_edit_clear_options {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    height: fit-content;
+    width: fit-content;
+}
+
+#password_copy_edit_clear_options > div{
+    gap: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: var(--secondry);
+    border-radius: 18px;
+    padding: 10px;
+    height: 112px;
+    width: 115px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#choice_set_one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+.icon_containers{
+    width: 24px;
+    height: 24px;
+
+}
+#copy_icon{
+    background-image: url("pictures/copy.png");
+    background-size: cover;
+}
+#refresh_icon{
+    background-image: url("pictures/refresh.png");
+    background-size: cover;
+}
+#clear_icon{
+    background-image: url("pictures/clear.png");
+    background-size: cover;
+}
+#Generate_password_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500px;
+}
+
+#password_length{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+#password_length_text{
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--defaultPrimary);
+}
+#password_length_value{
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+}
+#password_range_input{
+    width: 500px;
+    height: 10px;
+}
+#choice_set_two{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#choice_set_two > div {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondry);
+    border-radius: 10px;
+    padding: 15px;
+    gap: 25px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #49454F;
+}
+.custom_checkbox{
+    width: 30px;
+    height: 30px;
+}

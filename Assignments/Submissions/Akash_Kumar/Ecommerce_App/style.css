@@ -1,0 +1,152 @@
+#main_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#top_navigation_bar{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(213, 255, 254);
+    padding: 4px;
+    gap: 2%;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo{
+    width: 150px;
+    height: 70px;
+    background-image: url("pictures/Atlassian-Logo.png");
+    background-size: cover;
+}
+#icons{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    width: fit-content;
+}
+#search_icon{
+    background-image: url("pictures/search.png");
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+#cart_icon{
+    background-image: url("pictures/cart.png");
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+#login{
+    background-image: url("pictures/user.png");
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+#search_bar{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    gap: 15px;
+    width: fit-content;
+}
+#search_text{
+    width: 300px;
+    border-radius: 4px;
+    padding: 5px;
+}
+#nav_menus{
+    display: flex;
+    flex-direction: row;
+    gap: 40px; 
+}
+
+#nav_menus div{
+    padding: 5px;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+}
+
+#card_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    align-items: space-around;
+    justify-content: space-around;
+}
+#card_1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 400px;
+    height: 450px;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content :space-evenly;
+}
+#card_description{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+}
+#card_image_1{
+    width: 300px;
+    height: 250px;
+    background-color: rgb(207, 207, 207);
+}
+#title{
+    font-size: 24px;
+    font-weight: 500px;
+    text-wrap: wrap;
+}
+#price{
+    font-size: 18px;
+    color: rgb(111, 111, 111);
+}
+#add_to_cart_button{
+    background-color: rgb(255, 246, 78);
+    font-size: 18px;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    color: rgb(24, 24, 24);
+    font-weight: 600;
+    display: flex;
+    width: 380px;
+    align-items: center;
+    justify-content: center;
+}
+#cart_header{
+    font-size: 45px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+#no_of_items{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+#Amount{
+    font-size: 18px;
+    font-weight: 400px;
+    color: gray;
+}
+#item_no{
+    font-size: 24px;
+    font-weight: 500;
+}

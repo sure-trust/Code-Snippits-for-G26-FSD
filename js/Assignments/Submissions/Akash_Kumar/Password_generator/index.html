@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwrod Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="nav_text">Random Password Generator</div>
+    </nav>
+
+    <div id="password_generator_container">
+        <div id="generated_password">Password</div>
+        <div id="password_generating_options">
+            <div id="password_options">
+                <div id="choice_set_one">
+                    
+                    <!-- Password copy edit clear options -->
+                    <div id="password_copy_edit_clear_options">
+                        <div id="password_copy">
+                            <div id="copy_icon" class="icon_containers"></div>
+                            <div id="copy_text">Copy</div>
+                        </div>
+
+                        <div id="password_refresh" >
+                            <div id="refresh_icon" class="icon_containers"></div>
+                            <div id="refresh_text">Refresh</div>
+                        </div>
+
+                        <div id="password_clear" >
+                            <div id="clear_icon" class="icon_containers"></div>
+                            <div id="clear_text">Clear</div>
+                        </div>
+                    </div>
+
+                    <div id="password_length">
+                        <div id="password_length_text">Password Length</div>
+                        <div id="password_length_value">0</div>
+                    </div>
+
+                    <div id="password_length_range">
+                        <input type="range" min="0" max="50" value ="0" id="password_range_input">
+                    </div>
+                </div>
+
+                <!-- Checkbox options for Uppercase, Lowercase, Numbers, Symbols -->
+                <div id="choice_set_two">
+
+                    <div id="uppercase_container">
+                        <input type="checkbox" id="uppercase" class="custom_checkbox">
+                        <label for="uppercase">Uppercase</label>
+                    </div>
+
+                    <div id="lowercase_container" >
+                        <input type="checkbox" id="lowercase" class="custom_checkbox">
+                        <label for="lowercase">Lowercase</label>
+                    </div>
+
+                    <div id="numbers_container">
+                        <input type="checkbox" id="numbers" class="custom_checkbox">
+                        <label for="numbers">Numbers</label>
+                    </div>
+
+                    <div id="symbols_container">
+                        <input type="checkbox" id="symbols" class="custom_checkbox">
+                        <label for="symbols">Symbols</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="Generate_password_button">Generate Password</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

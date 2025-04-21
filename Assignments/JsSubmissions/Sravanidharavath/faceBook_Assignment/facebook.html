@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <header class="w-full bg-[#3b5998] p-4 flex justify-between items-center text-white">
+        <h1 class="text-3xl font-bold ml-8">facebook</h1>
+        <div class="flex space-x-2 mr-8">
+            <input type="text" placeholder="Email or Phone" class="p-2 text-black border rounded">
+            <input type="password" placeholder="Password" class="p-2 text-black border rounded">
+            <button class="bg-[#4c66a4] px-4 py-2 text-white rounded">Log In</button>
+        </div>
+    </header>
+    <main class="flex w-full max-w-5xl bg-white shadow-lg mt-8 p-6">
+        <section class="w-1/2 pr-6">
+            <h2 class="text-xl font-semibold">Introducing Graph Search</h2>
+            <p class="mt-2">Find more of what you're looking for through your friends and connections. <a href="#" class="text-blue-600">Learn More</a></p>
+            <img src="./facebookImage.png" alt="Graph Search Preview" class="mt-4 w-full">
+        </section>
+        <section class="w-1/2 bg-gray-100 p-6">
+            <h2 class="text-2xl font-semibold">Sign Up</h2>
+            <p class="text-gray-600">It’s free and always will be.</p>
+            <form class="mt-4">
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="First Name" class="w-1/2 p-2 border rounded">
+                    <input type="text" placeholder="Last Name" class="w-1/2 p-2 border rounded">
+                </div>
+                <input type="email" placeholder="Your Email" class="block w-full p-2 border rounded my-2">
+                <input type="email" placeholder="Re-enter Email" class="block w-full p-2 border rounded mb-2">
+                <input type="password" placeholder="New Password" class="block w-full p-2 border rounded mb-2">
+                <label class="block mt-2">Birthday:</label>
+                <div class="flex space-x-2">
+                    <select id="monthSelect" class="w-1/3 p-2 border rounded">
+                        <option selected disabled>Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <select id="daySelect" class="w-1/3 p-2 border rounded">
+                        <option selected disabled>Day</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<option>${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="yearSelect" class="w-1/3 p-2 border rounded">
+                        <option selected disabled>Year</option>
+                        <script>
+                            for (let i = 1990; i <= 2010; i++) {
+                                document.write(`<option>${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <label class="mr-4"><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Male</label>
+                </div>
+                <button class="bg-[#5cb85c] w-full mt-4 py-2 text-white rounded">Sign Up</button>
+            </form>
+        </section>
+    </main>
+    <footer class="w-full text-center p-4 text-gray-500 text-sm mt-6">
+        English (US) · Español · Français (France) · 中文(简体) · العربية · Português (Brasil) · Italiano · 한국어 · Deutsch · हिन्दी
+        <br>
+        <div class="mt-2">
+            <a href="#" class="text-gray-600 text-xs mx-2">Sign Up</a>
+            <a href="#" class="text-gray-600 text-xs mx-2">Log In</a>
+            <a href="#" class="text-gray-600 text-xs mx-2">Messenger</a>
+            <a href="#" class="text-gray-600 text-xs mx-2">Facebook Lite</a>
+            <a href="#" class="text-gray-600 text-xs mx-2">Privacy</a>
+        </div>
+        <p class="mt-2 text-xs">Facebook © 2013</p>
+    </footer>
+</body>
+</html>

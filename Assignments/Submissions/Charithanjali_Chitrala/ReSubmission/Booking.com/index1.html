@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking.com | Official site</title>
+    <link rel="icon" type="image/x-icon" href="booking_logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "style.css"></link>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Booking.com</div>
+        <div class="buttons">
+            <button>Register</button>
+            <button>Sign In</button>
+        </div>
+    </div>
+    <div class="nav-options">
+        <div class="nav-item">
+            <i class="fas fa-bed"></i> Stays
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-plane"></i> Flights
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-car"></i> Car rentals
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-ticket-alt"></i> Attractions
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-taxi"></i> Airport taxis
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Find your next stay</h1>
+        <p style="color: white;">Search deals on hotels, homes, and much more...</p>
+    </div>
+    <div class="search-container">
+        <input type="text" id="destination" placeholder="Where are you going?">
+        <input type="date" id="checkin" placeholder="check-in">
+        <input type="date" id="checkout" placeholder="check-out">
+        <select id="guests">
+            <option>2 adults · 0 children · 1 room</option>
+            <option>1 adult · 0 children · 1 room</option>
+            <option>2 adults · 1 child · 1 room</option>
+        </select>
+        <button onclick="search()">Search</button>
+    </div>
+    <div class="offers">
+        <h2>Offers</h2>
+        <p>Promotions, deals and special offers for you</p>
+        <div class="offer-box">
+            <img src="worldwide.jpeg" alt="worldwide"> 
+            <h3>Save on stays worldwide</h3>
+            <p>Start your year with an adventure, saving 15% or more.</p>
+            <button>Save 15% or more</button>
+        </div>
+        <div class="offer-box">
+          <img src="escape.jpeg" alt="escape"> 
+            <h3>Quick escape, quality time</h3>
+            <p>Save up to 20% with a Getaway Deal</p>
+            <button>Save on stays</button>
+        </div>
+    </div>
+    <section class="trip-planner">
+        <h2>Explore India</h2>
+        <p>These popular destinations have a lot to offer</p>
+        
+        <div class="destination-slider">
+            <div class="destination">
+                <img src="newdelhi.jpg" alt="new-delhi">
+                <p><strong>New Delhi</strong><br>2,912 properties</p>
+            </div>
+            <div class="destination">
+                <img src="bangalore.jpg" alt="bangalore">
+                <p><strong>Bangalore</strong><br>2,048 properties</p>
+            </div>
+            <div class="destination">
+                <img src="mumbai.jpg" alt="Mumbai">
+                <p><strong>Mumbai</strong><br>1,652 properties</p>
+            </div>
+            <div class="destination">
+                <img src="chennai.jpg" alt="Chennai">
+                <p><strong>Chennai</strong><br>1,406 properties</p>
+            </div>
+            <div class="destination">
+                <img src="mysore.jpg" alt="Mysore">
+                <p><strong>Mysore</strong><br>814 properties</p>
+            </div>
+        </div>
+    </section>
+    <div class="property-types">
+        <h2>Browse by property type</h2>
+        <div class="property-slider">
+            <div class="property-item">
+                <img src="apt.webp" alt="Apartments">
+                <p>Apartments</p>
+            </div>
+            <div class="property-item">
+                <img src="resort.webp" alt="Resorts">
+                <p>Resorts</p>
+            </div>
+            <div class="property-item">
+                <img src="villa.webp" alt="Villas">
+                <p>Villas</p>
+            </div>
+            <div class="property-item">
+                <img src="cabin.webp" alt="Cabins">
+                <p>Cabins</p>
+            </div>
+        </div>
+        
+        <section class="trending-destinations">
+            <h2>Trending destinations</h2>
+            <p>Most popular choices for travelers from India</p>
+            <div class="trending-container">
+                <div class="trending-item" style="background-image: url('newdelhi.jpg');">
+                    <span>New Delhi</span>
+                </div>
+                <div class="trending-item" style="background-image: url('bangalore.jpg');">
+                    <span>Bangalore</span>
+                </div>
+                <div class="trending-item" style="background-image: url('mumbai.jpg');">
+                    <span>Mumbai</span>
+                </div><div class="trending-item" style="background-image: url('chennai.jpg');">
+                    <span>Chennai</span>
+                </div>
+                <div class="trending-item" style="background-image: url('varanasi.jpg');">
+                    <span>Varanasi</span>
+                </div>
+            </div>
+        </section>
+        <section class="trip-planner">
+            <h2>Quick and easy trip planner</h2>
+            <p>Pick a vibe and explore the top destinations in India</p>
+            <div class="filters">
+                <button class="active">&#127969; City</button>
+                <button >&#127965; Beach</button>
+                <button>&#128692; Outdoors</button>
+                <button>&#10084; Romance</button>
+            </div>
+            <div class="destination-slider">
+                <div class="destination">
+                    <img src="Hyderabad.jpg" alt="Hyderabad">
+                    <p><strong>Hyderabad</strong><br>181 km away</p>
+                </div>
+                <div class="destination">
+                    <img src="dwaraka.jpg" alt="dwaraka">
+                    <p><strong>Dwaraka</strong><br>188 properties</p>
+                </div>
+                <div class="destination">
+                    <img src="bangalore.jpg" alt="bangalore">
+                    <p><strong>Bangalore</strong><br>2,048 properties</p>
+                </div>
+                <div class="destination">
+                    <img src="newdelhi.jpg" alt="new-delhi">
+                    <p><strong>New Delhi</strong><br>321 km away</p>
+                </div>
+                
+                <div class="destination">
+                    <img src="Mumbai.jpg" alt="Mumbai">
+                    <p><strong>Mumbai</strong><br>1,652 properties</p>
+                </div>
+                <div class="destination">
+                    <img src="Chennai.jpg" alt="Chennai">
+                    <p><strong>Chennai</strong><br>1,406 properties</p>
+                </div> 
+            </div>
+        </section>
+        <div class="deals-container">
+            <h2>Deals for the weekend</h2>
+            <p>Save on stays for March 28 - March 30</p>
+    
+            <div class="deals-slider">
+                <div class="deal-card">
+                    <img src="hotel1.jpg" alt="Olive Zip Kalyan Nagar">
+                    <div class="deal-info">
+                        <h3>Olive Zip Kalyan Nagar by Embassy Group</h3>
+                        <p>Bangalore, India</p>
+                        <div class="rating">
+                            <span class="score">7.2</span>
+                            <span>Good · 467 reviews</span>
+                        </div>
+                        <span class="deal-tag">Getaway Deal</span>
+                        <p class="price">2 nights <span class="old-price">₹ 4,832</span> <span class="new-price">₹ 3,866</span></p>
+                    </div>
+                </div>
+    
+                <div class="deal-card">
+                    <img src="palomar.jpg" alt="Treebo Premium">
+                    <div class="deal-info">
+                        <h3>Treebo Premium Vapr Ashok Nagar</h3>
+                        <p>Chennai, India</p>
+                        <div class="rating">
+                            <span class="score">7.6</span>
+                            <span>Good · 122 reviews</span>
+                        </div>
+                        <span class="deal-tag">Getaway Deal</span>
+                        <p class="price">2 nights <span class="old-price">₹ 14,159</span> <span class="new-price">₹ 5,734</span></p>
+                    </div>
+                </div>
+    
+                <div class="deal-card">
+                    <img src="hotel2.jpg" alt="Hotel Silver Clé">
+                    <div class="deal-info">
+                        <h3>"Hotel Silver Clé</h3>
+                        <p>Hyderabad, India</p>
+                        <div class="rating">
+                            <span class="score">8.1</span>
+                            <span>Very Good · 503 reviews</span>
+                        </div>
+                        <p class="price">2 nights <span class="old-price">₹ 7,790</span> <span class="new-price">₹ 7,011</span></p>
+                    </div>
+                </div>
+    
+                <div class="deal-card">
+                    <img src="palomar.jpg" alt="Zion - A Luxurious Hotel">
+                    <div class="deal-info">
+                        <h3>Zion - A Luxurious Hotel</h3>
+                        <p>Bangalore, India</p>
+                        <div class="rating">
+                            <span class="genius-badge">Genius</span>
+                            <span class="score">6.9</span>
+                            <span>Review score · 329 reviews</span>
+                        </div>
+                        <p class="price">2 nights <span class="old-price">₹ 6,460</span> <span class="new-price">₹ 6,137</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="properties-container">
+            <h2>Stay at our <strong>Top unique properties</strong></h2>
+            <p>From castles and villas to boats and igloos, we have it all</p>
+    
+            <div class="properties-slider">
+                <div class="property-card">
+                    <img src="Gyttja.webp" alt="Domki Wierszyki Shelters">
+                    <div class="favorite-icon">❤️</div>
+                    <div class="property-info">
+                        <h3>Domki Wierszyki Shelters</h3>
+                        <p>Poland, Zakopane</p>
+                        <div class="rating">
+                            <span class="score">9.7</span>
+                            <span>Exceptional · 89 reviews</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="property-card">
+                    <img src="Ranczo.webp" alt="Ranczo w Dolinie">
+                    <div class="favorite-icon">❤️</div>
+                    <div class="property-info">
+                        <h3>Ranczo w Dolinie</h3>
+                        <p>Poland, Kiszkowo</p>
+                        <div class="rating">
+                            <span class="score">9.7</span>
+                            <span>Exceptional · 179 reviews</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="property-card">
+                    <img src="Agriturismo.webp" alt="Tiny House Dreischwesternherz">
+                    <div class="favorite-icon">❤️</div>
+                    <div class="property-info">
+                        <h3>Tiny House Dreischwesternherz</h3>
+                        <p>Germany, Trier</p>
+                        <div class="rating">
+                            <span class="score">9.6</span>
+                            <span>Exceptional · 155 reviews</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="property-card">
+                    <img src="Mini.webp" alt="Das rote Haus hinterm Deich">
+                    <div class="favorite-icon">❤️</div>
+                    <div class="property-info">
+                        <h3>Das rote Haus hinterm Deich</h3>
+                        <p>Germany, Simonsberg</p>
+                        <div class="rating">
+                            <span class="score">9.2</span>
+                            <span>Wonderful · 47 reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Get inspiration for your next trip</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="los.png" alt="Los Angeles">
+                    <div class="card-content">
+                        <h3>5 of the best hotels in Los Angeles</h3>
+                        <p>From Hollywood to Beverly Hills, discover 5 of the best hotels in Los Angeles for your stay.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="orlando.webp" alt="Orlando Hotels">
+                    <div class="card-content">
+                        <h3>The 6 best Orlando hotels for families</h3>
+                        <p>Discover the best Orlando hotels for families for your vacation.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="best.webp" alt="Ski Towns">
+                    <div class="card-content">
+                        <h3>5 best ski towns around the world</h3>
+                        <p>Discover a winter wonderland in these charming ski destinations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="homes-section">
+       
+        <h2>Homes guests love</h2>
+            <a href="#">Discover homes</a>
+        <div class="homes-container">
+            <div class="home-card">
+                <img src="apart.webp" alt="Aparthotel Stare Miasto">
+                <div class="heart-icon">❤️</div>
+                <div class="home-info">
+                    <h3>Aparthotel Stare Miasto</h3>
+                    <p>Old Town, Poland, Krakow</p>
+                    <div class="rating"><span class="score">8.8</span> Excellent · 3,168 reviews</div>
+                    <p class="price">Starting from <strong>₹ 8,352</strong></p>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="villa.webp" alt="Villa Domina">
+                <div class="heart-icon">❤️</div>
+                <div class="home-info">
+                    <h3>Villa Domina</h3>
+                    <p>Split City Center, Croatia, Split</p>
+                    <div class="rating"><span class="score">9.4</span> Wonderful · 1,365 reviews</div>
+                    <p class="price">Starting from <strong>₹ 5,483</strong></p>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="7seasons.webp" alt="7Seasons Apartments Budapest">
+                <div class="heart-icon">❤️</div>
+                <div class="home-info">
+                    <h3>7Seasons Apartments Budapest</h3>
+                    <p>06. Terézváros, Hungary, Budapest</p>
+                    <div class="rating"><span class="score">8.8</span> Excellent · 11,444 reviews</div>
+                    <p class="price">Starting from <strong>₹ 8,624</strong></p>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="romance.webp" alt="RAMBLA BEACH Apartments">
+                <div class="heart-icon">❤️</div>
+                <div class="home-info">
+                    <h3>RAMBLA BEACH Apartments</h3>
+                    <p>Sant Martí, Spain, Barcelona</p>
+                    <div class="rating"><span class="score">8.7</span> Excellent · 629 reviews</div>
+                    <p class="price">Starting from <strong>₹ 9,479</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="travel-section">
+        
+        <div class="signin-box">
+            <div class="signin-text">
+                <h2>Travel more, spend less</h2>
+                <strong>Sign in, save money</strong>
+                <p>Save 10% or more at participating properties – just look for the blue Genius label</p>
+                <button class="signin-btn">Sign in</button>
+                <a href="#" class="register-link">Register</a>
+            </div>
+            <div class="genius-badge">
+                <img src="genius.png" alt="Genius">
+            </div>
+        </div>
+
+        
+        <div class="promo-banner">
+            <div class="promo-text">
+                <h2>Find <span class="highlight">apartments</span> for your next trip</h2>
+                <button class="discover-btn">Discover homes</button>
+            </div>
+            <div class="promo-image">
+                <img src="promo.png" alt="Relaxing chair">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="popular-destinations">
+            <h3>Popular with travelers from India</h3>
+            <div class="tabs">
+                <button class="active">Domestic cities</button>
+                <button>International cities</button>
+                <button>Regions</button>
+                <button>Countries</button>
+                <button>Places to stay</button>
+            </div>
+            <div class="cities-grid">
+                <ul>
+                    <li>Srinagar hotels</li>
+                    <li>Hyderabad hotels</li>
+                    <li>Rishikesh hotels</li>
+                    <li>Pune hotels</li>
+                    <li>Kodaikānāl hotels</li>
+                </ul>
+                <ul>
+                    <li>Bangalore hotels</li>
+                    <li>Jaipur hotels</li>
+                    <li>Munnar hotels</li>
+                    <li>Varkala hotels</li>
+                    <li>Mussoorie hotels</li>
+                </ul>
+                <ul>
+                    <li>Ooty hotels</li>
+                    <li>Puri hotels</li>
+                    <li>Varanasi hotels</li>
+                    <li>Manāli hotels</li>
+                    <li>Shimla hotels</li>
+                </ul>
+                <ul>
+                    <li>Mumbai hotels</li>
+                    <li>Chennai hotels</li>
+                    <li>Ayodhya hotels</li>
+                    <li>New Delhi hotels</li>
+                    <li>Cochin hotels</li>
+                </ul>
+                <ul>
+                    <li>Lonavala hotels</li>
+                    <li>Pondicherry hotels</li>
+                    <li>Mysore hotels</li>
+                    <li>Gurgaon hotels</li>
+                    <li>Udaipur hotels</li>
+                </ul>
+            </div>
+            <a href="#" class="show-more">+ Show more</a>
+        </div>
+    
+        <div class="footer-links">
+            <div class="footer-category">
+                <h4>Support</h4>
+                <ul>
+                    <li>Coronavirus (COVID-19) FAQs</li>
+                    <li>Manage your trips</li>
+                    <li>Contact Customer Service</li>
+                    <li>Safety Resource Center</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>Discover</h4>
+                <ul>
+                    <li>Genius loyalty program</li>
+                    <li>Seasonal and holiday deals</li>
+                    <li>Travel articles</li>
+                    <li>Booking.com for Business</li>
+                    <li>Traveller Review Awards</li>
+                    <li>Car rental</li>
+                    <li>Flight finder</li>
+                    <li>Restaurant reservations</li>
+                    <li>Booking.com for Travel Agents</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>Terms and settings</h4>
+                <ul>
+                    <li>Privacy & cookies</li>
+                    <li>Terms & conditions</li>
+                    <li>Grievance officer</li>
+                    <li>Modern Slavery Statement</li>
+                    <li>Human Rights Statement</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>Partners</h4>
+                <ul>
+                    <li>Extranet login</li>
+                    <li>Partner help</li>
+                    <li>List your property</li>
+                    <li>Become an affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>About</h4>
+                <ul>
+                    <li>About Booking.com</li>
+                    <li>How We Work</li>
+                    <li>Sustainability</li>
+                    <li>Press center</li>
+                    <li>Careers</li>
+                    <li>Investor relations</li>
+                    <li>Corporate contact</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
+
+    
+        </body>
+    <script>
+        function search() {
+            let destination = document.getElementById('destination').value;
+            let checkin = document.getElementById('checkin').value;
+            let checkout = document.getElementById('checkout').value;
+            let guests = document.getElementById('guests').value;
+            
+            alert(`Searching for hotels in ${destination} from ${checkin} to ${checkout} for ${guests}`);
+        }
+    </script>
+</html> 
+

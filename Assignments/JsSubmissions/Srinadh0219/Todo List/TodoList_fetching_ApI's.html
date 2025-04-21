@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .todo-container { width: 300px; margin: 20px auto; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; display: flex; justify-content: space-between; }
+        .add{
+            padding: 8px;
+            border-radius: 8px;
+            margin-left: 20px;
+            color:blue;
+            background-color: white;
+        }
+        .task{
+           padding: 10px;
+           border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="New task" class="task">
+        <button onclick="addTodo()" class="add">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+    
+    <script>
+        const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+        
+        async function fetchTodos() {
+            const response = await fetch(apiUrl + '?_limit=5');
+            const todos = await response.json();
+            const list = document.getElementById('todoList');
+            list.innerHTML = '';
+            todos.forEach(todo => {
+                list.innerHTML += `<li>${todo.title} <button onclick="deleteTodo(${todo.id})">❌</button></li>`;
+            });
+        }
+        
+        async function addTodo() {
+            const input = document.getElementById('todoInput');
+            const newTodo = { title: input.value, completed: false };
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                body: JSON.stringify(newTodo),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const todo = await response.json();
+            document.getElementById('todoList').innerHTML += `<li>${todo.title} <button onclick="deleteTodo(${todo.id})">❌</button></li>`;
+            input.value = '';
+        }
+        
+        async function deleteTodo(id) {
+            await fetch(`${apiUrl}/${id}`, { method: 'DELETE' });
+            fetchTodos();
+        }
+        
+        fetchTodos();
+    </script>
+</body>
+</html>
+

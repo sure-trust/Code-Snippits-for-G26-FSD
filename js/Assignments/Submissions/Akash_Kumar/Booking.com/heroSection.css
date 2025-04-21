@@ -1,0 +1,167 @@
+#main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 50px;
+    height: fit-content;
+    background-color: rgb(13, 13, 157);
+    gap: 30px;
+    padding-bottom: 50px;
+}
+#header{
+    font-size: 28px;
+    font-weight: 700;
+}
+#content_style1{
+    border: 1.5px solid rgb(72, 68, 68,0.5);
+    height: fit-content;
+    width: 95vw;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+#frame, #new_frame{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
+    gap: 15px;  
+}
+#picture , #new_picture_container{
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+#picture_name, #new_picture_detail{
+    font-size: 23px;
+    font-weight: 500;
+    color: rgb(45, 43, 43);
+}
+
+
+#logo_signUp{
+            
+    color: white;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+#company_logo{
+    width: 200px;
+    height: 50px;
+    background-color: gray;
+}
+#signUp_menu{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+}
+#choose_country_flag{
+    width: 50px;
+
+    height: 50px;
+    border-radius: 25px;
+}
+.register_signIn{
+    display: flex;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+#customer_service{
+    width: 50px;
+    background-color: gray;
+    height: 50px;
+    border-radius: 25px;
+}
+#navigation_menu_bar{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: fit-content;
+    height: 100px;
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    height: 40px;
+    width: fit-content;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+#icon, .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+#highlighted_texts{
+    color: white;
+    margin-top: 80px;
+}
+#highlighted_text_primary{
+    font-size: 50px;
+    font-weight: 700;
+}
+#highlighted_text_secondary{
+    font-size: 35px;
+    font-weight: 400;
+}
+
+#search_bar{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+    background-color: rgb(214, 167, 13);
+    position: relative;
+    width: fit-content;
+    border-radius: 10px;
+    top: 100px;
+    align-self: center;
+}
+.search_option_tabs{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    background-color: white;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+#location_search_icon_place, #adult_count_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+#search_button{
+    color: white;
+    background-color:rgb(70, 141, 255);
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+}

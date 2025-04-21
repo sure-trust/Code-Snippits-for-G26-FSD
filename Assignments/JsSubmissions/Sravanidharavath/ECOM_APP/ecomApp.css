@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Header with Background Image */
+header {
+  background: url('https://static.vecteezy.com/system/resources/previews/010/930/988/non_2x/shopping-online-on-phone-with-podium-paper-art-modern-background-gifts-box-vector.jpg') 
+              center/cover no-repeat;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+header h1 {
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  color: #ff4081;
+}
+
+/* Subtitle */
+header p {
+  font-size: 18px;
+  font-style: italic;
+  color: #9370DB;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #87CEEB;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Home & Cart Buttons */
+nav button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+  background-color: #303f9f;
+  transform: scale(1.05);
+}
+
+/* Moving Text */
+.moving-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
+  position: absolute;
+  left: 10%;
+  white-space: nowrap;
+  animation: moveText 5s linear infinite alternate;
+}
+
+/* Animation to Move the Text */
+@keyframes moveText {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 75%;
+  }
+}
+
+/* Content Section */
+.content {
+  padding: 30px;
+  background-color: #e3f2fd;
+  min-height: 80vh;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Product Cards */
+.product {
+  border: 1px solid #ddd;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product h3 {
+  color: #333;
+}
+
+.product p {
+  color: #666;
+}
+
+/* Product Image */
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.product button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product button:hover {
+  background-color: #f50057;
+  transform: scale(1.05);
+}
+
+/* Cart Item */
+.cart-item {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid #3f51b5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item strong {
+  color: #333;
+}
+
+/* Buy Button */
+.buy-btn {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Payment Dialog */
+#payment-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#payment-dialog-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#payment-dialog-content h2 {
+  margin-top: 0;
+}
