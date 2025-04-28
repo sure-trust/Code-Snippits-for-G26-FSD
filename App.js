@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css'
-import Count from './counterClass.js'
+import Dogfetcher from './dogapi.js';
+import './dogapi.css';
 function App(){
   return(
     
-    <Count/>
+    <Dogfetcher/>
   
 
   )
