@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaze E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Amaze</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>All Categories</h1>
+        <div class="categories">
+            <div class="category">Smartphone</div>
+            <div class="category">Watches</div>
+            <div class="category">Electronics</div>
+            <div class="category">Furniture</div>
+            <div class="category">Fashion</div>
+        </div>
+    </section>
+
+    <section id="shop">
+        <h2>Shop</h2>
+        <div class="products">
+            <div class="product" data-name="Smartphone" data-price="699">
+                <img src="images/smart.jpg" alt="Smartphone" class="product-image">
+                <p>Smartphone</p>
+                <button onclick="addToCart('Smartphone', 699)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Watch" data-price="199">
+                <img src="images/watch.jpg" alt="Watch" class="product-image">
+                <p>Watch</p>
+                <button onclick="addToCart('Watch', 199)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Headphones" data-price="149">
+                <img src="images/head.jpg" alt="Headphones" class="product-image">
+                <p>Headphones</p>
+                <button onclick="addToCart('Headphones', 149)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Shoes" data-price="89">
+                <img src="images/shoes.jpg" alt="Shoes" class="product-image">
+                <p>Shoes</p>
+                <button onclick="addToCart('Shoes', 89)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="T-Shirt" data-price="29">
+                <img src="images/tshirt.jpg" alt="T-Shirt" class="product-image">
+                <p>T-Shirt</p>
+                <button onclick="addToCart('T-Shirt', 29)">Add to Cart</button>
+            </div>
+            
+             <div class="product" data-name="shirt" data-price="30">
+                <img src="images/shirt.jpg" alt="Shirt" class="product-image">
+                <p>Shirt</p>
+                <button onclick="addToCart('Shirt', 30)">Add to Cart</button>
+            </div>
+            
+             <div class="product" data-name="hudi" data-price="40">
+                <img src="images/hudi.jpg" alt="hudi" class="product-image">
+                <p>Hudi</p>
+                <button onclick="addToCart('hudi', 40)">Add to Cart</button>
+            </div>
+            
+             <div class="product" data-name="tops" data-price="50">
+                <img src="images/Tops.jpg" alt="Tops" class="product-image">
+                <p>Tops</p>
+                <button onclick="addToCart('Tops', 50)">Add to Cart</button>
+            </div>
+            
+             <div class="product" data-name="pens" data-price="60">
+                <img src="images/pens.jpg" alt="pens" class="product-image">
+                <p>Pens</p>
+                <button onclick="addToCart('pens', 40)">Add to Cart</button>
+            </div>
+            
+             <div class="product" data-name="jeans" data-price="400">
+                <img src="images/jeans.jpg" alt="jeans" class="product-image">
+                <p>jeans</p>
+                <button onclick="addToCart('jeans', 400)">Add to Cart</button>
+            </div>
+            
+            
+            
+        </div>
+        
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0</span></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
