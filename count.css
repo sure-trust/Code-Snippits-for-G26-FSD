@@ -1,0 +1,18 @@
+body{
+    background-color: grey;
+   
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  button{
+    background-color:pink;
+    color:black;
+    font-size:50px;
+    border-radius:10px;
+    gap:10px;
+    width:60px;
+
+
+
+  }

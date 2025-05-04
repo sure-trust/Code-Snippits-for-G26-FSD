@@ -1,0 +1,11 @@
+let grades = {
+    Venu: 85,
+    Aravind: 92,
+    Yaswanth: 78
+};
+
+grades['Venu'] = 90;  
+
+delete grades['Yaswanth'];  
+
+console.log('Updated Grades:', grades);

@@ -1,0 +1,24 @@
+//START
+  // Create an array called movies, each element is an object with properties: movieName, rating, and year
+   //Create a new array filteredMovies
+   //FOR each movie in movies
+      // IF movie.year > 2015 THEN
+        //   Add movie to filteredMovies
+      // END IF
+  // END FOR
+    //Sort filteredMovies by rating in descending order
+  // Print filteredMovies
+//END
+
+// Movie List
+let movies = [
+    { movieName: 'Baahubali: The Beginning', rating: 8.8, year: 2015 },
+    { movieName: 'Avengers: Endgame', rating: 9.5, year: 2019 },
+    { movieName: 'Spider-Man: No Way Home', rating: 8.3, year: 2021 },
+    { movieName: 'Vikram', rating: 9.0, year: 2022 }
+];
+
+const filteredMovies = movies.filter(movie => movie.year > 2015)
+                            .sort((a, b) => b.rating - a.rating);
+
+console.log('Filtered and Sorted Movies:', filteredMovies);

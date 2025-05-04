@@ -1,0 +1,29 @@
+.small{
+    height: 30px;
+    width: 100%;
+    /* border: 2px solid #000000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    background-color: #EEEEEE;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.sep{
+    display: flex;
+    gap: 20px;
+}
+.sep2{
+    display: flex;
+    gap: 20px;
+    padding-right: 45px;
+}
+.sep h5{
+   font-size: 13px;
+   font-weight: 500;
+}
+.sep2 h5{
+    font-size: 13px;
+    font-weight: 500;
+ }

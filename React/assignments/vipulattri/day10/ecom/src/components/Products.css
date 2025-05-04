@@ -1,0 +1,37 @@
+.products-section {
+    padding: 20px;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .product-image {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .product-title {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .product-title:hover {
+    color: #007bff;
+  }
+  
