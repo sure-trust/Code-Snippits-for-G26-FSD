@@ -4,7 +4,7 @@ import Dog from "./Dog";
 function App() {
   return (
     <div className="app">
-      <Dog/> 
+      <Dog/> // renders the dog component 
     </div>
   );
 }

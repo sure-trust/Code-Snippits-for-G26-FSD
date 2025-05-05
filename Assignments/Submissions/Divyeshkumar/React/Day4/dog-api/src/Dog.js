@@ -31,10 +31,10 @@ const Dog = () => {
   return (
     <div className="main-container">
       <h1>
-        Dogesh Bhai
+        Dogesh Bro
         <img
           src="https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg"
-          alt="Dogesh Bhai"
+          alt="Dogesh Bro"
           style={{ width: "50px", height: "50px", marginLeft: "10px", verticalAlign: "middle" }}
         />
       </h1>
