@@ -1,0 +1,17 @@
+.image-row {
+  display: flex;
+  flex-direction: row;      
+  overflow-x: auto;         
+  gap: 20px;                
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.row-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;  
+  transition: transform 0.2s;         
+}
