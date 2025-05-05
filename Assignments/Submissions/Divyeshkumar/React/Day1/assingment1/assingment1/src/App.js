@@ -1,11 +1,12 @@
-
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="profile_pic"></div>
+      <div className="profile_pic">
+        <img src={logo} alt="Profile" style={{ height: '100%', width: '100%', borderRadius: '2%' }} />
+      </div>
       
       <div className="important_details">
         <div className="user_name">Divyesh Kumar</div>
