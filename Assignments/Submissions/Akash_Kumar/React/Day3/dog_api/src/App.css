@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+#image_container{
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+

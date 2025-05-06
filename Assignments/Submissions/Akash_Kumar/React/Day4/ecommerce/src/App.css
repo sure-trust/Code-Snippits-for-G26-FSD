@@ -1,0 +1,304 @@
+/* .App {
+  text-align: center;
+} */
+*{
+  font-family: 'poppins';
+ }
+/* Navbar 1 */
+#nav1{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 40px;
+  font-size: 14px;
+  color: rgb(54, 54, 54);
+  background-color: rgb(242, 242, 242);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#left_nav1, #right_nav1{
+  display: flex;
+  gap: 20px;
+
+}
+/* Navbar 2 */
+#nav2{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 40px;
+  font-size: 20px;
+  height: 60px;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+#left_nav2, #right_nav2{
+  display: flex;
+  gap: 20px;
+}
+
+/* Navbar 3 */
+#nav3{
+  display: flex;
+  text-wrap: nowrap;
+  padding-inline: 60px;
+  gap: 30px;
+  height: 80px;
+  align-items: center;
+}
+#men_women{
+  display: flex;
+  gap: 20px;
+  border: 1px solid gray;
+  padding-inline: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 40px;
+  align-items: center;
+}
+#men{
+  background-color: rgb(229, 202, 0);
+  width: fit-content;
+  padding-inline: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+#women{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero pics */
+.hero1{
+  background-image: url("../public/image_shirt.png");
+}
+.hero2{
+  background-image: url("../public/image_pant.png");
+}
+.hero3{
+  background-image: url("../public/image_style.png");
+}
+.hero4{
+  background-image: url("../public/men.webp");
+}
+#container > div{
+  width: 350px;
+  height: 550px;
+  background-color: red;
+  background-size: cover;
+  background-position: center;
+}
+
+#container{
+  display: flex;
+  margin: 30px;
+  gap: 10px;
+}
+
+/* New Arrivals */
+#new_arrival_cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#card_list{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#card1{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0,0, 0.2);
+}
+.card_image{
+  width: 100%;
+  height: 250px;
+  background-image: url("../public/shirt.webp");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#new_arrival_card1{
+  background-image: url("../public/new1.png");
+}
+#new_arrival_card2{
+  background-image: url("../public/new2.png");
+}
+#new_arrival_card3{
+  background-image: url("../public/new3.png");
+}
+#new_arrival_card4{
+  background-image: url("../public/new4.png");
+}
+#new_arrival_card5{
+  background-image: url("../public/new5.png");
+}
+#new_arrival_card6{
+  background-image: url("../public/new6.png");
+}
+#texts{
+  color: rgb(97, 97, 97);
+}
+#prices{
+  display: flex;
+  gap: 5px;
+}
+#shirt_name{
+  width: 100%;
+  font-size: 12px;
+  font-weight: 200;
+  text-wrap: nowrap;
+  color: rgb(158, 158, 158);
+  text-overflow:clip;
+  text-overflow: ellipsis;
+}
+#original{
+  color: rgb(23, 23, 23);
+}
+#crossed_price{
+  text-decoration: line-through;
+  color: rgb(132, 132, 132);
+}
+#offs{
+  color: rgb(53, 188, 103);
+  }
+
+  /* Trending */
+  #trending{
+    display: flex;
+    flex-direction: column;
+  }
+  #trending_cards_container{
+    display: flex;
+    flex-direction: row;
+  }
+  #shirt_pic{
+    width: 250px;
+    height: 400px;
+    background-image: url("../public/trending.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #shirt_name{
+    position: relative;
+  }
+  
+  /* Footer */
+  
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 60px;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #ebc60e;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #edfa05;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links li {
+  margin-bottom: 0;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+
+#mobile-covers h2 {
+  text-align: center;
+}
+
+#mobile-covers .product-list {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+#mobile-covers.undo-horizontal .product-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.new-arrivals-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+#sale{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden; 
+  padding-bottom: 10px;
+  justify-content: center; 
+}
