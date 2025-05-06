@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-commerce Platform</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1> E-commerce Platform</h1>
+  </header>
+
+  <nav>
+    <button onclick="showHome()">Home</button>
+    <div class="promo-banner">
+      <span class="promo-tag">NEW</span>
+      <span class="promo-text">Free Shipping on Orders Over ₹1000</span>
+      <span class="promo-tag">HOT</span>
+    </div>
+    <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+
+  <div class="content" id="content">
+    <div class="category-filters">
+      <button onclick="filterProducts('all')">All Products</button>
+      <button onclick="filterProducts('clothing')">Clothing</button>
+      <button onclick="filterProducts('accessories')">Accessories</button>
+      <button onclick="filterProducts('kids')">Kids</button>
+      <button onclick="filterProducts('Electronics')">Electronics</button>
+      <button onclick="filterProducts('footwear')">Footwear</button>
+    </div>
+  </div>
+
+  <div id="payment-dialog">
+    <div id="payment-dialog-content">
+      <h2>Order Summary</h2>
+      <p id="order-summary"></p>
+      <h3>Choose Payment Mode</h3>
+      <ul>
+        <li><label><input type="radio" name="payment" /> Credit Card</label></li>
+        <li><label><input type="radio" name="payment" /> Debit Card</label></li>
+        <li><label><input type="radio" name="payment" /> UPI</label></li>
+        <li><label><input type="radio" name="payment" /> Cash on Delivery</label></li>
+      </ul>
+      <button class="buy-btn" onclick="completePurchase()">Proceed to Pay</button>
+      <button onclick="closePaymentDialog()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

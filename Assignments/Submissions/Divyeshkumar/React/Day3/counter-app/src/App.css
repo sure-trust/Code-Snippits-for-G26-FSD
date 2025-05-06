@@ -1,0 +1,32 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.count {
+  font-size: 3rem;
+  margin: 20px 0;
+  color: #007bff;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

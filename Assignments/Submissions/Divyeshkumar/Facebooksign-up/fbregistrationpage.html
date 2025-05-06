@@ -1,0 +1,99 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="form-container max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+        <h1 class="form-title text-3xl font-bold mb-2">Sign Up</h1>
+        <p class="form-subtitle text-lg mb-4">It's free and always will be.</p>
+        <form>
+            <div class="name-inputs flex gap-2 mb-4">
+                <input type="text" placeholder="First Name" class="input-field w-1/2 p-2 border border-gray-300 rounded">
+                <input type="text" placeholder="Last Name" class="input-field w-1/2 p-2 border border-gray-300 rounded">
+            </div>
+            <div class="email-input mb-4">
+                <input type="email" placeholder="Your Email" class="input-field w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="email-confirmation mb-4">
+                <input type="email" placeholder="Re-enter Email" class="input-field w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="password-input mb-4">
+                <input type="password" placeholder="New Password" class="input-field w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="birthday-input mb-4">
+                <label class="birthday-label block text-lg font-bold mb-2">Birthday:</label>
+                <div class="birthday-selects flex gap-2">
+                    <select class="birthday-dropdown w-1/3 p-2 border border-gray-300 rounded">
+                        <option>Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                       <option>May</option>
+<option>June </option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>Octuber</option>
+<option>November</option>
+<option>December</option>
+                    </select>
+                    <select class="birthday-dropdown w-1/3 p-2 border border-gray-300 rounded">
+                        <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+                    </select>
+                    <select class="birthday-dropdown w-1/3 p-2 border border-gray-300 rounded">
+                        <option>Year</option>
+                        <option value="">Year</option>
+            <option value="1">2001</option>
+            <option value="2">2002</option>
+            <option value="3">2003</option>
+            <option value="4">2004</option>
+            <option value="5">2005</option>
+            <option value="6">2006</option>
+            <option value="7">2007</option>
+            <option value="8">2008</option>
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+                    </select>
+                </div>
+                <a href="#" class="birthday-info text-blue-600 text-sm mt-2 inline-block">Why do I need to provide my birthday?</a>
+            </div>
+            <div class="gender-input mb-4">
+                <label class="gender-label block text-lg font-bold mb-2">Gender:</label>
+                <div class="gender-options flex gap-4">
+                    <label class="gender-option flex items-center">
+                        <input type="radio" name="gender" class="gender-radio mr-2"> Female
+                    </label>
+                    <label class="gender-option flex items-center">
+                        <input type="radio" name="gender" class="gender-radio mr-2"> Male
+                    </label>
+                </div>
+            </div>
+            <p class="terms-and-conditions text-xs text-gray-600 mb-4">
+                By clicking Sign Up, you agree to our <a href="#" class="terms-link text-blue-600">Terms</a> and that you have read our <a href="#" class="data-policy-link text-blue-600">Data Use Policy</a>, including our <a href="#" class="cookie-use-link text-blue-600">Cookie Use</a>.
+            </p>
+            <button class="submit-button w-full bg-green-600 text-white p-2 rounded text-lg">Sign Up</button>
+        </form>
+        <hr class="divider my-4">
+        <p class="create-page text-center text-sm">
+            <a href="#" class="create-page-link text-blue-600">Create a Page</a> for a celebrity, band, or business.
+        </p>
+    </div>
+</body>
+</html>

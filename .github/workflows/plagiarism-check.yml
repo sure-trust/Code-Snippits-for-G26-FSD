@@ -1,0 +1,190 @@
+name: Check Plagiarism
+
+on:
+  pull_request:
+    paths:
+      - 'Assignments/Submissions/**'
+
+# Add permissions block
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15  # Add timeout to prevent hanging
+    steps:
+      # This special checkout configuration works with forked PRs
+      - name: Checkout PR
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: false
+
+      - name: Check for Plagiarism
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            function calculateSimilarity(str1, str2) {
+              try {
+                // Remove comments, whitespace, and normalize case
+                str1 = str1.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')  // Remove comments
+                          .replace(/\s+/g, '')
+                          .toLowerCase();
+                str2 = str2.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')
+                          .replace(/\s+/g, '')
+                          .toLowerCase();
+                
+                if (str1 === str2) return 100;
+                if (str1.length === 0 || str2.length === 0) return 0;
+                
+                // Use Levenshtein distance for more accurate similarity
+                const matrix = Array(str2.length + 1).fill(null)
+                  .map(() => Array(str1.length + 1).fill(null));
+
+                for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
+                for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
+
+                for (let j = 1; j <= str2.length; j++) {
+                  for (let i = 1; i <= str1.length; i++) {
+                    const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+                    matrix[j][i] = Math.min(
+                      matrix[j][i - 1] + 1,
+                      matrix[j - 1][i] + 1,
+                      matrix[j - 1][i - 1] + indicator
+                    );
+                  }
+                }
+
+                const distance = matrix[str2.length][str1.length];
+                const maxLength = Math.max(str1.length, str2.length);
+                return Math.round((1 - distance / maxLength) * 100);
+              } catch (error) {
+                console.error('Error calculating similarity:', error);
+                return 0;
+              }
+            }
+            
+            const submissionsDir = 'Assignments/Submissions';
+            let comment = '## Plagiarism Check Results\n\n';
+            let plagiarismFound = false;
+            
+            try {
+              // Get changed files
+              const changedFiles = await github.paginate(
+                github.rest.pulls.listFiles,
+                {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number
+                }
+              );
+              
+              if (!changedFiles.length) {
+                comment += '⚠️ No files were found to check.\n';
+              }
+
+              for (const file of changedFiles) {
+                if (!file.filename.startsWith('Assignments/Submissions/')) continue;
+                
+                // Check if file exists and is readable
+                if (!fs.existsSync(file.filename)) {
+                  comment += `⚠️ Could not access file: ${file.filename}\n`;
+                  continue;
+                }
+
+                try {
+                  const content = fs.readFileSync(file.filename, 'utf8');
+                  
+                  // Skip empty files
+                  if (!content.trim()) {
+                    comment += `⚠️ File is empty: ${file.filename}\n`;
+                    continue;
+                  }
+
+                  // Get all submission files recursively
+                  const files = fs.readdirSync(submissionsDir, {recursive: true})
+                    .filter(f => {
+                      const ext = path.extname(f).toLowerCase();
+                      return ['.js', '.py', '.html', '.css'].includes(ext);
+                    });
+                  
+                  let similarities = [];
+                  
+                  for (const otherFile of files) {
+                    const fullPath = path.join(submissionsDir, otherFile);
+                    if (fullPath === file.filename) continue;
+                    
+                    try {
+                      const otherContent = fs.readFileSync(fullPath, 'utf8');
+                      const similarity = calculateSimilarity(content, otherContent);
+                      
+                      if (similarity > 80) {  // Lower threshold to catch more potential matches
+                        similarities.push({
+                          file: otherFile,
+                          similarity: similarity
+                        });
+                      }
+                    } catch (error) {
+                      console.error(`Error reading comparison file ${otherFile}:`, error);
+                    }
+                  }
+
+                  // Sort similarities by percentage
+                  similarities.sort((a, b) => b.similarity - a.similarity);
+                  
+                  if (similarities.length > 0) {
+                    plagiarismFound = true;
+                    comment += `\n### Results for ${file.filename}:\n`;
+                    similarities.forEach(({file, similarity}) => {
+                      const severityIcon = similarity > 90 ? '🚨' : '⚠️';
+                      comment += `${severityIcon} ${similarity}% similarity with \`${file}\`\n`;
+                    });
+                  }
+                } catch (error) {
+                  console.error(`Error processing ${file.filename}:`, error);
+                  comment += `⚠️ Error processing file: ${file.filename}\n`;
+                }
+              }
+              
+              if (!plagiarismFound) {
+                comment += '✅ No significant code similarity detected\n';
+              } else {
+                comment += '\n### Note\n';
+                comment += '- Similarity above 90% is marked as 🚨 (high risk)\n';
+                comment += '- Similarity between 80-90% is marked as ⚠️ (moderate risk)\n';
+                comment += '- These results are automated and may need human verification\n';
+              }
+              
+            } catch (error) {
+              console.error('Workflow error:', error);
+              comment += '⚠️ An error occurred during the plagiarism check.\n';
+            }
+            
+            // Post results
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment
+              });
+            } catch (error) {
+              console.error('Error posting comment:', error);
+              throw error;
+            }
+
+      - name: Check final status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "failure" ]; then
+            echo "Plagiarism check failed to complete successfully"
+            exit 1
+          fi

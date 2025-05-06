@@ -1,0 +1,309 @@
+*{
+
+    border:0px;
+    margin:0px;
+}
+
+
+
+
+body{
+    padding-left:20px;
+    height:fit-content;
+    width:max-content;
+
+}
+.head{
+    padding:20px;
+
+}
+
+
+
+header{
+    background-color:darkblue;
+    color:white;
+    display:flex;
+    width:1360px;
+    height:300px;
+    padding-left:20px;
+}
+#acc{
+
+    padding-left: 1000px;
+
+}
+#cls{
+    color:white;
+}
+.cn{
+    color:darkblue;
+    background-color:white;
+}
+.special{
+    display:flex;
+    align-content:center;
+    display:flex;
+    gap:10px;
+padding-left:20px;
+}
+#one{
+    display: flex;
+    align-content:left;
+
+}
+input{
+
+    border:5px #e2a713 solid;
+    gap:0px;
+
+
+}
+.parent{
+    padding-left:20px;
+    display: flex;
+ gap:20px;
+
+}
+.child1{
+    border:1px solid grey;
+    border-radius:25px;
+}
+h1{
+    padding-left:20px;
+}
+p{
+    padding-left:20px;
+}
+.child2{
+    border:1px solid grey;
+    border-radius:25px;
+
+
+}
+.btn
+  {
+    background-color: rgb(44, 129, 199);
+    border-radius: 5px;
+    align-self:flex-end;
+    color:white;
+
+
+  }
+.img{
+    display:flex;
+    padding-left:200px;
+    border-radius:25px;
+    width:60px;
+    height:60px;
+
+}
+.btn2{
+    background-color: green;
+    color:white;
+}
+
+
+
+.image-container
+{
+    display:flex;
+    width:300px;
+    height:300px;
+
+    padding-left:10px;
+    gap:10px;
+    position:relative;
+}
+
+.it1{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+.it2{
+    position: absolute;
+    top: 20%;
+    left: 900px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}.it3{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}.it4{
+    position: absolute;
+    top: 20%;
+    left: 500px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+.it5{
+
+    position: absolute;
+    top: 20%;
+    left: 900px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.image-container2{
+
+    display:flex;
+    width:200px;
+    height:200px;
+
+    gap:20px;
+    padding:10px;
+    position: relative;
+
+    }
+    img{
+        border-radius:20px;
+    }
+    .hi{
+    display:flex;
+   flex-direction:row;
+    padding-left:10px; 
+    gap:30px;
+    align-content:center;
+}
+    .new{
+        width:100px;
+        height:100px;
+     border-radius:10px;
+
+    }
+    .hotel{
+        padding-left:10px;
+        border-radius:10px;
+    }
+    .hi2{
+        display:flex;
+        padding-left:10px;
+        gap:10px;
+
+
+    }
+    .new2{
+        gap:30px;
+        border-radius:5px;
+
+    }
+    strike{
+        color:rgb(240, 52, 52);
+    }
+    .pure{
+        display:flex;
+        gap:30px;
+        padding-left:10px;
+
+    }
+
+    .new2{
+        border:1px solid grey;
+        border-radius: 5px;
+        gap:10px;
+    }
+    .sun{
+        width:800px;
+        height:200px;
+        border:1px solid grey;
+        border-radius:10px;
+    }
+    .gis{
+
+    float:right;
+    padding-right:50px;
+    width:100px;
+    height:100px;
+    padding-top:5px;;
+
+    }
+    #btn{
+        color:blue;
+        border: solid grey;
+        border-radius:10px;
+    }
+    .list{
+        display:flex;
+        gap:10px;
+    }
+    .city{
+        display:flex;
+        gap:5px;
+    }
+    .last{
+        display:flex;
+
+    }
+    .final{
+        background-color: blue;
+        color:black;
+        width:700px;
+        height:300px;
+        border:5px solid grey;
+        border-radius:10px;
+        display: flex;
+    }
+    .imge{
+    padding-right:50px;
+    width:80px;
+    height:80px;
+    float:right;
+    }
+    .end{
+        padding-left:0px;
+        color:black;
+        text-align:center;
+        font-size:20px;
+
+    }
+    #logo{
+        width:80px;
+        height:80px;
+        padding-left:300px;
+        background-color: #ffffff; /* Add a valid color value */
+
+
+    }
+    footer{
+       background-color:#121686;
+    }

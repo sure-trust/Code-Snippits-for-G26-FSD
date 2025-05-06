@@ -1,0 +1,91 @@
+name: Format Code
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+# Add explicit permissions
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    # Add timeout to prevent hanging
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+        # Add error handling for checkout
+        continue-on-error: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+        # Add error handling for node setup
+        continue-on-error: false
+
+      # Add check for package.json
+      - name: Check for package.json
+        id: check-package
+        run: |
+          if [ -f "package.json" ]; then
+            echo "::set-output name=exists::true"
+          else
+            echo "Creating minimal package.json"
+            echo '{"name":"format-check","private":true}' > package.json
+          fi
+
+      - name: Install and run Prettier
+        run: |
+          # Check if prettier is already installed
+          if ! command -v prettier &> /dev/null; then
+            echo "Installing prettier..."
+            npm install --global prettier
+          fi
+          
+          # Check if there are any matching files before running prettier
+          if [ -n "$(find . -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.css" -o -name "*.md" -o -name "*.html" \))" ]; then
+            prettier --write "**/*.{js,jsx,ts,tsx,json,css,md,html}" || echo "Prettier formatting failed, but continuing..."
+          else
+            echo "No files to format found"
+          fi
+        continue-on-error: true
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          # Ensure git is configured
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Check for changes while ignoring whitespace
+          git diff -w --exit-code || echo "::set-output name=modified::true"
+
+      - name: Commit changes
+        if: steps.git-check.outputs.modified == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Format code with prettier"
+          branch: ${{ github.event.pull_request.head.ref }}
+          commit_options: '--no-verify'
+          file_pattern: '**/*.{js,jsx,ts,tsx,json,css,md,html}'
+        # Add error handling for commit
+        continue-on-error: true
+
+      # Add final status check
+      - name: Check final status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "failure" ]; then
+            echo "Workflow failed but files might have been partially formatted"
+            exit 1
+          fi 

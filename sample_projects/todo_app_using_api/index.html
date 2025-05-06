@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <h1 class="text-center">Todo App</h1>
+
+    <div id="root" class="w-full  text-center flex flex-col gap-2">
+        <div id="operationCont" class="border  py-2 rounded mx-2"></div>
+        <div id="todoList" class=""></div>
+    </div>
+
+</body>
+
+<script>
+
+
+    let rootElement = document.getElementById('root')
+    let optElement = document.getElementById('operationCont')
+    let fetchButton = document.createElement('button')
+    let todoData = []
+
+
+    fetchButton.addEventListener('click', (e) => {
+        fetch('https://dummyjson.com/todos').then((response) => {
+            response.json().then((data) => {
+                console.log({ data })
+
+                let todoListElement = document.getElementById('todoList')
+                todoListElement.className = 'border  py-2 rounded mx-2'
+                let colorArrar = ['bg-red-500','bg-green-500','bg-blue-500','bg-indigo-500']
+               data.todos.forEach((todoObj) => {
+
+                    //     {
+                    //     "id": 1,
+                    //     "todo": "Do something nice for someone you care about",
+                    //     "completed": false,
+                    //     "userId": 152
+                    // }
+
+
+                    let todoElement = document.createElement('div')
+                    todoElement.className = colorArrar[parseInt(Math.random()*5)]
+                    todoElement.className  += ' customtext'
+                    todoElement.textContent = todoObj.todo
+                    todoElement.id = todoData.id
+                    if(todoListElement){
+
+                        todoListElement.appendChild(todoElement) 
+                    }
+
+                })
+                // todoListElement.children = newList
+
+
+            })
+
+        })
+    })
+    fetchButton.textContent = 'Fetch Todo Data'
+    fetchButton.className= 'w-[100px] border'
+
+
+    optElement.appendChild(fetchButton)
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
