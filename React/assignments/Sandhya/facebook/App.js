@@ -1,6 +1,6 @@
 import React from 'react';
 import SignUp from './Sign-up';
- 
+import './Sign-Up.css'
 import './App.css';
     
  
