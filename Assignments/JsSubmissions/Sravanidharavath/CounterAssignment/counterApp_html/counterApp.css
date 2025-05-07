@@ -1,0 +1,51 @@
+body{
+    font-family: Arial,sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.counter-container{
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.counter-display{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.buttons button{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#increment{
+    background-color: #4caf50;
+    color: white;
+}
+
+#decrement{
+    background-color: #f44336;
+    color: white;
+}
+
+#reset{
+    background-color: #2196f3;
+    color: white;
+}
+
+button:hover{
+    opacity: 0.9;
+}

@@ -1,0 +1,110 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .facebook-title {
+    color: #1877f2;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .signup-box {
+    background-color: white;
+    width: 380px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-box h2 {
+    margin-bottom: 5px;
+  }
+  
+  .signup-box p {
+    font-size: 14px;
+    color: #606770;
+    margin-bottom: 15px;
+  
+  }
+
+  .signup-box{
+    text-align: center;
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dateofbirth{
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .gender{
+    text-align: left;
+    margin-bottom:5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+  }
+  
+  .para{
+    text-align: left;
+  }
+
+  .para1{
+    text-align: left;
+  }
+  
+  .gender-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .gender-options label {
+    font-size: 14px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-link{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .login-link a{
+    color: #1877f2;
+    text-decoration: none;
+    
+  }
+
+  .login-link a:hover{
+    text-decoration: underline;
+  }
+  

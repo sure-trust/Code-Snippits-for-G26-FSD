@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.container {
+    background: #2d2d2d;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #4CAF50;
+}
+
+.password-display {
+    background: #404040;
+    padding: 16px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#password {
+    word-break: break-all;
+    margin-right: 16px;
+}
+
+.options {
+    margin-bottom: 24px;
+}
+
+.option-group {
+    margin: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.option-item {
+    flex: 1 1 200px;
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 4.8px;
+    background: #404040;
+    border: 1px solid #666;
+    color: #fff;
+    border-radius: 3px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 11.2px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+
+.strength-indicator {
+    height: 5px;
+    background: #404040;
+    margin: 16px 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+   
+}
+
+.error {
+    color: #ff4444;
+    margin-top: 8px;
+    display: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

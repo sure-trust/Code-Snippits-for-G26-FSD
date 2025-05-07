@@ -1,0 +1,15 @@
+.special{
+    height: 480px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+    gap: 10px;
+}
+.sp{
+    height: 450px;
+    width: 300px;
+    /* border: 2px solid black; */
+}

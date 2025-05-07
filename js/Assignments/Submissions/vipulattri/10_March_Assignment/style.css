@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+   display: grid;
+   place-items: center;
+    
+}
+.box{
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(180deg,white,yellow);
+  text-shadow: 2px 2px 4px 3px #000000;
+  border: 2px solid black;
+  overflow-y: scroll;
+}
+.boxy{
+     padding: 20px;
+     text-align: center;
+     padding: 50px;
+     margin-left: 10px;
+     overflow-y: scroll;
+
+
+}
+.h1{
+    font-size: 30px;
+    text-align: center;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Counter</title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+     <style>
+          body {
+               background-color: #f0f0f0;
+               font-family: Arial, sans-serif;
+               color: #333;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               margin: 0;
+               height: 100vh;
+          }
+
+          .container {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               background-color: #fff;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+               padding: 20px;
+               width: 400px;
+               height: 300px;
+          }
+
+          .container h1 {
+               font-size: 44px;
+               margin-bottom: 60px;
+          }
+
+          .inside {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               margin-bottom: 20px;
+               flex-direction: row;
+               gap: 20px;
+          }
+
+          #plus,
+          #minus {
+               cursor: pointer;
+               font-size: 48px;
+               border: 1px solid black;
+               padding: 10px;
+               border-radius: 10px;
+               background-color: white;
+          }
+          p{
+               font-size: 48px;
+               font-weight: bold;
+               color: black;
+               margin: 2px;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>Counter App</h1>
+          <div class="inside">
+               <span class="material-symbols-outlined" onclick="decrement()" id="minus">
+                    remove
+               </span>
+               <p id="counter">0</p>
+               <span class="material-symbols-outlined" onclick="increment()" id="plus">
+                    add
+               </span>
+          </div>
+     </div>
+     <script>
+          let count = 0;
+          let countElement = document.getElementById("counter");
+          function updateCounter() {
+               countElement.textContent = count;
+          }
+          function increment() {
+               count += 1;
+               updateCounter();
+          }
+          function decrement() {
+               count -= 1;
+               updateCounter();
+          }
+          updateCounter();
+     </script>
+</body>
+
+</html>

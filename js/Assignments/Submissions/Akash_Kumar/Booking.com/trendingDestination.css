@@ -1,0 +1,81 @@
+#trending_destinations{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#destinations_cards_style_one,#destinations_cards_style_two,#browse_by_property_type_cards_container
+,#quick_and_easy_navigation_options, #list_of_quick_and_easy_cards{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#destinations_cards_style_one > div{
+    width: 400px;
+    height: 250px;
+    background-color: rgb(149, 149, 149);
+    border-radius: 15px;
+}
+#destinations_cards_style_two > div {
+    width: 300px;
+    height: 250px;
+    background-color: rgb(149, 149, 149);
+    border-radius: 15px;
+}
+
+#destinations_cards_style_one > div > div, #destinations_cards_style_two > div > div {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+#browse_property_card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#property_image{
+    width: 300px;
+    height: 250px;
+    background-color: rgb(149, 149, 149);
+    border-radius: 15px;
+}
+#browse_card_name, #quic_and_easy_trip_destination_name{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#quick_and_easy_trip_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#quick_and_easy_navigation_options #menu{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: black;
+    padding: 10px 15px;
+}
+
+#quick_and_easy_navigation_options #menu:first-child{
+    border: 1px solid rgb(10, 127, 228);
+    background-color: rgb(212, 240, 249);
+}
+
+#quick_and_easy_trip_planner_section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#quick_and_easy_trip_destination_distance{
+    font-size: 18px;
+    font-weight: 400;
+    color: gray;
+}

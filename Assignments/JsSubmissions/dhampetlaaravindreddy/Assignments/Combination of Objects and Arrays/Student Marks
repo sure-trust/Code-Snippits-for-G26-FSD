@@ -1,0 +1,22 @@
+let students = [
+    { name: 'Venu', marks: 85 },
+    { name: 'Uma', marks: 92 },
+    { name: 'Aravind', marks: 78 },
+    { name: 'Yaswanth', marks: 88 }
+];
+
+let totalMarks = 0;
+let highestMarks = 0;
+let topStudent = '';
+
+students.forEach(student => {
+    totalMarks += student.marks;
+    if (student.marks > highestMarks) {
+        highestMarks = student.marks;
+        topStudent = student.name;
+    }
+});
+
+const averageMarks = totalMarks / students.length;
+console.log('Average Marks:', averageMarks);
+console.log('Top Student:', topStudent);

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign uP</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-top: 100px;
+        }
+        form{
+            border: 2px solid rgb(218, 218, 218);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            width: 300px;
+            border-radius: 20px;
+        }
+        #signUp{
+            font-size: 28px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+        input{
+            font-size: 15px;
+            padding: 8px;
+            border: 1px solid rgb(196, 196, 196);
+            border-radius: 2px;
+        }
+        select{
+            font-size: 15px;
+            padding: 5px;
+            border-radius: 2px;
+        }
+        #birthday{
+            display: flex;
+            flex-direction: row;
+        }
+        .termsConditions{
+            font-size: p15x;
+            font-weight: 100;
+            color: rgb(0, 0, 0);
+
+        }
+        #submitButton{
+            background-color: #4CAF50;
+            padding: 10px;
+            color:white;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+     </style>
+</head>
+<body>
+    <form>
+        <div id="signUp">Sign UP</div>
+        <div id="description">It's free and always will be.</div>
+        <input type="text" placeholder="First Name">
+        <input type="text" Placeholder="Last Name">
+        <input type="email" placeholder="Your Email">
+        <input type="email" placeholder="Re-enter Email">
+        <input type="password" placeholder="Enter Password">
+
+        <!-- Birthday Selection-->
+        <div>
+    
+        <section id="birthday" >Birthday :</section>
+        
+        <!-- Month Selection  -->
+        <select id="month">
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+    <!-- Day Selection -->
+        <select id="Day">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <!-- Year Selection -->
+        <select id="Year">
+            <option value="">Year</option>
+            <option value="1">2001</option>
+            <option value="2">2002</option>
+            <option value="3">2003</option>
+            <option value="4">2004</option>
+            <option value="5">2005</option>
+            <option value="6">2006</option>
+            <option value="7">2007</option>
+            <option value="8">2008</option>
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+        </select>
+
+        </div>
+        <div class="termsConditions">
+            <p>By clicking Sign Up, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use</p>
+        </div>
+
+        <button type="submit" id="submitButton">Sign Up</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main_data_container{
+            display: flex;
+            flex-direction:column;
+            gap: 20px;
+        }
+        #list_items{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+        #id_user, #data_id, #data_status, #data_todo{
+            width: 200px;
+            height: fit-content;
+            font-size: 25px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        #data_item_container{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 20px;
+            color: rgb(51, 51, 51);
+            font-weight: 400;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            height: fit-content;
+            gap: 40px;
+        }
+        .user_id, .data_id, .data_status, .todo{
+            width: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        .todo{
+            display: flex;
+            justify-content: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="heading"> The TODO List Assignment</div>
+    <br><br>
+    <div id="main_data_container">
+        <div id="list_items">
+            <div id="id_user">User Id</div>
+            <div id="data_id">Data Id</div>
+            <div id="data_status">Data Status</div>
+            <div id="data_todo">Todo</div>
+        </div>
+
+        <div id="data_item_container"></div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

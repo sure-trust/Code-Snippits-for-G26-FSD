@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "a506",
+      "firstName": "Vipul",
+      "surname": "Attri",
+      "email": "vipul@domain.com",
+      "password": "123456",
+      "dob": "2005-01-12",
+      "gender": "Male"
+    },
+    {
+      "id": "622e",
+      "firstName": "Aryan",
+      "surname": "Thakur",
+      "email": "aryan@gmail.com",
+      "password": "Aryan@123",
+      "dob": "2005-01-12",
+      "gender": "Male"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "user": "Vipul",
+      "content": "This is my first post!",
+      "comments": [
+        "Great post!",
+        "Thanks for sharing!"
+      ]
+    },
+    {
+      "id": 2,
+      "user": "Vipul",
+      "content": "Hello, this is my second post!",
+      "comments": [
+        "Looking good!",
+        "Nice post!"
+      ]
+    }
+  ]
+}

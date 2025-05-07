@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Boutique - Flipkart Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">FashionBoutique<span>Plus</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="cart-icon" id="cart-icon">
+        🛒
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+    
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>My Cart</h2>
+            <button class="close-cart" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total">
+            Total: ₹<span id="cart-total">0.00</span>
+        </div>
+        <button class="checkout-btn">Place Order</button>
+    </div>
+    
+    <div class="container">
+        <h2 style="color: #212121; font-size: 20px; margin-bottom: 10px;">Trending Styles</h2>
+        <div class="products" id="products"></div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, title: "Solid Men Polo Neck Black T-Shirt", price: 299, originalPrice: 599, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSq9oNBujjzEkxTkmQ34BAtWcxotLuUiWBIzwe4-L2EBZXxHNhvBe8Qt8tlVvDcGu8TtnR-7Pcbu19Mw9pqTf_uC7EBiwDydjd36eyfWFNW" },
+            { id: 2, title: "Men Slim Fit Jeans", price: 799, originalPrice: 1299, image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQLprwJu6qHtRJ2_gVRhpeIb6qKk50690w_Z_P9Pad3Vq485Acq-tcZnkIE0SZFmT3z6LpDqCZ_XDF6w7RAa9flMkZPwgRva-3hGlniI9zkP6dzfMFe9tFIvg" }
+        ];
+        
+        let cart = [];
+        
+        const productsContainer = document.getElementById('products');
+        const cartIcon = document.getElementById('cart-icon');
+        const cartModal = document.getElementById('cart-modal');
+        const closeCart = document.getElementById('close-cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+        
+        function init() {
+            renderProducts();
+            setupEventListeners();
+            updateCart();
+        }
+        
+        function renderProducts() {
+            productsContainer.innerHTML = '';
+            products.forEach(product => {
+                const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+                const productElement = document.createElement('div');
+                productElement.classList.add('product-card');
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.title}</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹${product.price}</span>
+                            <span class="original-price">₹${product.originalPrice}</span>
+                            <span class="discount">${discount}% off</span>
+                        </div>
+                        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                    </div>
+                `;
+                productsContainer.appendChild(productElement);
+            });
+        }
+        
+        function setupEventListeners() {
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-to-cart')) {
+                    addToCart(parseInt(e.target.getAttribute('data-id')));
+                }
+                if (e.target.classList.contains('remove-item')) {
+                    removeFromCart(parseInt(e.target.getAttribute('data-id')));
+                }
+            });
+            cartIcon.addEventListener('click', function() {
+                cartModal.classList.add('open');
+            });
+            closeCart.addEventListener('click', function() {
+                cartModal.classList.remove('open');
+            });
+        }
+        
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                const existingItem = cart.find(item => item.id === productId);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+                updateCart();
+            }
+        }
+        
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+        
+        function updateCart() {
+            cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            cartItemsContainer.innerHTML = cart.length === 0 ? '<p style="text-align: center; color: #878787;">Your cart is empty</p>' : '';
+            cart.forEach(item => {
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-title">${item.title}</h4>
+                        <p class="cart-item-price">₹${(item.price * item.quantity).toFixed(2)} (₹${item.price.toFixed(2)} × ${item.quantity})</p>
+                        <button class="remove-item" data-id="${item.id}">Remove</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            cartTotal.textContent = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+        }
+        
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="bg-blue-600 p-4 flex justify-between items-center text-white">
+        <h1 class="text-3xl font-bold">
+            facebook
+        </h1>
+        <div class="flex space-x-2">
+            <input type="text" placeholder="Email or Phone" class="p-2 rounded text-black">
+            <input type="password" placeholder="Password" class="p-2 rounded text-black">
+            <button class="bg-blue-800 px-4 py-2 rounded">
+                Log In
+            </button>
+        </div> 
+    </div>
+    <div class="flex justify-center items-center min-h-screen">
+    <div class="flex w-3/4 space-x-12">
+        <div class="w-1/2">
+            <h2 class="text-2xl font-semibold">Introducing Graph Search</h2>
+            <p>Find more of what you're looking for through your friends and connections.</p>
+            <img src="fb.jpg" alt="Graph Search" class="mt-4 rounded shadow">
+        </div>
+        <div class="w-1/2 bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-bold">Sign Up</h2>
+            <p>It's free and always will be.</p>
+            <input type="text" placeholder="First Name" class="border p-2 w-full mt-2 rounded">
+            <input type="text" placeholder="Last Name" class="border p-2 w-full mt-2 rounded">
+            <input type="email" placeholder="Your Email" class="border p-2 w-full mt-2 rounded">
+            <input type="email" placeholder="Re-enter Email" class="border p-2 w-full mt-2 rounded">
+            <input type="password" placeholder="New Password" class="border p-2 w-full mt-2 rounded">
+            <label class="block mt-2">Birthday:</label>
+            <div class="flex space-x-2">
+                <select id="month" class="border p-2 rounded w-1/3"></select>
+                <select id="day" class="border p-2 rounded w-1/3"></select>
+                <select id="year" class="border p-2 rounded w-1/3"></select>
+            </div>
+            <div class="mt-2">
+                <label><input type="radio" name="gender"> Female</label>
+                <label class="ml-4"><input type="radio" name="gender"> Male</label>
+            </div>
+            <button class="bg-green-600 text-whitepx-4 py-2 mt-4 w-full rounded">sign Up</button>
+        </div>
+    </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="heroSection.css"> 
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="trendingDestination.css">
+
+    <style>
+       #popular_with_travellers{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80vw;
+       }
+
+       #popular_nav_options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 20px;
+       }
+       #popular_nav_options > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+    
+        text-wrap: nowrap;
+       }
+       #popular_nav_options :first-child{
+        border: 1px solid rgb(64, 213, 235);
+        border-radius: 50px;
+        background-color: rgb(186, 249, 255);
+       }
+       #multiple_options{
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        color: rgb(42, 42, 42);
+        text-wrap: nowrap;
+        justify-content: space-between;
+       }
+
+       #multiple_options > div{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       }
+       #randon_list{
+        display: flex;
+        flex-direction: row;
+        text-wrap: nowrap;
+        width: 80vw;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 45px;
+        font-size: 18px;
+       }
+
+       /* Travel more spend less */
+       #travel_more_and_spend_less{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       }
+
+       #travle_more_card, #travle_more_card_two{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid rgb(208, 208, 208);
+        padding: 15px;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: space-between;
+        
+        width: 80vw;
+       }
+       #travel_more_card_text_details{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       }
+       #signin_register_button{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+       }
+       #travel_more_image{
+        background-image: url("pictures/genius_pic.png");
+        background-size: cover;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+       }
+       #signin_register_button > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 10px;
+       }
+       #signin{
+        background-color: rgb(7, 147, 235);
+        color: white;
+       }
+
+       #travle_more_card_two{
+        height: 200px;
+        overflow: hidden;
+       }
+
+       #travel_more_card_two_image{
+        width: 300px;
+        height: 200px;
+        background-image: url("pictures/design_pic.png");
+        background-size: cover;
+       }
+       #text_and_button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       }
+       #large_blue_circle{
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        color: white;
+        border-radius: 300px;
+       }
+
+       .explore_india_destination_image1{
+        background-image: url("pictures/fatehpur_sikri.jpg");
+        background-size: cover;
+       }
+       .explore_india_destination_image2{
+        background-image: url("pictures/old_goa.jpg");
+        background-size: cover;
+       }
+       .property_image1{
+        background-image: url("pictures/hotel1.jpeg");
+        background-size: cover;
+       }
+       .property_image2{
+        background-image: url("pictures/hotel2.jpeg");
+        background-size: cover;
+       }
+       .property_image3{
+        background-image: url("pictures/hotel3.jpeg");
+        background-size: cover;
+       }
+       .destination_card_one_image{
+        background-image: url("pictures/new_delhi.jpg");
+        background-size: cover;
+       }
+       .destination_card_two_image{
+        background-image: url("pictures/banglore.jpg");
+        background-size: cover;
+       }
+       .destination_card_one_image1{
+        background-image: url("pictures/mumbai.jpg");
+        background-size: cover;
+       }
+       .destination_card_two_image2{
+        background-image: url("pictures/chennai.jpg");
+        background-size: cover;
+       }
+       .destination_card_three_image3{
+        background-image: url("pictures/varanasi.jpg");
+        background-size: cover;
+       }
+
+    </style>   
+</head>
+<body>
+    <div id="main_container">
+
+        <!-- Top Company logo signup -->
+        <div id="logo_signUp">
+            <div id="company_logo"></div>
+            <div id="signUp_menu">
+                <div id="Currency_type">INR</div>
+                <div id="choose_country_flag"></div>
+                <div id="customer_service"></div>
+                <div id="list_your_property">List your Property</div>
+                <div id="Register" class="register_signIn">Register</div>
+                <div id="SignIn" class="register_signIn">Sign In</div>
+            </div>
+        </div>
+
+        <!-- Navigation Menus -->
+         <div id="navigation_menu_bar">
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/hotel.png'); background-size: cover;"></div>
+                <div id="icon_name"><p>Stays</p></div>
+            </div>
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/flight.png'); background-size: cover;"></div>
+                <div id="icon_name">Flights</div>
+            </div>
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/hotel.png'); background-size: cover;"></div>
+                <div id="icon_name">flight + hotel</div>
+            </div>
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/car.png'); background-size: cover;"></div>
+                <div id="icon_name">Car rentals</div>
+            </div>
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/attractions.png'); background-size: cover;"></div>
+                <div id="icon_name">Attractions</div>
+            </div>
+
+            <div id="menu">
+                <div id="icon" style="background-image: url('pictures/car.png'); background-size: cover;"></div>
+                <div id="icon_name">Airport taxis</div>
+            </div>
+         </div>
+
+         <!-- Highlighted texts -->
+        <div id="highlighted_texts">
+            <div id="highlighted_text_primary">Find Your Next Stay</div>
+            <div id="highlighted_text_secondary">Search low prices on hotels, homes and much more ...</div>
+        </div>
+
+        <!-- Search Bar -->
+         <div id="search_bar">
+
+            <!-- Location Search -->
+            <div id="location_search" class="search_option_tabs">
+                <div id="location_search_icon_place" >
+                    <div id="location_search_icon" class="icon"></div>
+                    <div id="location_search_name">Prayagraj</div>
+                </div>
+                <div id="location_search_cross" class="icon"></div>
+            </div>
+
+            <!-- Date Selection -->
+            <div id="date_selection" class="search_option_tabs">
+                <div id="date_selection_icon" class="icon"></div>
+                <div id="date_selection_name">Check-in</div>
+                <div id="dash_line"></div>
+                <div id="date_selection_name">Check-out</div>
+            </div>
+
+            <!-- Adult and children count -->
+            <div id="adult_children_count" class="search_option_tabs">
+                <div id="adult_count_container" >
+                    <div id="adult_count_icon" class="icon"></div>
+                    <div id="adult_count">2 Adults</div>
+                    <div id="children_count">5 Children</div>
+                    <div id="room_count">2 room</div>
+                </div>
+                <div id="drop_down_icon" class="icon"></div>
+            </div>
+
+            <!-- Search Button -->
+             <div id="search_button">Seacrh</div>           
+        </div>
+
+    </div>
+    <div id="checkbox_for_flights">
+        <input type="checkbox" id="flightc_check_status"></input>
+        <label for="flightc_check_status">I'm looking for flights</label>
+    </div>
+
+    <!-- Offers Section -->
+    <div id="offers_section">
+        <div id="text_primary">Offers</div>
+        <div id="text_secondary">Promotions, deals and special offers for you</div>
+        
+        <!-- Offer Cards Container -->
+        <div id="offers_cards">
+            <!-- Offers Card one -->
+            <div id="offers_card_one">
+                <div id="offers_texts_and_button">
+                    <div id="offers_card_text_primary">Save on stays worldwide</div>
+                    <div id="offers_card_text_secondary">Start your year with a sense of adventure, saving 15% or more with Early 2025 Deals.</div>
+                    <div id="offers_card_button_highlight">Save 15% or more</div>
+                </div>
+                <div id="offers_image" style="background-image: url('pictures/save_on.jpeg'); background-size: cover;"></div>
+            </div>
+
+            <!-- Offers Card two -->
+            <div id="offers_card_tw0">
+                <div id="offers_texts_and_button">
+                    <div id="offers_card_text_primary">Quick escape, quality time</div>
+                    <div id="offers_card_text_secondary">Save upto 20% with a Gateway Deal
+                    </div>
+                    <div id="offers_card_button_highlight">Save on Stays</div>
+                </div>
+                <div id="offers_image" style="background-image: url('pictures/quici_escap.jpeg'); background-size: cover;"></div>
+            </div>
+        </div>
+
+        <!-- Center Dot -->
+         <div id="center_dot"></div>
+    </div>
+
+    <!-- Explore India Section -->
+    <div id="explore_india_section">
+        <div id="text_primary">Explore India</div>
+        <div id="text_secondary">These popular destinations have a alot to offer</div>
+        <!-- Horzontal scroll , list of destination cards and their details -->
+        <div id="explore_india_cards_container">
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/newDelhi.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">New Delhi</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/banglore.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">Bangalore</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/mumbai.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">Mumbai</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/chennai.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">Chennai</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/hyderabad.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">Hyderabad</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+
+            <div id="explore_india_each_card">
+                <div id="explore_india_destination_image" style="background-image: url('pictures/jaipur.jpg'); background-size: cover;"></div>
+                <div id="explore_india_destination_details">
+                    <div id="explore_india_destination_name">Jaipur</div>
+                    <div id="explore_india_destination_no_of_properties">2,921 properties</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Destinations -->
+    <div id="trending_destinations">
+        <div id="text_primary">Trending destinations</div>
+        <div id="text_secondary">Most popular choices for travellers from india</div>
+
+        <!-- Cards Style one -->
+        <div id="destinations_cards_style_one">
+            <!-- Destination Card one -->
+             <div id="destination_card_one" class="destination_card_one_image">
+                <div id="destination_name" >New Delhi</div>
+             </div>
+
+             <!-- Destination Card two -->
+             <div id="destination_card_two" class="destination_card_two_image">
+                <div id="destination_name">Bangalore</div>
+             </div>
+        </div>
+
+        <!-- Cards Style two -->
+        <div id="destinations_cards_style_two">
+            <!-- Destination Card one -->
+             <div id="destination_card_one" class="destination_card_one_image1">
+                <div id="destination_name">Mumbai</div>
+             </div>
+
+             <!-- Destination Card two -->
+             <div id="destination_card_two" class="destination_card_two_image2">
+                <div id="destination_name">Chennai</div>
+             </div>
+
+             <!-- Destination Card three -->
+             <div id="destination_card_three" class="destination_card_three_image3">
+                <div id="destination_name">Varanasi</div>
+             </div>
+        </div>
+    </div>
+
+    <!-- Browse by Propery Type -->
+    <div id="browse_by_property_type">
+        <div id="text_primary">Browse by property type</div>
+        <!-- Horizontal Scroll list of property cards -->
+        <div id="browse_by_property_type_cards_container">
+
+            <div id="browse_property_card">
+                <div id="property_image" class="property_image1"></div>
+                <div id="browse_card_name">Hotels</div>
+            </div>
+            <div id="browse_property_card" >
+                <div id="property_image" class="property_image2"></div>
+                <div id="browse_card_name">Hotels</div>
+            </div>
+            <div id="browse_property_card">
+                <div id="property_image" class="property_image3"></div>
+                <div id="browse_card_name">Hotels</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Quick and easy trip planner -->
+    <div id="quick_and_easy_trip_planner_section">
+        <div id="text_primary">Quick and easy trip  planner</div>
+        <div id="text_secondary">Pick a vibe and explore the top destinations in india</div>
+        <!-- Navigation menu options of the Quick and easy trip planner -->
+        <div id="quick_and_easy_navigation_options">
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name"><p>City</p></div>
+            </div>
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name">Beach</div>
+            </div>
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name">Outdoor</div>
+            </div>
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name">Relax</div>
+            </div>
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name">Romance</div>
+            </div>
+
+            <div id="menu">
+                <div id="icon"></div>
+                <div id="icon_name">Food</div>
+            </div>
+        </div>
+
+        <div id="list_of_quick_and_easy_cards">
+            <div id="quick_and_easy_trip_cards">
+                <div id="explore_india_destination_image" class="explore_india_destination_image1"></div>
+                <div id="explore_india_destination_details">
+                    <div id="quic_and_easy_trip_destination_name">Fatehpur Sikri</div>
+                    <div id="quick_and_easy_trip_destination_distance">361 Km away</div>
+                </div>
+            </div>
+
+            <div id="quick_and_easy_trip_cards">
+                <div id="explore_india_destination_image" class="explore_india_destination_image2"></div>
+                <div id="explore_india_destination_details">
+                    <div id="quic_and_easy_trip_destination_name">Old Goa</div>
+                    <div id="quick_and_easy_trip_destination_distance">413 Km away</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Deals for the Weekend -->
+    <!-- <div id="deals_for_weekend_section">
+        <div id="text_primary">Deals for the Weekend</div>
+        <div id="text_secondary">Save on stays for 28 March - 30 March</div> -->
+
+        <!-- Horizontal Scroll list of deals -->
+        <!-- <div id="deal_card">
+            <div id="deal_card_image"></div> -->
+
+            <!-- card Details -->
+            <!-- <div id="deal_card-details">
+                <div id="deal_card_name">
+                    <div id="genius_tag">genius_tag</div>
+                    <div id="site_name_and_details">Saltstayz Thyme - New Friends Colony</div>
+                    <div id="site_address">New Delhi, India</div>
+                    <div id="reviews_and_ratings">
+                        <div id="rating">4.5</div>
+                        <div id="user_feedback">Good</div>
+                        <div id="reviews">281 reviews</div>
+                    </div>
+                </div> -->
+
+                <!-- Deal Price Details -->
+                <!-- <div id="deal_card_price_details">
+                    <div id="days_nights">2 nights</div>
+                    <div id="max_price">8,874</div>
+                    <div id="actual_price">5,324</div>
+                </div>
+            </div>
+        </div>
+        
+    </div> -->
+
+
+    <!-- Travel more, Spend less -->
+    <div id="travel_more_and_spend_less">
+        <div id="text_primary">Travel more, spend less</div>
+
+        <div id="travle_more_card">
+            <div id="travel_more_card_text_details">
+                <div id="travel_more_card_text_primary">Sign in, Save money</div>
+                <div id="travel_more_card_text_secondary">Save 10% or more at participating properties - just look for the bblue Genius label</div>
+                <div id="signin_register_button">
+                    <div id="signin">Sign In</div>
+                    <div id="register">Register</div>
+                </div>
+            </div>
+            <div id="travel_more_image"></div>
+        </div>
+
+        <!-- design -->
+        <div id="travle_more_card_two">
+            <div id="yellow_circle"></div>
+            <div id="large_blue_circle">
+                <div id="text_and_button">
+                    <div id="text_one">Find homes for your next trip</div>
+                    <div id="discover_button">Discover homes</div>
+                </div>
+            </div>
+            <div id="travel_more_card_two_image"></div>
+        </div>
+    </div>
+
+    <!-- Popular with travellers from India -->
+    <div id="popular_with_travellers">
+        <div id="text_primary">Popular with travellers from India</div>
+        <div id="popular_nav_options">
+            <div>Domestic cities</div>
+            <div>International cities</div>
+            <div>Regions</div>
+            <div>Countries</div>
+            <div>Places to Stay</div>
+        </div>
+        <div id="multiple_options">
+            <div id="column1">
+                <div>Srinagar hotels</div>
+                <div>Bangalore hotels</div>
+                <div>Oody hotels</div>
+                <div>Mumbai hotels</div>
+                <div>Lonavala hotels</div>
+            </div>
+            <div id="column2">
+                <div>Hyderabad hotels</div>
+                <div>Jaipur hotels</div>
+                <div>Puri hotels</div>
+                <div>Chennai hotels</div>
+                <div>Puducherry hotels</div>
+            </div>
+            <div id="column3">
+                <div>Rishikesh hotels</div>
+                <div>Munnar hotels</div>
+                <div>Varanasi hotels</div>
+                <div>Ayodhya hotels</div>
+                <div>Mysore hotels</div>
+            </div>
+            <div id="column4">
+                <div>Pune hotels</div>
+                <div>Manali hotels</div>
+                <div>Varkala hotels</div>
+                <div>New Delhi hotels</div>
+                <div>Gurgaon hotels</div>
+            </div>
+        </div>
+
+        <div id="randon_list">
+            <div>Countries</div>
+            <div>Regions</div>
+            <div>Districts</div>
+            <div>Airports</div>
+            <div>Hotels</div>
+            <div>Places of Interest</div>
+            <div>holiday Homes</div>
+            <div>Apartments</div>
+            <div>Resorts</div>
+            <div>villas</div>
+            <div>Hostels</div>
+            <div>B&B's</div>
+            <div>Guest Houses</div>
+            <div>Unique places to stay</div>
+            <div>All destinations</div>
+            <div>All flight destinations</div>
+            <div>All car hire locations</div>
+            <div>All holiday destinations</div>
+            <div>Guides</div>
+            <div>Discover</div>
+            <div>Reviews</div>
+            <div>Discover monthly stays</div>
+        </div>
+    </div>     
+
+
+        <!-- <div id="header">Browse by Property Type</div>
+        <div id="content_style1">
+            <div id="frame">
+                <div id="picture"></div>
+                <div id="picture_name">Hotels</div>
+            </div>
+        </div> -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

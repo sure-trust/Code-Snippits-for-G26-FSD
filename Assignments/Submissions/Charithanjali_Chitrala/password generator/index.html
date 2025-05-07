@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-blue-600 p-6 text-white">
+            <h1 class="text-2xl font-bold text-center">Password Generator</h1>
+        </div>
+        <div class="p-6">
+            <div class="flex items-center mb-6">
+                <input 
+                    type="text" 
+                    id="password" 
+                    readonly 
+                    class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                >
+                <button 
+                    id="copyBtn" 
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-r-lg transition duration-200"
+                    title="Copy to clipboard"
+                >
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                    <span class="text-sm font-medium">Password Strength:</span>
+                    <span id="strengthText" class="text-sm font-medium">Weak</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div id="strengthBar" class="bg-red-500 h-2.5 rounded-full" style="width: 25%"></div>
+                </div>
+            </div>
+            <div class="mb-6">
+                <label for="length" class="block text-sm font-medium mb-2">
+                    Length: <span id="lengthValue">12</span>
+                </label>
+                <input 
+                    type="range" 
+                    id="length" 
+                    min="4" 
+                    max="32" 
+                    value="12" 
+                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                >
+            </div>
+            <div class="space-y-3 mb-6">
+                <div class="flex items-center">
+                    <input type="checkbox" id="uppercase" checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="uppercase" class="ml-2 text-sm font-medium">Uppercase Letters (A-Z)</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="lowercase" checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="lowercase" class="ml-2 text-sm font-medium">Lowercase Letters (a-z)</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="numbers" checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="numbers" class="ml-2 text-sm font-medium">Numbers (0-9)</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="symbols" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="symbols" class="ml-2 text-sm font-medium">Symbols (!@#$%^&*)</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="excludeSimilar" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="excludeSimilar" class="ml-2 text-sm font-medium">Exclude Similar Characters (i,l,1,o,0)</label>
+                </div>
+            </div>
+            <button 
+                id="generateBtn" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200"
+            >
+                Generate Password
+            </button>
+        </div>
+    </div>
+</body>
+</html>

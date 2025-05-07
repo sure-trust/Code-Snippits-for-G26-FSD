@@ -1,0 +1,88 @@
+/* FacebookRegister.css */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ebee;
+  }
+  
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .register-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .register-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1877f2;
+  }
+  
+  .register-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .register-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .register-input.half {
+    width: 50%;
+  }
+  
+  .register-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+  }
+  
+  .register-gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .register-gender label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .register-button {
+    background-color: #42b72a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .register-button:hover {
+    background-color: #36a420;
+  }
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How User Can Copy Things</title>
+</head>
+
+<body>
+    <h1>Hello Class</h1>
+    <div class="">
+
+        <input type="text" name="" id="userText">
+        <button onclick="handleUserClick()">Bro Click Here To Copy</button>
+        <button onclick="handleReset()">reset</button>
+        <input type="text" name="" id="userTextPaste">
+        <button onclick="handleUserPaste()">Bro Click Here To Copy</button>
+        <button onclick="handleReset()">reset</button>
+    </div>
+</body>
+<script>
+
+
+
+    let userTextValue = document.getElementById('userText')
+    let userTextValuePaste = document.getElementById('userTextPaste')
+    function handleUserClick() {
+
+        // do something
+
+        console.log(userTextValue.value)
+        userTextValue.select();
+        document.execCommand("copy");
+
+        // after doing reset
+
+    }
+    function handleUserPaste() {
+
+        // do something
+
+        
+       navigator.clipboard.readText().then((res)=>{
+        userTextValuePaste.value = res
+            console.log(res)
+        })
+        console.log(userTextValuePaste.value)
+
+        // after doing reset
+
+    }
+    function handleReset() {
+
+        // do something
+
+        console.log(userTextValue.value)
+        userTextValue.value = ""
+
+
+
+    }
+
+</script>
+
+</html>

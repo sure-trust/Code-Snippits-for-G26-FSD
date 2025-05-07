@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate a Random Password</h1>
+    <div id = "display">
+        <input type="text" id="password" placeholder="password">
+        <button onclick="copyPassword()">Copy</button>
+    </div>
+    <div class ="container">
+        <h2>Customize your Password</h2>
+        
+            <label>Length: <span id ="length-value">8</span></label>
+            <input type="range" id="length" min="4" max="20" value="8">
+            <div class="type">
+            <input type="checkbox" id="Uppercase" name="Uppercase" value="Uppercase">
+            <label for="Uppercase">Uppercase</label><br>
+            <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+            <label for="lowercase">Lowercase</label><br>
+            <input type="checkbox" id="Numbers" name="Numbers" value="Numbers">
+            <label for="Numbers">Numbers</label><br>
+            <input type="checkbox" id="symbols" name="Symbols" value="Symbols">
+            <label for="symbols">Symbols</label><br>
+        </div>
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+
+    <script>
+        document.getElementById("length").addEventListener("input",function() {
+            document.getElementById("length-value").textContent = this.value;
+        });
+
+        function generatePassword(){
+            const length = document.getElementById("length").value;
+            const Uppercase = document.getElementById("Uppercase").checked;
+            const lowercase = document.getElementById("lowercase").checked;
+            const Numbers = document.getElementById("Numbers").checked;
+            const symbols = document.getElementById("symbols").checked;
+
+            const upperchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const lowerchar = "abcdefghijklmnopqrstuvwxyz";
+            const numberchars = "0123456789"
+            const symbolschars = "!@#$%^&*()<>?;:'=-/";
+
+            let allChars = "";
+            if(Uppercase) allChars +=upperchar;
+            if(lowercase) allChars +=lowerchar;
+            if(Numbers) allChars += numberchars;
+            if(symbols) allChars += symbolschars;
+            
+            let password="";
+            for(let i=0;i<length;i++){
+                password +=allChars.charAt(Math.floor(Math.random() * allChars.length));
+            }
+
+            document.getElementById("password").value = password;
+        }
+        function copyPassword(){
+            const passwordfield = document.getElementById("password");
+            passwordfield.select();
+            document.execCommand("copy");
+            alert("Password Copied!")
+        }
+
+    </script>
+</body>
+</html>

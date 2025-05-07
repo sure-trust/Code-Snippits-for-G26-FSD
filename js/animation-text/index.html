@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+       Find <span id="spText"></span> for your next trip.
+    </h1>
+</body>
+<script>
+let spanTag = document.getElementById('spText')
+let arr = ['cottage','villas','homes','apartments']
+let indx = 0
+
+let myIntervarForSPText =setInterval(()=>{
+if(spanTag){
+    if(indx <arr.length){
+
+        spanTag.textContent = arr[indx++]
+    }else{
+        indx = 0
+        spanTag.textContent = arr[indx++]
+    }
+}
+},2000)
+
+</script>
+</html>
