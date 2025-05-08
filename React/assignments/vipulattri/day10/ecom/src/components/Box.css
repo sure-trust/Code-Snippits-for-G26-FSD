@@ -1,0 +1,22 @@
+.box{
+    height: 450px;
+    width: screen;
+    /* border: 0.5px solid black; */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.boxy{
+    
+    height: 400px;
+    width: 250px;
+border-radius: 10px;
+    border: 0.5px solid grey;
+}
+img{
+    border-radius: 10px;
+    width: 100%;
+}

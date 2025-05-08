@@ -2,18 +2,34 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import ChildA from './components/ChildA';
+ jsonserver
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Demo } from './components/Demo';
 import { ChakraProvider } from '@chakra-ui/react';
+ main
 
 function App() {
   const [userDetailState, setUserDetail] = useState({
     name: 'Kuldeep Ahlawat',
     work: 'Engineering'
   })
+
+ jsonserver
+function handleChangeUser(updatedState){
+  setUserDetail(updatedState)
+}
+
+  return (
+    <div className="App">
+      <h1>
+        App.js
+      </h1>
+      <ChildA userDetails={userDetailState} handleChange={handleChangeUser}/>
+    </div>
+  );
 
   function handleChangeUser(updatedState) {
     setUserDetail(updatedState)
@@ -38,6 +54,7 @@ function App() {
     <Demo/>
     </ChakraProvider>
   </div>)
+ main
 }
 
 export default App;
