@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+  }
+  .container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+  }
+  .count {
+    font-size: 10rem;
+    z-index: 1;
+  }
+  
+  .btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
+  .reset-btn {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .reset-btn img {
+    width: 40px;
+    height: 40px;
+  }
+  

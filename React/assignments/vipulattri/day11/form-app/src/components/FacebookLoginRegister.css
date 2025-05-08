@@ -1,0 +1,108 @@
+/* General styles for both forms */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ebee;
+  }
+  
+  .login-register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .form-toggle {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .form-toggle button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .form-toggle button.active {
+    background-color: #42b72a;
+  }
+  
+  .form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1877f2;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .form-input.half {
+    width: 50%;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+  }
+  
+  .form-gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-gender label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .form-button {
+    background-color: #42b72a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .form-button:hover {
+    background-color: #36a420;
+  }
+  
