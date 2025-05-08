@@ -19,7 +19,7 @@
     overflow-x: auto;
     padding-bottom: 10px;
   
-    scrollbar-width: none;
+    scrollbar-width: thin;
     -ms-overflow-style: none;
   }
   

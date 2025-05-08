@@ -28,45 +28,49 @@ const Footer = () => {
           <h3 className="footer-heading">CONNECT WITH US</h3>
           <ul>
             
-            <a 
+          <li>
+          <a 
             href="https://www.facebook.com/bewakoofcom"
             target="_blank"
-           
+            rel="noreferrer"
             className="footer-social-link">
           
             <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png"alt="Facebook"className="footer-social-icon"/></a>
-            
+            </li>
           
+          <li>
           <a 
           href="https://www.instagram.com/bewakoof/"
           target="_blank"
-          
+          rel="noreferrer"
           className="footer-social-link">
           
             <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"alt="Instagram"className="footer-social-icon"/>
-            
-          </a>
-          <a href="https://twitter.com/bewakoof"target="_blank"
+            </a>
+            </li>
+          <li>
+          <a href="https://twitter.com/bewakoof"target="_blank" rel="noreferrer"
               className="footer-social-link">
             
               <img
                 src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
                 alt="Twitter"
                 className="footer-social-icon"/>
-              
-            </a>
+              </a>
+              </li>
+            <li>
             <a
               href="https://www.snapchat.com/add/bewakoof"
               target="_blank"
-             
+              rel="noreferrer"
               className="footer-social-link">
           
               <img
                 src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png"
                 alt="Snapchat"
                 className="footer-social-icon"/>
-              
               </a>
+              </li>
               </ul>
               
         </div>

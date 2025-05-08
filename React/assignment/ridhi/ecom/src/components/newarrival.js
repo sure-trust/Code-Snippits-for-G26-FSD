@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react'
 import './newarrival.css'
 
@@ -18,20 +19,17 @@ const popularItems = [
   { img: img1, category: 'Tshirt', info: 'women' },
   { img: img2, category: 'oversized' },
   { img: img3, category: 'Crop tshirt' }
-
 ]
 
-
 const trendingItems = [
-  { img: img4, price: 400, originalPrice: 150 },
+  { img: img4, price: 150, originalPrice: 400 },
   { img: img5, price: 200, originalPrice: 250 },
   { img: img6, price: 300, originalPrice: 350 },
-  { img: img7, price: 800, originalPrice: 550 },
-  { img: img8, price: 600, originalPrice: 450 },
-  { img: img9, price: 400, originalPrice: 250 },
-  { img: img10, price: 500, originalPrice: 350 },
-  { img: img11, price: 900, originalPrice: 550 }
-
+  { img: img7, price: 550, originalPrice: 800 },
+  { img: img8, price: 450, originalPrice: 600 },
+  { img: img9, price: 250, originalPrice: 400 },
+  { img: img10, price: 350, originalPrice: 500 },
+  { img: img11, price: 550, originalPrice: 900 }
 ]
 
 function NewArrival () {
@@ -63,7 +61,8 @@ function NewArrival () {
             {popularItems.map(function (item, index) {
               return (
                 <div className='card' key={index}>
-                  <img src={item.img} alt={item.category} />
+                {}
+                <img src={item.img} alt={item.category} />
                   <p>{item.category}</p>
                 </div>
               )
@@ -80,7 +79,7 @@ function NewArrival () {
       <div className='section product-mrp'>
         <h2>TRENDING</h2>
         <div className='full-image-container'>
-          <img src={img12} alt='Product MRP Full Image' className='full-width-img' />
+          <img src={img12} alt='' className='full-width-img' />
         </div>
       </div>
 
@@ -92,7 +91,7 @@ function NewArrival () {
             const discount = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100)
             return (
               <div className='card' key={index}>
-                <img src={item.img} alt={'Trending item ' + (index + 1)} />
+                <img src={item.img} alt="" />
                 <div className='price-block'>
                   <span className='price'>₹{item.price}</span>
                   <span className='cut'>₹{item.originalPrice}</span>
