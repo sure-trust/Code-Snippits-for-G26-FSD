@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>counter</title>
+   <link  rel="stylesheet" href="count.css">
+    
+</head>
+<body>
+    <div>
+    
+        <h1>Counter:<span id="counter">0</span></h1>
+        
+        <button id="increment-btn" onclick="increment()">+</button>
+        <button id="decrement-btn" onclick="decrement()">-</button>
+
+    </div>
+<script>
+    let count=0;
+
+    function display(){
+        document.getElementById("counter").innerText=count;
+    }
+    function increment(){
+    count++;
+    display();
+    
+}
+function decrement(){
+    count--;
+    display();
+}
+</script>
+</body>
+
+</html>

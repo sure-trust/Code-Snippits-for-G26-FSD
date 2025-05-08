@@ -1,0 +1,48 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #1877f2;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.post-button {
+  background-color: #1877f2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #145db2;
+}
+
+.post-list {
+  margin-top: 20px;
+}
+
+.post-card {
+  background-color: #f0f2f5;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 5px;
+}

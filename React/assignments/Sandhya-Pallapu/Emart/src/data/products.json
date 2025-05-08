@@ -1,0 +1,131 @@
+[
+    {
+      "id": 1,
+      "name": "Western Wear",
+      "price": 4599,
+      "image": "/images/download1.jpeg",
+
+      "description": "Comfortable party wear."
+    },
+    {
+      "id": 2,
+      "name": "Women's Top",
+      "price": 5999,
+      "image": "/images/i2.jpeg",
+      "description": "Stylish with premium fabric."
+    },
+    {
+      "id": 3,
+      "name": "Classic top",
+      "price": 6299,
+      "image": "/images/i3.jpeg",
+      "description": "Grand Look with elangent Fabric."
+    },
+    {
+      "id": 4,
+      "name": "Fork",
+      "price": 3899,
+      "image": "/images/i4.jpeg",
+      "description": "Fabricated."
+    },
+    {
+      "id": 5,
+      "name": "Jeans",
+      "price": 1699,
+      "image": "/images/i5.jpeg",
+      "description": "Stretchable Jeans with a high waistband."
+    },
+    {
+      "id": 6,
+      "name": "Fork",
+      "price": 199,
+      "image": "/images/i6.jpeg",
+      "description": "Comfortable cotton-blend."
+    },
+    {
+      "id": 7,
+      "name": "Pattu Saree",
+      "price": 1299,
+      "image": "/images/s1.jpeg",
+      "description": "Lightweight kanchi Pattu."
+    },
+    {
+      "id": 8,
+      "name": "Grren Silky",
+      "price": 2599,
+      "image": "/images/s2.jpeg",
+      "description": "Good Fabric."
+    },
+    {
+      "id": 9,
+      "name": "Casual Shirt",
+      "price": 3499,
+      "image": "/images/s.jpeg",
+      "description": "Perfect Look."
+    },
+    {
+      "id": 10,
+      "name": "Saree",
+      "price": 3299,
+      "image": "/images/s4.jpeg",
+      "description": "Classic ."
+    },
+    {
+      "id": 11,
+      "name": "Saree designed",
+      "price": 1499,
+      "image": "/images/s5.jpeg",
+      "description": "Designed."
+    },
+    {
+      "id": 12,
+      "name": " yellow saree",
+      "price": 799,
+      "image": "/images/s6.jpeg",
+      "description": "Good Look."
+    },
+    {
+      "id": 13,
+      "name": "Shirt",
+      "price": 1999,
+      "image": "/images/q8.jpeg",
+      "description": "simple."
+    },
+    {
+      "id": 14,
+      "name": "Shoes",
+      "price": 2499,
+      "image":"/images/d1.jpeg",
+      "description": "Compact "
+    },
+    {
+      "id": 15,
+      "name":"Combo Sale",
+      "price": 5299,
+      "image": "/images/d4.jpeg",
+      "description": "Classic leather ."
+    },
+    {
+      "id": 16,
+      "name": "Wrist watch",
+      "price": 5399,
+      "image": "/images/q2.jpeg",
+      "description": "Combo offer."
+    },
+    {
+      "id": 17,
+      "name": "Watch",
+      "price": 1099,
+      "image": "/images/w1.jpeg",
+      "description": "."
+    },
+    {
+      "id": 18,
+      "name": "Watch",
+      "price": 3599,
+      "image": "/images/s5.jpeg",
+      "description": "Wrist watch."
+    }
+   
+  ]
+  
