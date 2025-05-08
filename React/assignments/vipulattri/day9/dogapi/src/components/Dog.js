@@ -52,7 +52,7 @@ const Dog = () => {
             <img style={{height:'300px',width:'300px'}} src={dogImage} alt='beautiful dog'></img>
         </div>
     </>
-
+ 
 };
 
 export default Dog;
