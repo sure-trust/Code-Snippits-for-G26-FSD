@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "d290",
+      "fname": "Anjali",
+      "lname": "Chitrala",
+      "birthday": {
+        "month": "Jan",
+        "day": "12",
+        "year": "2003"
+      },
+      "gender": "Female",
+      "contact": "1234567890",
+      "passwrd": "73587349"
+    },
+    {
+      "id": "5f2b",
+      "fname": "Charithanjali",
+      "lname": "Chitrala",
+      "birthday": {
+        "month": "Apr",
+        "day": "19",
+        "year": "2004"
+      },
+      "gender": "Female",
+      "contact": "9885851695",
+      "passwrd": "Anjali#1219"
+    }
+  ]
+}
