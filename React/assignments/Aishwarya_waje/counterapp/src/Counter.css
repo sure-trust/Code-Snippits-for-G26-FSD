@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+.button-Box {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  margin-top: 100px;
+  align-items: center;
+}
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.count {
+  font-size: 200px;
+  font-weight: bold;
+  font-style: italic;
+}
+.start-refresh {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

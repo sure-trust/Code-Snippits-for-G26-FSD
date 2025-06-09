@@ -1,0 +1,19 @@
+button {
+  height: 50px;
+  width: 150px;
+  border: 2px solid green;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+img {
+  display: block;
+  margin-left: 50px;
+  align-items: center;
+  border-radius: 5px;
+  width: 500px;
+  height: 400px;
+}

@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px lightgray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+}
+.navbar-logo {
+  width: 160px;
+  height: 50px;
+  padding: 10px 0;
+  object-fit: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icons input {
+  padding: 5px;
+  margin-right: 10px;
+}
