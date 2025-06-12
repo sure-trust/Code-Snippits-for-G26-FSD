@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Edit, Trash2, Save, X, AlertTriangle } from 'lucide-react';
 
 const Admin = () => {
   const [users, setUsers] = useState([]);
