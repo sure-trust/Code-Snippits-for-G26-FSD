@@ -1,0 +1,72 @@
+<div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-4xl font-bold">Your Files</h1>
+        <a href="/upload" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+            Upload New Files
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% files.forEach(file => { %>
+            <div class="glass-effect rounded-lg p-6 space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-xl font-semibold truncate" title="<%= file.originalName %>">
+                        <%= file.originalName %>
+                    </h3>
+                    <span class="text-sm text-purple-300">
+                        <%= file.size %>
+                    </span>
+                </div>
+                
+                <div class="text-sm text-purple-200">
+                    Uploaded: <%= file.uploadDate %>
+                </div>
+                
+                <div class="flex justify-between items-center pt-4">
+                    <a 
+                        href="/api/download/<%= file.id %>" 
+                        class="text-purple-300 hover:text-purple-100 transition duration-300"
+                    >
+                        Download
+                    </a>
+                    <button 
+                        onclick="deleteFile('<%= file.id %>')"
+                        class="text-red-400 hover:text-red-600 transition duration-300"
+                    >
+                        Delete
+                    </button>
+                </div>
+            </div>
+        <% }); %>
+
+        <% if (files.length === 0) { %>
+            <div class="col-span-full text-center py-12 glass-effect rounded-lg">
+                <h3 class="text-2xl font-bold mb-4">No Files Yet</h3>
+                <p class="mb-6">Upload some files to get started!</p>
+                <a href="/upload" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Upload Now
+                </a>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<script>
+async function deleteFile(fileId) {
+    if (!confirm('Are you sure you want to delete this file?')) return;
+
+    try {
+        const response = await fetch(`/api/files/${fileId}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            window.location.reload();
+        } else {
+            throw new Error('Delete failed');
+        }
+    } catch (error) {
+        alert('Error deleting file: ' + error.message);
+    }
+}
+</script> 

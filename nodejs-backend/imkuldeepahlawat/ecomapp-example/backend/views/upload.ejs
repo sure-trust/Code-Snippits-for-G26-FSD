@@ -1,0 +1,149 @@
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-4xl font-bold mb-8 text-center">Upload Files</h1>
+
+    <div class="glass-effect rounded-lg p-8 mb-8">
+        <form id="uploadForm" class="space-y-6">
+            <div 
+                id="dropZone" 
+                class="border-4 border-dashed border-purple-300 rounded-lg p-12 text-center cursor-pointer hover:border-purple-400 transition duration-300"
+            >
+                <p class="text-xl mb-4">Drag & Drop Files Here</p>
+                <p>or</p>
+                <input 
+                    type="file" 
+                    id="fileInput" 
+                    class="hidden" 
+                    multiple
+                >
+                <button 
+                    type="button" 
+                    onclick="document.getElementById('fileInput').click()" 
+                    class="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+                >
+                    Select Files
+                </button>
+            </div>
+
+            <div id="fileList" class="space-y-4"></div>
+
+            <button 
+                type="submit" 
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded transition duration-300"
+                disabled
+            >
+                Upload Files
+            </button>
+        </form>
+    </div>
+
+    <div id="uploadProgress" class="hidden glass-effect rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">Upload Progress</h3>
+        <div class="w-full bg-purple-200 rounded-full h-4">
+            <div id="progressBar" class="w-0 h-4 bg-purple-600 rounded-full transition-all duration-300"></div>
+        </div>
+        <p id="progressText" class="mt-2 text-center">0%</p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+    const uploadForm = document.getElementById('uploadForm');
+    const uploadProgress = document.getElementById('uploadProgress');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    let files = [];
+
+    // Drag and drop handlers
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('border-purple-500');
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('border-purple-500');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('border-purple-500');
+        const droppedFiles = Array.from(e.dataTransfer.files);
+        handleFiles(droppedFiles);
+    });
+
+    fileInput.addEventListener('change', () => {
+        const selectedFiles = Array.from(fileInput.files);
+        handleFiles(selectedFiles);
+    });
+
+    function handleFiles(newFiles) {
+        files = [...files, ...newFiles];
+        updateFileList();
+    }
+
+    function updateFileList() {
+        fileList.innerHTML = '';
+        files.forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'flex justify-between items-center glass-effect rounded-lg p-4';
+            fileItem.innerHTML = `
+                <span>${file.name}</span>
+                <button 
+                    onclick="removeFile(${index})" 
+                    class="text-red-400 hover:text-red-600 transition duration-300"
+                >
+                    Remove
+                </button>
+            `;
+            fileList.appendChild(fileItem);
+        });
+
+        const submitButton = uploadForm.querySelector('button[type="submit"]');
+        submitButton.disabled = files.length === 0;
+    }
+
+    window.removeFile = (index) => {
+        files.splice(index, 1);
+        updateFileList();
+    };
+
+    uploadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (files.length === 0) return;
+
+        const formData = new FormData();
+        files.forEach(file => {
+            formData.append('files', file);
+        });
+
+        uploadProgress.classList.remove('hidden');
+        
+        try {
+            const response = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData,
+                onUploadProgress: (progressEvent) => {
+                    const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                    progressBar.style.width = `${percentCompleted}%`;
+                    progressText.textContent = `${percentCompleted}%`;
+                }
+            });
+
+            if (response.ok) {
+                alert('Files uploaded successfully!');
+                files = [];
+                updateFileList();
+                uploadProgress.classList.add('hidden');
+            } else {
+                throw new Error('Upload failed');
+            }
+        } catch (error) {
+            alert('Error uploading files: ' + error.message);
+            uploadProgress.classList.add('hidden');
+        }
+    });
+});
+</script> 
