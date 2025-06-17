@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1c2c 0%, #4a1942 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #e53e3e;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg text-white">
+    <!-- Navigation -->
+    <nav class="p-4 glass-effect sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold flex items-center">
+                <i class="fas fa-shopping-bag mr-2"></i>
+                ShopEasy
+            </a>
+            <div class="space-x-6 flex items-center">
+                <a href="/" class="hover:text-purple-300 transition">Home</a>
+                <% if (typeof user !== 'undefined' && user) { %>
+                    <a href="/cart" class="hover:text-purple-300 transition relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <% if (typeof cartCount !== 'undefined' && cartCount > 0) { %>
+                            <span class="cart-badge"><%= cartCount %></span>
+                        <% } %>
+                    </a>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-green-400">₹<%= user.balance %></span>
+                        <button onclick="logout()" class="hover:text-red-300 transition">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                <% } else { %>
+                    <a href="/login" class="hover:text-purple-300 transition">Login</a>
+                    <a href="/signup" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded transition">Sign Up</a>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-8">
+        <%- body %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full p-4 glass-effect mt-16">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ShopEasy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        async function logout() {
+            try {
+                await fetch('/api/logout', { method: 'POST' });
+                window.location.href = '/login';
+            } catch (error) {
+                console.error('Error logging out:', error);
+            }
+        }
+
+        // Flash message handling
+        function showMessage(message, type = 'success') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `fixed top-4 right-4 p-4 rounded ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            } text-white`;
+            messageDiv.textContent = message;
+            document.body.appendChild(messageDiv);
+            setTimeout(() => messageDiv.remove(), 3000);
+        }
+    </script>
+</body>
+</html> 

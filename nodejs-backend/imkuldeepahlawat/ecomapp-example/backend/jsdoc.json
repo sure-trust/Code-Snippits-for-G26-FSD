@@ -1,0 +1,48 @@
+{
+    "source": {
+        "include": ["./"],
+        "exclude": ["node_modules", "docs"],
+        "includePattern": ".+\\.js(doc|x)?$"
+    },
+    "plugins": ["plugins/markdown"],
+    "opts": {
+        "encoding": "utf8",
+        "destination": "./docs/",
+        "recurse": true,
+        "verbose": true,
+        "template": "node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "default_theme": "dark",
+            "title": "E-commerce App Documentation",
+            "menu": [
+                {
+                    "title": "GitHub",
+                    "link": "https://github.com/imkuldeepahlawat/ecomapp-example",
+                    "target": "_blank"
+                }
+            ],
+            "meta": [
+                {
+                    "name": "author",
+                    "content": "Kuldeep Ahlawat"
+                },
+                {
+                    "name": "description",
+                    "content": "Documentation for the E-commerce application built with Express and EJS"
+                }
+            ]
+        }
+    },
+    "markdown": {
+        "hardwrap": false,
+        "idInHeadings": true
+    },
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true,
+            "includeDate": false
+        }
+    }
+} 
