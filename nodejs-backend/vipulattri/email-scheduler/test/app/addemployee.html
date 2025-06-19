@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Employee</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #388E3C;
+    }
+  </style>
+</head>
+<body>
+  <h2>Add New Employee</h2>
+  <form id="empForm">
+    <input type="text" id="name" placeholder="Employee Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="role" placeholder="Role" required />
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <script>
+    document.getElementById('empForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const role = document.getElementById('role').value.trim();
+
+      const newEmp = { name, email, role };
+      const employees = JSON.parse(localStorage.getItem('employees')) || [];
+      employees.push(newEmp);
+      localStorage.setItem('employees', JSON.stringify(employees));
+      window.location.href = 'widget.html';
+    });
+  </script>
+</body>
+</html>
+    
