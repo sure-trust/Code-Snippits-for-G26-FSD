@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management - Home</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    #addBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #addBtn:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Employee Directory</h1>
+  <button id="addBtn">Add Employee</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody id="empTableBody"></tbody>
+  </table>
+
+  <script>
+    function loadEmployees() {
+      const employees = JSON.parse(localStorage.getItem('employees')) || [];
+      const tbody = document.getElementById('empTableBody');
+      tbody.innerHTML = "";
+
+      employees.forEach(emp => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${emp.name}</td>
+          <td>${emp.email}</td>
+          <td>${emp.role}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    document.getElementById('addBtn').addEventListener('click', () => {
+      window.location.href = 'addemployee.html';
+    });
+
+    window.onload = loadEmployees;
+  </script>
+</body>
+</html>
