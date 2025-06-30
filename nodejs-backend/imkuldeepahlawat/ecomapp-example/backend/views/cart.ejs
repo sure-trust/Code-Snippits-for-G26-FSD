@@ -1,0 +1,146 @@
+<div class="max-w-4xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-4xl font-bold">Your Cart</h1>
+        <div class="text-xl">
+            Balance: <span class="text-green-400">₹<%= user.balance %></span>
+        </div>
+    </div>
+
+    <% if (cart.items && cart.items.length > 0) { %>
+        <div class="glass-effect rounded-lg p-6 mb-8">
+            <div class="space-y-6">
+                <% cart.items.forEach(item => { %>
+                    <div class="flex items-center justify-between border-b border-purple-800 pb-4">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2"><%= item.title %></h3>
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center space-x-2">
+                                    <button 
+                                        onclick="updateQuantity('<%= item.productId %>', <%= item.quantity - 1 %>)"
+                                        class="text-purple-400 hover:text-purple-300 transition"
+                                        <%= item.quantity <= 1 ? 'disabled' : '' %>
+                                    >
+                                        <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <span class="text-lg"><%= item.quantity %></span>
+                                    <button 
+                                        onclick="updateQuantity('<%= item.productId %>', <%= item.quantity + 1 %>)"
+                                        class="text-purple-400 hover:text-purple-300 transition"
+                                    >
+                                        <i class="fas fa-plus-circle"></i>
+                                    </button>
+                                </div>
+                                <span class="text-green-400">₹<%= Math.round(item.price * 80) %> each</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-8">
+                            <span class="text-xl font-bold text-green-400">
+                                ₹<%= Math.round(item.price * item.quantity * 80) %>
+                            </span>
+                            <button 
+                                onclick="removeFromCart('<%= item.productId %>')"
+                                class="text-red-400 hover:text-red-300 transition"
+                            >
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-purple-800">
+                <div class="flex justify-between items-center text-2xl font-bold mb-6">
+                    <span>Total:</span>
+                    <span class="text-green-400">
+                        ₹<%= Math.round(cart.items.reduce((sum, item) => sum + (item.price * item.quantity * 80), 0)) %>
+                    </span>
+                </div>
+                <button 
+                    onclick="checkout()"
+                    class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded transition duration-300 flex items-center justify-center"
+                >
+                    <i class="fas fa-shopping-cart mr-2"></i>
+                    Checkout
+                </button>
+            </div>
+        </div>
+    <% } else { %>
+        <div class="glass-effect rounded-lg p-12 text-center">
+            <div class="text-6xl mb-4">🛒</div>
+            <h2 class="text-2xl font-bold mb-4">Your cart is empty</h2>
+            <p class="text-gray-300 mb-8">Add some products to your cart and they will appear here</p>
+            <a 
+                href="/" 
+                class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded transition duration-300"
+            >
+                Continue Shopping
+            </a>
+        </div>
+    <% } %>
+</div>
+
+<script>
+async function updateQuantity(productId, newQuantity) {
+    if (newQuantity < 1) return;
+
+    try {
+        const response = await fetch('/api/cart/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productId, quantity: newQuantity })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update quantity');
+        }
+
+        window.location.reload();
+    } catch (error) {
+        showMessage('Failed to update quantity', 'error');
+    }
+}
+
+async function removeFromCart(productId) {
+    try {
+        const response = await fetch('/api/cart/remove', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productId })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to remove item');
+        }
+
+        window.location.reload();
+    } catch (error) {
+        showMessage('Failed to remove item', 'error');
+    }
+}
+
+async function checkout() {
+    try {
+        const response = await fetch('/api/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Checkout failed');
+        }
+
+        showMessage('Checkout successful! Thank you for your purchase.');
+        setTimeout(() => window.location.href = '/', 2000);
+    } catch (error) {
+        showMessage(error.message, 'error');
+    }
+}
+</script> 

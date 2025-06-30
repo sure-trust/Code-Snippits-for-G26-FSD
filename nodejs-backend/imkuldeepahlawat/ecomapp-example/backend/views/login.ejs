@@ -1,0 +1,70 @@
+<div class="max-w-md mx-auto">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">Welcome Back!</h1>
+        <p class="text-gray-300">Login to your ShopEasy account</p>
+    </div>
+
+    <div class="glass-effect rounded-lg p-8">
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label class="block mb-2">Email</label>
+                <input 
+                    type="email" 
+                    name="email"
+                    required
+                    class="w-full p-3 rounded bg-purple-900 bg-opacity-50 border border-purple-300 focus:outline-none focus:border-purple-500"
+                >
+            </div>
+            <div>
+                <label class="block mb-2">Password</label>
+                <input 
+                    type="password" 
+                    name="password"
+                    required
+                    class="w-full p-3 rounded bg-purple-900 bg-opacity-50 border border-purple-300 focus:outline-none focus:border-purple-500"
+                >
+            </div>
+            <button 
+                type="submit"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded transition duration-300"
+            >
+                Login
+            </button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <p>Don't have an account? <a href="/signup" class="text-purple-400 hover:text-purple-300">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const data = {
+        email: formData.get('email'),
+        password: formData.get('password')
+    };
+
+    try {
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Login failed');
+        }
+
+        window.location.href = '/';
+    } catch (error) {
+        showMessage(error.message, 'error');
+    }
+});</script> 
