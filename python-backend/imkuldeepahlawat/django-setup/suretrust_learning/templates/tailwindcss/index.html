@@ -1,0 +1,364 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hat Academy - Advanced Security Research & Training</title>
+    {% tailwind_css %}
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .inter { font-family: 'Inter', sans-serif; }
+        .matrix-bg {
+            background: linear-gradient(45deg, #0a0a0a 25%, transparent 25%), 
+                        linear-gradient(-45deg, #0a0a0a 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #0a0a0a 75%), 
+                        linear-gradient(-45deg, transparent 75%, #0a0a0a 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .glow-red { 
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+        .glow-white { 
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .typing-animation {
+            border-right: 2px solid #ef4444;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: #ef4444; }
+            51%, 100% { border-color: transparent; }
+        }
+        .slide-in {
+            animation: slideIn 0.6s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .blackhat-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #ef4444 100%);
+        }
+    </style>
+</head>
+<body class="bg-black text-white inter overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-red-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold mono text-white">BLACK<span class="text-red-500">HAT</span></span>
+                    <span class="ml-2 text-sm text-gray-400">ACADEMY</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-red-400 transition-colors">Home</a>
+                    <a href="#training" class="text-gray-300 hover:text-red-400 transition-colors">Training</a>
+                    <a href="#research" class="text-gray-300 hover:text-red-400 transition-colors">Research</a>
+                    <a href="#events" class="text-gray-300 hover:text-red-400 transition-colors">Events</a>
+                    <a href="#contact" class="text-gray-300 hover:text-red-400 transition-colors">Contact</a>
+                    <button class="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded-md font-semibold transition-all duration-300 glow-red">
+                        Register Now
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white hover:text-red-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden blackhat-gradient">
+        <div class="absolute inset-0 matrix-bg opacity-5"></div>
+        
+        <!-- Floating particles effect -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
+            <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div class="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-red-300 rounded-full animate-bounce"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-4 slide-in">
+            <div class="mb-8">
+                <span class="mono text-red-400 text-lg">&gt; Initializing security research protocols...</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                <span class="text-white">BLACK</span><span class="text-red-500">HAT</span>
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-semibold mb-8 text-gray-200">
+                SECURITY RESEARCH & TRAINING
+            </h2>
+            <div class="text-xl md:text-2xl text-gray-300 mb-8 mono">
+                <span class="typing-animation">Advanced Vulnerability Research | Professional Training | Security Briefings</span>
+            </div>
+            <p class="text-lg text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Join the world's most technical and relevant information security event. Learn cutting-edge security research, 
+                master advanced exploitation techniques, and network with the global security community. 
+                Defend forward through deep technical knowledge.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-red-500 hover:bg-red-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-red transform hover:scale-105">
+                    Browse Training
+                </button>
+                <button class="border border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-white">
+                    View Research
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="py-20 bg-gray-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span class="mono text-red-400">&gt;</span> Training Programs
+                </h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+                    World-class technical training designed by practitioners, for practitioners. 
+                    Learn from the researchers who discover the vulnerabilities.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Advanced Penetration Testing -->
+                <div class="bg-black/80 p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Advanced Penetration Testing</h3>
+                    <p class="text-gray-400 mb-6">Master advanced techniques used by security researchers to identify critical vulnerabilities in modern systems.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 mono">
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Zero-Day Exploitation</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Advanced Evasion Techniques</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Custom Exploit Development</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs mono">4-DAY INTENSIVE</span>
+                    </div>
+                </div>
+
+                <!-- Vulnerability Research -->
+                <div class="bg-black/80 p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Vulnerability Research</h3>
+                    <p class="text-gray-400 mb-6">Learn the methodologies and tools used by top security researchers to discover new vulnerabilities.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 mono">
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Reverse Engineering</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Fuzzing Techniques</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Binary Analysis</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs mono">5-DAY BOOTCAMP</span>
+                    </div>
+                </div>
+
+                <!-- Red Team Operations -->
+                <div class="bg-black/80 p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Red Team Operations</h3>
+                    <p class="text-gray-400 mb-6">Advanced adversary simulation techniques used by elite red teams to test organizational defenses.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 mono">
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Advanced Persistence</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Lateral Movement</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✓</span> Command & Control</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs mono">6-DAY ADVANCED</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-black/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span class="mono text-red-400">&gt;</span> Latest Research
+                </h2>
+                <p class="text-gray-400 text-lg">Cutting-edge security research from the world's top researchers</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-900/60 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+                    <div class="text-3xl mb-4">🔍</div>
+                    <h3 class="font-semibold text-white mb-2">Zero-Day Research</h3>
+                    <div class="text-sm text-gray-400 mono space-y-1">
+                        <div>CVE Discoveries</div>
+                        <div>Exploit Development</div>
+                        <div>Responsible Disclosure</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/60 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+                    <div class="text-3xl mb-4">🏗️</div>
+                    <h3 class="font-semibold text-white mb-2">Infrastructure Attacks</h3>
+                    <div class="text-sm text-gray-400 mono space-y-1">
+                        <div>Cloud Security</div>
+                        <div>Container Escapes</div>
+                        <div>Kubernetes Exploits</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/60 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="font-semibold text-white mb-2">Mobile & IoT</h3>
+                    <div class="text-sm text-gray-400 mono space-y-1">
+                        <div>iOS/Android Exploits</div>
+                        <div>IoT Vulnerabilities</div>
+                        <div>Hardware Hacking</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/60 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+                    <div class="text-3xl mb-4">🤖</div>
+                    <h3 class="font-semibold text-white mb-2">AI/ML Security</h3>
+                    <div class="text-sm text-gray-400 mono space-y-1">
+                        <div>Model Poisoning</div>
+                        <div>Adversarial ML</div>
+                        <div>AI Jailbreaking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span class="mono text-red-400">&gt;</span> Upcoming Events
+                </h2>
+                <p class="text-gray-400 text-lg">Join the global security community at Black Hat events worldwide</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black/60 p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm mono font-semibold">UPCOMING</span>
+                        <span class="ml-3 text-gray-400 mono">July 2025</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Black Hat USA 2025</h3>
+                    <p class="text-gray-400 mb-4">Las Vegas, Nevada</p>
+                    <p class="text-gray-300 mb-6">The most technical and relevant information security event featuring the latest research, developments and trends.</p>
+                    <button class="bg-red-500 hover:bg-red-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+
+                <div class="bg-black/60 p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm mono font-semibold">PLANNING</span>
+                        <span class="ml-3 text-gray-400 mono">Dec 2025</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Black Hat Europe 2025</h3>
+                    <p class="text-gray-400 mb-4">London, United Kingdom</p>
+                    <p class="text-gray-300 mb-6">Bringing the latest security research and training to the European security community.</p>
+                    <button class="border border-gray-600 text-gray-300 hover:border-white hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                        Get Notified
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <span class="mono text-red-400 text-lg">&gt; Ready to advance your security expertise?</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="text-white">Join the </span><span class="text-red-500">BLACK HAT</span><span class="text-white"> Community</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+                Connect with the world's most elite security researchers and practitioners. 
+                Advance your skills, discover cutting-edge research, and help shape the future of cybersecurity.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-red-500 hover:bg-red-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-red transform hover:scale-105">
+                    Register for Training
+                </button>
+                <button class="border border-gray-500 text-gray-300 hover:border-white hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                    Submit Research
+                </button>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-gray-700">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-red-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-gray-500 mono text-sm">
+                    &copy; 2024 Black Hat Academy. Advancing cybersecurity through research and education.
+                </p>
+                <p class="text-gray-600 mono text-xs mt-2">
+                    Inspired by the <a href="https://www.blackhat.com/" class="text-red-400 hover:text-red-300">Black Hat Conference</a> - The most technical and relevant information security event.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black');
+            } else {
+                nav.classList.remove('bg-black');
+            }
+        });
+    </script>
+</body>
+</html>

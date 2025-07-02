@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuldeep Ahlawat - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .highlight {
+            color: #0066cc;
+            font-weight: 700;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1a1a1a;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #0066cc;
+            margin: 20px auto 0;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .skill-badge {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .project-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background-color: #e6f2ff;
+            color: #0066cc;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .project-link:hover {
+            background-color: #0052a3;
+            color: #fff;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .blog-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-date {
+            color: #777;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 50px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #0066cc;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+            color: #aaa;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Kuldeep Ahlawat</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Kuldeep Ahlawat!</span></h1>
+                <p>A <span class="highlight">Software Developer</span> based in Bengaluru, IN. Working towards creating software that makes life easier and more meaningful.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, my name is Kuldeep and I am a highly ambitious, self-motivated, and driven software developer based in Bengaluru, IN.</p>
+                    <p>I graduated from Shri Krishna University, Chattarpur in 2022 with a BCA in Computer Software Engineering and have been working in the field ever since.</p>
+                    <p>I have a wide range of hobbies and passions that keep me busy. From reading & writing blogs, Running, traveling, I am always seeking new experiences and love to keep myself engaged and learning new things.</p>
+                    <p>I believe that you should never stop growing and that's what I strive to do, I have a passion for technology and a desire to always push the limits of what is possible. I am excited to see where my career takes me and am always open to new opportunities. 🙂</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-badge">C++</div>
+                <div class="skill-badge">Linux</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">TypeScript</div>
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">React</div>
+                <div class="skill-badge">ThreeJs</div>
+                <div class="skill-badge">Next.js</div>
+                <div class="skill-badge">React Native</div>
+                <div class="skill-badge">Tailwind CSS</div>
+                <div class="skill-badge">NodeJs</div>
+                <div class="skill-badge">ExpressJs</div>
+                <div class="skill-badge">MongoDB</div>
+                <div class="skill-badge">Redux</div>
+                <div class="skill-badge">Frappe</div>
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">GitHub</div>
+                <div class="skill-badge">Docker</div>
+                <div class="skill-badge">Kubernetes</div>
+                <div class="skill-badge">Kafka</div>
+                <div class="skill-badge">Nginx</div>
+                <div class="skill-badge">Github Actions</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Qkart</h3>
+                        <p>Qkart is a Ecommerce app where customers can order products</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>H4S</h3>
+                        <p>H4S is a Ecommerce app where customers can order products. run by NGO</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Observance</h3>
+                        <p>Observance is a Construction Management System and it is a web app that allows users to manage their construction projects, view 3d models, and more</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Big O Circus</h3>
+                        <p>Big O Circus is a web app that allows users understand how datastructure and algorithms works</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">ThreeJS</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Sure Trust</h3>
+                        <p>SURE Trust is a skill-bridging initiative established to offer free training in emerging and industry-relevant technologies to educated unemployed rural youth for enhancing the employability</p>
+                        <div class="tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Contributer</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <div class="blog-card">
+                <h3>Hello World!</h3>
+                <span class="blog-date">Feb 1, 2025</span>
+                <p>I'm an engineer who loves building stuff across the whole tech stack. Frontend? I make things look good. Backend? I make things work fast. Android apps? Done that. Databases? Love them. If it's something you can code, I've probably broken it and fixed it (maybe a few times)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                    <p>Email: contact@kuldeepahlawat.in</p>
+                    <p>Bengaluru, India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#projects">Projects</a></p>
+                    <p><a href="#blog">Blog</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><span>LinkedIn</span></a>
+                        <a href="#"><span>GitHub</span></a>
+                        <a href="#"><span>Twitter</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Kuldeep Ahlawat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.http import HttpResponse
-from django.urls import path
+from django.urls import path, include
 from . import viewes
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -29,7 +29,12 @@ def hello_world(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', viewes.html_template_rendering_css),
+    path('hackers/', viewes.html_template_rendering_tailwind),
     path('salute_guys/', viewes.salute_guys),
     path('salute_guys_test/', viewes.salute_guys_test),
     path('hello_world/', hello_world),
+    path('html_page/', viewes.html_template_rendering),
+    path('kuldeep-portfolio/', viewes.kuldeep_portfolio),
+    path('suretrustcourses/', include('suretrustcourses.urls')),
 ]
