@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ about.name }} | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+    .hero {
+      background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .hero-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #6366f1;
+      box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-top: 20px;
+    }
+    .hero-tagline {
+      font-size: 1.3rem;
+      color: #6366f1;
+      margin-top: 0.5rem;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #4f46e5;
+      margin-bottom: 1.5rem;
+    }
+    .badge-skill {
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 1rem;
+      margin: 0.25rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .project-card {
+      border: none;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px rgba(99,102,241,0.12);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 40px rgba(99,102,241,0.25);
+    }
+    .project-img {
+      border-radius: 1.5rem 1.5rem 0 0;
+      height: 180px;
+      object-fit: cover;
+    }
+    .footer {
+      background: #6366f1;
+      color: white;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="/">{{ about.name }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="hero">
+  {% if about.profile_picture %}
+    <img src="{{ about.profile_picture.url }}" class="hero-img mb-3" alt="{{ about.name }}">
+  {% endif %}
+  <div class="hero-title">Hi, I'm {{ about.name }}!</div>
+  <div class="hero-tagline">I'm a passionate developer. I love building things that make life easier and more meaningful.</div>
+</section>
+<div class="container mt-5">
+  <section id="about" class="mb-5">
+    <div class="section-title text-center">About Me</div>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="lead">{{ about.bio }}</p>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="mb-5">
+    <div class="section-title text-center">Skills</div>
+    <div class="d-flex flex-wrap justify-content-center">
+      {% for skill in skills %}
+        <span class="badge-skill">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
+  </section>
+  <section id="projects" class="mb-5">
+    <div class="section-title text-center">Featured Projects</div>
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100">
+          {% if project.image %}
+            <img src="{{ project.image.url }}" class="card-img-top project-img" alt="{{ project.title }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description|truncatewords:20 }}</p>
+            <a href="/projects/{{ project.id }}/" class="btn btn-outline-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <p>No projects to show yet.</p>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/projects/" class="btn btn-primary btn-lg">See All Projects</a>
+    </div>
+  </section>
+</div>
+<footer class="footer text-center">
+  &copy; {{ about.name }} {{ now|date:'Y' }}
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  gsap.from(".hero-img", { duration: 1.2, opacity: 0, y: -50, ease: "power2.out" });
+  gsap.from(".hero-title", { duration: 1.2, opacity: 0, x: -50, delay: 0.3, ease: "power2.out" });
+  gsap.from(".hero-tagline", { duration: 1.2, opacity: 0, x: 50, delay: 0.6, ease: "power2.out" });
+  gsap.from(".section-title", { duration: 1, opacity: 0, y: 40, stagger: 0.2, scrollTrigger: { trigger: ".section-title", start: "top 90%" }});
+  gsap.from(".project-card", { duration: 1, opacity: 0, y: 30, stagger: 0.2, scrollTrigger: { trigger: ".project-card", start: "top 90%" }});
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: #22223b;
+}
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+.navbar {
+    border-bottom: 1px solid #e0e7ff;
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(8px);
+}
+.card {
+    border-radius: 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 24px rgba(99,102,241,0.08);
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(99,102,241,0.16);
+    transform: translateY(-6px) scale(1.03);
+}
+footer {
+    font-size: 1rem;
+    background: #6366f1;
+    color: #fff;
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: 0 -2px 16px rgba(99,102,241,0.10);
+}
+.badge-skill {
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 1rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.badge-skill:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.16);
+    background: #6366f1;
+    color: #fff;
+}
+.glass {
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(99,102,241,0.10);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(8px);
+}
+.hero-img {
+    box-shadow: 0 8px 32px rgba(99,102,241,0.10);
+    border: 5px solid #6366f1;
+    background: #fff;
+}
+.btn-primary, .btn-outline-primary {
+    border-radius: 999px;
+    font-weight: 600;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover, .btn-outline-primary:hover {
+    background: #6366f1;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(99,102,241,0.16);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background: #e0e7ff;
+}
+::-webkit-scrollbar-thumb {
+    background: #b4b8f8;
+    border-radius: 8px;
+} 
