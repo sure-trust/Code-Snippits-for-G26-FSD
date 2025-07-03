@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SureTrust</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SureTrust</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#progress">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Your Digital Future</h1>
+                <p>We help businesses transform through innovative technology solutions and expert guidance.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="shape"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features reveal" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <i class="fas fa-rocket feature-icon"></i>
+                    <h3>Fast Implementation</h3>
+                    <p>We deliver solutions quickly without compromising quality.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Secure & Reliable</h3>
+                    <p>Your data security is our top priority with robust protection.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is always ready to assist you.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Growth Focused</h3>
+                    <p>Solutions designed to scale with your growing business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats reveal" id="stats">
+        <div class="container">
+            <h2 class="section-title">Our Success in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="counter" data-target="500">0</div>
+                    <p>Clients Worldwide</p>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="counter" data-target="1200">0</div>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="counter" data-target="98">0</div>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="counter" data-target="15">0</div>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="progress-section reveal" id="progress">
+        <div class="container">
+            <h2 class="section-title">Our Expertise</h2>
+            <div class="progress-container reveal">
+                <h4>
+                    <span>Web Development</span>
+                    <span>95%</span>
+                </h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" data-value="95"></div>
+                </div>
+            </div>
+            <div class="progress-container reveal">
+                <h4>
+                    <span>Mobile Applications</span>
+                    <span>85%</span>
+                </h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" data-value="85"></div>
+                </div>
+            </div>
+            <div class="progress-container reveal">
+                <h4>
+                    <span>UI/UX Design</span>
+                    <span>90%</span>
+                </h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" data-value="90"></div>
+                </div>
+            </div>
+            <div class="progress-container reveal">
+                <h4>
+                    <span>AI & Machine Learning</span>
+                    <span>80%</span>
+                </h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" data-value="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta reveal">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join hundreds of satisfied clients who have elevated their digital presence.</p>
+                <a href="#" class="btn btn-cta">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-logo">
+                    <h3>SureTrust</h3>
+                    <p>Building digital excellence together</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#stats">Stats</a></li>
+                        <li><a href="#progress">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@suretrust.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SureTrust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+    
+    <!-- Main animations JavaScript -->
+    <script src="{% static 'animations.js' %}"></script>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+# Email Scheduler Requirements
+# This project uses only built-in Python modules:
+# - smtplib (for SMTP email sending)
+# - ssl (for secure connections)
+# - email.message (for email formatting)
+# - time (for scheduling delays)
+
+# No external packages required
+# Python 3.6+ recommended for best compatibility
+
+# To run this project:
+# 1. No pip install needed
+# 2. Configure Gmail app password (see README.md)
+# 3. Run: python scheduler.py 

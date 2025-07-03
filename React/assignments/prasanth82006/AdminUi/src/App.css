@@ -1,0 +1,382 @@
+/* App.css for Admin UI */
+
+body {
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color: #333;
+     background-color: #f7f8fc;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .max-w-6xl {
+     max-width: 1100px;
+     margin: 0 auto;
+   }
+   
+   /* Search input */
+   input[type="text"] {
+     width: 100%;
+     padding: 10px 15px;
+     border: 1px solid #e2e8f0;
+     border-radius: 4px;
+     font-size: 14px;
+     margin-bottom: 20px;
+   }
+   
+   input[type="text"]::placeholder {
+     color: #a0aec0;
+   }
+   
+   /* Table styles */
+   table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+     background-color: white;
+     border-radius: 4px;
+     overflow: hidden;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+   }
+   
+   thead {
+     background-color: #ffffff;
+     border-bottom: 1px solid #e2e8f0;
+   }
+   
+   th {
+     text-align: left;
+     padding: 15px 20px;
+     font-weight: 500;
+     color: #1a202c;
+     font-size: 14px;
+   }
+   
+   td {
+     padding: 15px 20px;
+     font-size: 14px;
+     border-bottom: 1px solid #f0f0f0;
+   }
+   
+   tr:hover {
+     background-color: #f9fafb;
+   }
+   
+   /* Checkbox styling */
+   input[type="checkbox"] {
+     width: 16px;
+     height: 16px;
+     cursor: pointer;
+     border: 1px solid #cbd5e0;
+     border-radius: 3px;
+   }
+   
+   /* Role styling */
+   .text-blue-700 {
+     color: #2b6cb0;
+     font-weight: 500;
+   }
+   
+   .text-green-700 {
+     color: #2f855a;
+     font-weight: 500;
+   }
+   
+   /* Action buttons */
+   button.edit, button.delete {
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 5px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   button.edit {
+     color: #4a5568;
+   }
+   
+   button.delete {
+     color: #e53e3e;
+   }
+   
+   /* Pagination */
+   .flex.justify-between {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 20px;
+   }
+   
+   .flex.items-center {
+     display: flex;
+     align-items: center;
+   }
+   /* Delete Selected button styling */
+   button.delete-selected {
+     background-color: #ef4444; /* bg-red-500 */
+     color: white;
+     border: none;
+     border-radius: 3px; /* rounded */
+     padding: 0.75rem 1.5rem; /* py-3 px-6 */
+     font-size: 0.875rem; /* text-sm */
+     font-weight: 500;
+     background-color: #9f2424;
+     cursor: pointer;
+     transition: background-color 0.2s ease;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+   }
+   
+   button.delete-selected:hover {
+     background-color: #dc2626; /* bg-red-600 */
+   }
+   
+   button.delete-selected:focus {
+     outline: none;
+     box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
+   }
+   
+   button.delete-selected:disabled {
+     background-color: #fca5a5; /* bg-red-300 */
+     cursor: not-allowed;
+     opacity: 0.7;
+     box-shadow: none;
+   }
+     button.delete-selected:disabled:hover {
+       background-color: #fca5a5; /* bg-red-300 */
+     }
+     button.delete-selected:disabled:focus {
+       box-shadow: none;
+     }
+   /* Pagination buttons */
+   button.first-page,
+   button.previous-page,
+   button.next-page,
+   button.last-page,
+   .flex.items-center button {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 4px;
+     background: white;
+     border: 1px solid #e2e8f0;
+     cursor: pointer;
+     font-size: 14px;
+     color: #4a5568;
+     transition: all 0.2s;
+   }
+   
+   .flex.items-center button:hover {
+     background-color: #ebf4ff;
+     border-color: #4299e1;
+     color: #4299e1;
+   }
+   
+   button.next-page, button.last-page {
+     font-weight: bold;
+   }
+   
+   button.first-page, button.previous-page {
+     font-weight: bold;
+   }
+   
+   /* Active page button */
+   .flex.items-center button.bg-blue-500 {
+     background-color: #3b82f6;
+     color: white;
+     border-color: #3b82f6;
+   }
+   
+   
+   /* Member and Admin role styling */
+   td span.text-green-700 {
+     color: #2f855a;
+     font-weight: 500;
+   }
+   
+   td span.text-blue-700 {
+     color: #2b6cb0;
+     font-weight: 500;
+   }
+   
+   /* Edit form inputs */
+   td input[type="text"] {
+     padding: 6px 10px;
+     margin-bottom: 0;
+     font-size: 14px;
+   }
+   
+   /* Save and cancel buttons */
+   button.text-green-600,
+   button.text-gray-600 {
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 5px;
+   }
+   
+   button.text-green-600 {
+     color: #38a169;
+   }
+   
+   button.text-gray-600 {
+     color: #718096;
+   }
+   
+   /* Loading state */
+   .loading {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 200px;
+     font-size: 16px;
+     color: #4a5568;
+   }
+   
+   /* Error state */
+   .text-red-500 {
+     color: #e53e3e;
+     text-align: center;
+     font-size: 16px;
+   }
+   
+   /* Confirmation Modal Styles */
+   .fixed {
+     position: fixed;
+   }
+   
+   .inset-0 {
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+   }
+   
+   .bg-black {
+     background-color: #000;
+   }
+   
+   .bg-opacity-50 {
+     background-opacity: 0.5;
+   }
+   
+   .flex {
+     display: flex;
+   }
+   
+   .items-center {
+     align-items: center;
+   }
+   
+   .justify-center {
+     justify-content: center;
+   }
+   
+   .z-50 {
+     z-index: 50;
+   }
+   
+   .bg-white {
+     background-color: #fff;
+   }
+   
+   .rounded-lg {
+     border-radius: 0.5rem;
+   }
+   
+   .p-6 {
+     padding: 1.5rem;
+   }
+   
+   .max-w-md {
+     max-width: 28rem;
+   }
+   
+   .w-full {
+     width: 100%;
+   }
+   
+   .text-red-500 {
+     color: #ef4444;
+   }
+   
+   .mr-2 {
+     margin-right: 0.5rem;
+   }
+   
+   .text-lg {
+     font-size: 1.125rem;
+   }
+   
+   .font-semibold {
+     font-weight: 600;
+   }
+   
+   .mb-4 {
+     margin-bottom: 1rem;
+   }
+   
+   .mb-6 {
+     margin-bottom: 1.5rem;
+   }
+   
+   .justify-end {
+     justify-content: flex-end;
+   }
+   
+   .space-x-3 > * + * {
+     margin-left: 0.75rem;
+   }
+   
+   .px-4 {
+     padding-left: 1rem;
+     padding-right: 1rem;
+   }
+   
+   .py-2 {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+   }
+   
+   .border {
+     border-width: 1px;
+   }
+   
+   .border-gray-300 {
+     border-color: #d1d5db;
+   }
+   
+   .rounded {
+     border-radius: 0.25rem;
+   }
+   
+   .hover\:bg-gray-50:hover {
+     background-color: #f9fafb;
+   }
+   
+   .hover\:bg-red-600:hover {
+     background-color: #dc2626;
+   }
+   
+   /* Responsive styles */
+   @media (max-width: 768px) {
+     th, td {
+       padding: 10px;
+       font-size: 13px;
+     }
+     
+     .flex.justify-between {
+       flex-direction: column;
+       gap: 15px;
+     }
+     
+     button.delete-selected {
+       width: 100%;
+     }
+   }
